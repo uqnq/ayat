@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yesaya 1-2: Panggilan untuk Pertobatan dan Harapan Sion</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-light: #e3f2fd; /* Pale Blue */
+            --secondary-light: #e8f5e9; /* Light Mint Green */
+            --accent-cool: #26a69a; /* Teal */
+            --text-dark: #263238; /* Dark Blue Gray */
+            --text-light: #455a64; /* Medium Blue Gray */
+            --border-light: #b0bec5; /* Light Grayish Blue */
+            --heading-color: #00796b; /* Darker Teal */
+            --link-hover: #4db6ac; /* Lighter Teal */
+            --background-body: #f5f8fa; /* Off-white for body */
+            --background-article: #ffffff; /* Pure white for article content */
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background-color: var(--background-body);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        article {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--background-article);
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.07);
+            border-radius: 16px;
+            margin: 2rem 1rem;
+            box-sizing: border-box;
+            border: 1px solid var(--border-light);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--heading-color);
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 0.6em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 0.4em;
+            margin-top: 2.5em;
+        }
+
+        h3 {
+            font-size: 1.6em;
+            margin-top: 2em;
+            color: var(--accent-cool);
+        }
+
+        h4 {
+            font-size: 1.3em;
+            margin-top: 1.8em;
+            color: var(--text-dark);
+        }
+
+        p {
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+
+        blockquote {
+            border-left: 5px solid var(--accent-cool);
+            padding-left: 1.5em;
+            margin: 1.8em 0;
+            color: var(--text-dark);
+            font-style: italic;
+            background-color: var(--primary-light);
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        cite {
+            display: block;
+            text-align: right;
+            font-size: 0.9em;
+            margin-top: 0.5em;
+            color: var(--heading-color);
+        }
+
+        a {
+            color: var(--accent-cool);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin-left: 1.8em;
+            margin-bottom: 1.2em;
+        }
+
+        li {
+            margin-bottom: 0.6em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2em auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-light);
+        }
+
+        .ayat-container {
+            font-style: italic;
+            background-color: var(--primary-light);
+            border-left: 7px solid var(--accent-cool);
+            padding: 1.8em;
+            margin: 2.5em 0;
+            border-radius: 10px;
+            color: var(--text-dark);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .ayat-container p {
+            margin-bottom: 0.9em;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .ayat-container .ayat-num {
+            font-weight: bold;
+            margin-right: 0.6em;
+            color: var(--heading-color);
+        }
+
+        .sub-heading {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-size: 1.15em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            article {
+                padding: 2rem 1.2rem;
+                margin: 1.5rem 0.8rem;
+                border-radius: 12px;
+            }
+            h1 {
+                font-size: 2.3em;
+            }
+            h2 {
+                font-size: 1.9em;
+            }
+            h3 {
+                font-size: 1.4em;
+            }
+            body {
+                font-size: 0.95em;
+            }
+            .ayat-container {
+                padding: 1.5em;
+                margin: 2em 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            article {
+                padding: 1.5rem 0.8rem;
+                margin: 0.8rem 0.5rem;
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 1.9em;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            body {
+                font-size: 0.9em;
+            }
+            .ayat-container {
+                padding: 1.2em;
+                margin: 1.5em 0;
+                border-radius: 6px;
+            }
+            img {
+                margin: 1.5em auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Yesaya 1-2: Panggilan untuk Pertobatan dan Harapan Sion</h1>
+
+        <div class="ayat-container">
+            <h3>Yesaya 1:1-31</h3>
+            <p><span class="ayat-num">1</span> Penglihatan Yesaya bin Amos tentang Yehuda dan Yerusalem dalam zaman Uzia, Yotam, Ahas dan Hizkia, raja-raja Yehuda.</p>
+            <p><span class="ayat-num">2</span> Dengarlah, hai langit, dan perhatikanlah, hai bumi, sebab TUHAN berfirman: "Aku telah membesarkan anak-anak dan mengasuh mereka, tetapi mereka memberontak terhadap Aku.</p>
+            <p><span class="ayat-num">3</span> Lembu mengenal pemiliknya, keledai mengenal palungan tuannya, tetapi Israel tidak mengenal Aku, umat-Ku tidak mengerti."</p>
+            <p><span class="ayat-num">4</span> Celakalah bangsa yang berdosa, kaum yang sarat dengan kesalahan, keturunan yang jahat, anak-anak yang berlaku busuk! Mereka telah meninggalkan TUHAN, menista Yang Mahakudus, Allah Israel, dan berpaling membelakangi Dia.</p>
+            <p><span class="ayat-num">5</span> Di mana lagi kamu hendak dipukul, kalau kamu makin memberontak? Seluruh kepala pusing dan seluruh hati merana.</p>
+            <p><span class="ayat-num">6</span> Dari telapak kaki sampai kepala tidak ada yang sehat: bengkak dan bilur dan luka baru, tidak dibalut dan tidak diobati dan tidak ditaruh minyak.</p>
+            <p><span class="ayat-num">7</span> Negerimu menjadi sunyi sepi, kota-kotamu habis terbakar; di depan matamu orang-orang asing memakan hasil dari tanahmu, dan sunyi sepi tinggal seperti runtuhan akibat penyerbuan orang asing.</p>
+            <p><span class="ayat-num">8</span> Putri Sion tertinggal sendirian seperti pondok di kebun anggur, seperti gubuk di kebun mentimun dan seperti kota yang terkepung.</p>
+            <p><span class="ayat-num">9</span> Seandainya TUHAN semesta alam tidak meninggalkan pada kita sedikit orang yang terlepas, maka kita sudah menjadi seperti Sodom, dan sama seperti Gomora.</p>
+            <p><span class="ayat-num">10</span> Dengarlah firman TUHAN, hai pemimpin-pemimpin Sodom! Perhatikanlah pengajaran Allah kita, hai rakyat Gomora!</p>
+            <p><span class="ayat-num">11</span> "Untuk apa banyaknya korban sembelihanmu?" firman TUHAN. "Aku sudah jemu akan korban-korban bakaran berupa domba jantan dan akan lemak binatang gemukan; darah lembu jantan, domba-domba dan kambing jantan tidak Kusukai.</p>
+            <p><span class="ayat-num">12</span> Apabila kamu datang untuk menghadap Aku, siapakah yang menuntut itu dari padamu, bahwa kamu menginjak-injak pelataran-Ku?</p>
+            <p><span class="ayat-num">13</span> Jangan lagi membawa persembahanmu yang tidak sungguh, sebab baunya adalah kekejian bagi-Ku. Kalau kamu merayakan bulan baru dan sabat, pertemuan-pertemuan raya, Aku tidak tahan melihatnya, karena perayaanmu itu disertai kejahatan.</p>
+            <p><span class="ayat-num">14</span> Perayaan bulan barumu dan pertemuan-pertemuan rayamu Aku benci melihatnya; semuanya itu menjadi beban bagi-Ku, Aku telah jemu menanggungnya.</p>
+            <p><span class="ayat-num">15</span> Apabila kamu menadahkan tanganmu, Aku akan memalingkan muka-Ku, bahkan sekalipun kamu berkali-kali berdoa, Aku tidak akan mendengarkannya, sebab tanganmu penuh dengan darah.</p>
+            <p><span class="ayat-num">16</span> Basuhlah, bersihkanlah dirimu, jauhkanlah perbuatan-perbuatanmu yang jahat dari depan mata-Ku. Berhentilah berbuat jahat,</p>
+            <p><span class="ayat-num">17</span> belajarlah berbuat baik; usahakanlah keadilan, kendalikanlah orang kejam; belalah hak anak yatim, perjuangkanlah perkara janda!"</p>
+            <p><span class="ayat-num">18</span> "Marilah, baiklah kita berperkara!" firman TUHAN. "Sekalipun dosamu merah seperti kirmizi, akan menjadi putih seperti salju; sekalipun berwarna merah seperti kain kesumba, akan menjadi putih seperti bulu domba.</p>
+            <p><span class="ayat-num">19</span> Jika kamu menurut dan mau mendengar, maka kamu akan memakan hasil baik dari negeri ini.</p>
+            <p><span class="ayat-num">20</span> Tetapi jika kamu melawan dan memberontak, maka kamu akan dimakan pedang." Sungguh, TUHAN telah berfirman.</p>
+            <p><span class="ayat-num">21</span> Betapa berubahnya kota yang setia itu menjadi sundal! Dahulu penuh keadilan dan di dalamnya diam kebenaran, tetapi sekarang pembunuh-pembunuh.</p>
+            <p><span class="ayat-num">22</span> Perakmu menjadi sanga, minuman anggurmu bercampur air.</p>
+            <p><span class="ayat-num">23</span> Para pemimpinmu adalah pemberontak dan setongkol dengan pencuri. Semuanya cinta suap dan mengejar hadiah. Mereka tidak membela hak anak yatim, dan perkara janda tidak sampai kepada mereka.</p>
+            <p><span class="ayat-num">24</span> Sebab itu demikianlah firman Tuhan, TUHAN semesta alam, Yang Mahakuat, Allah Israel: "Ha, Aku akan melampiaskan dendam-Ku kepada para lawan-Ku, dan melakukan pembalasan kepada para musuh-Ku!</p>
+            <p><span class="ayat-num">25</span> Aku akan mengenakan tangan-Ku kepadamu untuk membersihkan sangamu sampai tuntas, dan membuang segala timahmu.</p>
+            <p><span class="ayat-num">26</span> Aku akan mengembalikan bagimu hakim-hakim seperti dahulu, dan penasihat-penasihat seperti semula. Sesudah itu engkau akan disebutkan kota keadilan, kota yang setia.</p>
+            <p><span class="ayat-num">27</span> Sion akan diselamatkan oleh keadilan, dan orang-orangnya yang bertobat oleh kebenaran.</p>
+            <p><span class="ayat-num">28</span> Tetapi orang-orang fasik dan orang-orang berdosa akan dihancurkan bersama, dan orang-orang yang meninggalkan TUHAN akan habis lenyap.</p>
+            <p><span class="ayat-num">29</span> Sungguh, kamu akan mendapat malu karena pohon-pohon tarbantin yang kamu ingini itu, dan kamu akan tersipu-sipu karena taman-taman dewa yang kamu pilih itu;</p>
+            <p><span class="ayat-num">30</span> sebab kamu akan seperti pohon tarbantin yang daunnya layu, dan seperti taman yang kekurangan air.</p>
+            <p><span class="ayat-num">31</span> Maka orang kuat akan menjadi serabut dan pekerjaannya menjadi percikan api; keduanya akan terbakar bersama-sama dengan tidak ada yang memadamkan."</p>
+
+            <h3>Yesaya 2:1-22</h3>
+            <p><span class="ayat-num">1</span> Firman yang telah dilihat Yesaya bin Amos tentang Yehuda dan Yerusalem.</p>
+            <p><span class="ayat-num">2</span> Akan terjadi pada hari-hari yang terakhir: gunung rumah TUHAN akan berdiri tegak di hulu gunung-gunung dan menjulang tinggi di atas bukit-bukit; segala bangsa akan berduyun-duyun ke sana,</p>
+            <p><span class="ayat-num">3</span> dan banyak suku bangsa akan pergi serta berkata: "Marilah, kita naik ke gunung TUHAN, ke rumah Allah Yakub, supaya Ia mengajar kita tentang jalan-jalan-Nya, dan supaya kita berjalan menempuhnya; sebab dari Sion akan keluar pengajaran dan firman TUHAN dari Yerusalem."</p>
+            <p><span class="ayat-num">4</span> Ia akan menjadi hakim antara bangsa-bangsa dan akan menjadi wasit bagi banyak suku bangsa; maka mereka akan menempa pedang-pedangnya menjadi mata bajak dan tombak-tombaknya menjadi pisau pemangkas; bangsa tidak akan lagi mengangkat pedang terhadap bangsa, dan mereka tidak akan belajar perang lagi.</p>
+            <p><span class="ayat-num">5</span> Hai kaum keturunan Yakub, mari kita berjalan di dalam terang TUHAN!</p>
+            <p><span class="ayat-num">6</span> Sungguh, Engkau telah membuang umat-Mu, kaum keturunan Yakub, sebab mereka penuh dengan adat dari Timur, dan adalah tukang-tukang ramal seperti orang Filistin, dan berjabatan tangan dengan anak-anak orang asing.</p>
+            <p><span class="ayat-num">7</span> Negeri mereka penuh dengan perak dan emas, dan harta benda mereka tidak ada habis-habisnya; negeri mereka penuh dengan kuda, dan kereta-kereta mereka tidak terbilang banyaknya.</p>
+            <p><span class="ayat-num">8</span> Negeri mereka penuh dengan berhala-berhala; buatan tangan mereka sendiri disembah mereka, yakni apa yang dibuat oleh jari-jari mereka.</p>
+            <p><span class="ayat-num">9</span> Maka manusia akan merunduk dan orang akan merendahkan diri; janganlah mengampuni mereka!</p>
+            <p><span class="ayat-num">10</span> Masuklah ke dalam gunung batu dan sembunyilah dalam debu, oleh karena kedahsyatan TUHAN dan semarak kemegahan-Nya!</p>
+            <p><span class="ayat-num">11</span> Manusia yang sombong akan direndahkan, dan orang yang angkuh akan ditundukkan; hanya TUHAN sajalah yang maha tinggi pada hari itu.</p>
+            <p><span class="ayat-num">12</span> Sebab TUHAN semesta alam mempunyai suatu hari untuk menghukum semua yang congkak dan angkuh serta semua yang meninggikan diri, supaya direndahkan;</p>
+            <p><span class="ayat-num">13</span> juga segala pohon aras di Libanon yang tinggi dan megah, dan segala pohon tarbantin di Basan;</p>
+            <p><span class="ayat-num">14</span> juga segala gunung yang tinggi, dan segala bukit yang menjulang tinggi;</p>
+            <p><span class="ayat-num">15</span> juga segala menara yang tinggi, dan segala tembok yang berkubu;</p>
+            <p><span class="ayat-num">16</span> juga segala kapal Tarshis, dan segala kapal yang indah-indah.</p>
+            <p><span class="ayat-num">17</span> Manusia yang sombong akan ditundukkan, dan orang yang angkuh akan direndahkan; hanya TUHAN sajalah yang maha tinggi pada hari itu.</p>
+            <p><span class="ayat-num">18</span> Segala berhala akan dilenyapkan-Nya sama sekali.</p>
+            <p><span class="ayat-num">19</span> Orang akan masuk ke dalam gua-gua di gunung batu dan ke dalam liang-liang di tanah, oleh karena kedahsyatan TUHAN dan semarak kemegahan-Nya, apabila Ia bangkit untuk menggentarkan bumi.</p>
+            <p><span class="ayat-num">20</span> Pada hari itu manusia akan membuang berhala-berhala peraknya dan berhala-berhala emasnya yang dibuatnya untuk disembah kepada kelelawar dan tikus;</p>
+            <p><span class="ayat-num">21</span> dan ia akan masuk ke dalam liang-liang batu dan ke dalam celah-celah bukit batu, oleh karena kedahsyatan TUHAN dan semarak kemegahan-Nya, apabila Ia bangkit untuk menggentarkan bumi.</p>
+            <p><span class="ayat-num">22</span> Jangan lagi percaya kepada manusia, sebab ia tidak lebih dari pada embusan nafas, dan apakah harganya?"</p>
+        </div>
+
+        <p>Kitab Yesaya, yang dinubuatkan oleh nabi Yesaya bin Amos, merupakan salah satu mahakarya sastra kenabian dalam Perjanjian Lama. Dua pasal pertamanya berfungsi sebagai pengantar yang kuat, menetapkan nada untuk seluruh kitab, yang akan menguraikan tema-tema penghukuman, pertobatan, dan janji keselamatan yang agung. Yesaya melayani di Yehuda selama masa pemerintahan empat raja—Uzia, Yotam, Ahas, dan Hizkia—periode yang ditandai dengan kemakmuran ekonomi yang terkadang semu, ketidakstabilan politik, dan kemerosotan moral serta spiritual yang mendalam. Dalam konteks inilah firman Tuhan melalui Yesaya berkumandang, menyerukan bangsa Yehuda untuk meninjau kembali hubungan mereka dengan Allah yang Mahakudus.</p>
+
+        <h2>Latar Belakang Historis dan Makna Awal Kitab Yesaya</h2>
+        <p>Sebelum kita menyelami setiap ayat, penting untuk memahami konteks historis. Yesaya bernubuat di Yerusalem pada abad ke-8 SM, sebuah era yang krusial dalam sejarah Israel kuno. Kerajaan Utara (Israel) sedang menuju kehancuran total oleh Asyur, sementara Kerajaan Selatan (Yehuda) menghadapi ancaman yang sama, baik dari Asyur maupun kemudian dari Babel. Namun, lebih dari ancaman eksternal, masalah utama Yehuda adalah kemerosotan internal: korupsi di antara para pemimpin, ketidakadilan sosial, dan praktik keagamaan yang hampa. Yesaya, sebagai seorang nabi, dipanggil untuk menjadi suara Tuhan di tengah kekacauan ini, menyerukan pertobatan dan menawarkan harapan di balik penghakiman yang tak terelakkan.</p>
+
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDI0MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMjQwIiBoZWlnaHQ9IjE4MCIgZmlsbD0id2hpdGUiLz4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyNDAiIGhlaWdodD0iMTgwIiBmaWxsPSIjZTBmMmY3Ii8+CiAgICA8cGF0aCBkPSJNMTIwIDIwIEw0MCAxNjAgSDIwMCBMMTIwIDIwIFoiIGZpbGw9IiM2NmIyYjIiLz4KICAgIDxwYXRoIGQ9Ik0xMjAgNDAgTDYwIDE2MCANIMTgwIEw2MCA0MCBaIiBmaWxsPSIjM2Y3Zjg1Ii8+CiAgICA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIzMCIgcj0iMTUiIGZpbGw9IiNmZGZkOTYiLz4KICAgIDxwYXRoIGQ9Ik0xMjAgMzAgTDEwNSA4IE0xMjAgMzAgTDEzNSA4IiBzdHJva2U9IiNmZGZkOTYiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHBhdGggZD0iTTEyMCAzMCBMMTIwIDUiIHN0cm9rZT0iI2ZkZmQ5NiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8cGF0aCBkPSJNMCAxODAgTDgwIDE2MCIgc3Ryb2tlPSIjYTdkOWU3IiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxwYXRoIGQ9Ik0yNDAgMTgwTDE2MCAxNjAiIHN0cm9rZT0iI2E3ZDllNyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8cGF0aCBkPSJNMzAgMTgwTDEwMCAxNjAiIHN0cm9rZT0iI2E3ZDllNyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8cGF0aCBkPSJNMjEwIDE4MEwxNDAgMTYwIiBzdHJva2U9IiNhN2Q5ZTciIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPHRleHQgeD0iMTIwIiB5PSIxMTAiIGZvbnQtZmFtaWx5PSJNb25zZXJyYXQiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZjBmZGZkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TSU9OPC90ZXh0PgogICAgPHRleHQgeD0iMTIwIiB5PSIxMzUiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2YwZmRmZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SGFyYXBhbiBEYW1haSBEdW5pYTwvdGV4dD4KPC9zdmc+" alt="Gambar Gunung Sion dengan cahaya memancar, melambangkan harapan dan damai sejahtera yang keluar dari sana. Beberapa jalur menuju gunung menandakan bangsa-bangsa berduyun-duyun datang." title="Gunung Sion: Pusat Harapan dan Damai Sejahtera Universal">
+
+        <h2>Yesaya Pasal 1: Penyakit Rohani Israel dan Panggilan untuk Pertobatan</h2>
+        <p>Pasal pertama kitab Yesaya adalah sebuah tuduhan yang menghancurkan terhadap Yehuda, menyerupai sebuah 'perkara hukum' ilahi di mana Tuhan adalah Hakim dan Penuntut, dan Israel adalah terdakwa. Ini dimulai dengan gambaran yang suram tentang kondisi moral dan spiritual bangsa tersebut.</p>
+
+        <h3>1. Israel sebagai Anak-anak yang Memberontak (Ayat 2-3)</h3>
+        <p>Yesaya memulai dengan memanggil langit dan bumi sebagai saksi, sebuah perangkat sastra yang kuat untuk menekankan keseriusan tuduhan Tuhan. "Dengarlah, hai langit, dan perhatikanlah, hai bumi, sebab TUHAN berfirman: 'Aku telah membesarkan anak-anak dan mengasuh mereka, tetapi mereka memberontak terhadap Aku.'" Pernyataan ini menunjukkan hubungan perjanjian yang intim antara Allah dan Israel, di mana Allah bertindak sebagai Bapa yang penuh kasih, dan Israel sebagai anak-anak-Nya. Pemberontakan mereka bukan hanya pelanggaran hukum, tetapi pengkhianatan terhadap kasih dan pemeliharaan ilahi.</p>
+        <p>Kontras yang tajam ditarik antara perilaku Israel dan naluri hewan: "Lembu mengenal pemiliknya, keledai mengenal palungan tuannya, tetapi Israel tidak mengenal Aku, umat-Ku tidak mengerti." Ini adalah teguran yang memalukan. Bahkan hewan yang paling sederhana sekalipun menunjukkan kesetiaan dan pengenalan terhadap pemberi nafkah mereka, sementara Israel, yang telah menerima begitu banyak wahyu dan berkat, gagal mengenali atau memahami Tuhan. Ini bukan sekadar ketidaktahuan, melainkan ketidaksengajaan yang disengaja untuk mengabaikan dan menolak kedaulatan serta kebaikan Allah.</p>
+
+        <h3>2. Bangsa yang Sakit dan Busuk (Ayat 4-9)</h3>
+        <p>Yesaya menggambarkan Israel sebagai "bangsa yang berdosa, kaum yang sarat dengan kesalahan, keturunan yang jahat, anak-anak yang berlaku busuk." Gambaran ini melukiskan korupsi yang meluas, bukan hanya individu tetapi seluruh masyarakat. Mereka telah "meninggalkan TUHAN, menista Yang Mahakudus, Allah Israel, dan berpaling membelakangi Dia." Ini adalah akar dari semua masalah mereka: penolakan terhadap Allah perjanjian.</p>
+        <p>Kondisi moral dan spiritual bangsa ini digambarkan secara fisik sebagai penyakit yang mengerikan: "Dari telapak kaki sampai kepala tidak ada yang sehat: bengkak dan bilur dan luka baru, tidak dibalut dan tidak diobati dan tidak ditaruh minyak." Ini adalah metafora yang kuat untuk keruntuhan total Yehuda, baik secara rohani maupun sosial. Tidak ada bagian dari bangsa ini yang tidak terkontaminasi oleh dosa. Penyakit ini telah menyebabkan kehancuran material juga: "Negerimu menjadi sunyi sepi, kota-kotamu habis terbakar; di depan matamu orang-orang asing memakan hasil dari tanahmu." Ini adalah konsekuensi langsung dari pemberontakan mereka, sebuah peringatan akan penghakiman yang akan datang melalui tangan musuh-musuh mereka.</p>
+        <p>Dalam gambaran kehancuran ini, ada secercah harapan yang tipis, atau setidaknya pengakuan atas belas kasihan Tuhan yang menahan diri. "Putri Sion tertinggal sendirian seperti pondok di kebun anggur, seperti gubuk di kebun mentimun dan seperti kota yang terkepung." Meskipun terisolasi dan rentan, Yerusalem masih ada. Ayat 9 adalah pengingat akan anugerah ilahi: "Seandainya TUHAN semesta alam tidak meninggalkan pada kita sedikit orang yang terlepas, maka kita sudah menjadi seperti Sodom, dan sama seperti Gomora." Tuhan telah menyisakan "sisa" kecil, mencegah kehancuran total yang menimpa Sodom dan Gomora. Ini mengisyaratkan tema "sisa" yang setia, yang akan menjadi penting dalam narasi Yesaya selanjutnya.</p>
+
+        <h3>3. Ritual Hampa dan Panggilan untuk Keadilan Sejati (Ayat 10-17)</h3>
+        <p>Bagian ini merupakan kritik pedas terhadap praktik keagamaan yang kosong dari substansi moral dan spiritual. Para pemimpin dan rakyat Yehuda, yang disebut "pemimpin-pemimpin Sodom" dan "rakyat Gomora" sebagai sindiran yang tajam, masih melakukan ritual keagamaan: mempersembahkan kurban, merayakan bulan baru dan Sabat, serta mengadakan pertemuan raya. Namun, Allah menyatakan rasa muak-Nya: "Untuk apa banyaknya korban sembelihanmu?" firman TUHAN. "Aku sudah jemu... darah lembu jantan, domba-domba dan kambing jantan tidak Kusukai."</p>
+        <p>Masalahnya bukan pada ritual itu sendiri, yang sebenarnya diperintahkan oleh Taurat, melainkan pada hati di baliknya. Mereka datang ke pelataran Tuhan dengan tangan penuh darah (kejahatan dan ketidakadilan), tetapi tanpa pertobatan yang tulus. Persembahan mereka menjadi "bau kekejian," dan doa-doa mereka diabaikan. Tuhan menolak persembahan mereka karena perayaan mereka "disertai kejahatan" (ayat 13) dan tangan mereka "penuh dengan darah" (ayat 15). Ini adalah penekanan yang fundamental: Allah menginginkan hati yang tulus dan kehidupan yang adil, bukan hanya kepatuhan ritual yang lahiriah.</p>
+        <p>Oleh karena itu, panggilan untuk pertobatan sejati sangatlah jelas: "Basuhlah, bersihkanlah dirimu, jauhkanlah perbuatan-perbuatanmu yang jahat dari depan mata-Ku. Berhentilah berbuat jahat, belajarlah berbuat baik; usahakanlah keadilan, kendalikanlah orang kejam; belalah hak anak yatim, perjuangkanlah perkara janda!" (Ayat 16-17). Ini adalah inti dari tuntutan Allah: pertobatan harus menghasilkan perubahan perilaku yang nyata, terutama dalam hal keadilan sosial. Membela yang lemah dan tertindas adalah tanda sejati dari pengabdian kepada Tuhan.</p>
+
+        <h3>4. Undangan Kasih Karunia dan Konsekuensi Pilihan (Ayat 18-20)</h3>
+        <p>Di tengah semua tuduhan dan ancaman penghakiman, Tuhan menawarkan undangan yang luar biasa, sebuah janji kasih karunia yang radikal: "Marilah, baiklah kita berperkara!" firman TUHAN. "Sekalipun dosamu merah seperti kirmizi, akan menjadi putih seperti salju; sekalipun berwarna merah seperti kain kesumba, akan menjadi putih seperti bulu domba." Metafora warna ini sangat kuat. Merah kirmizi adalah warna yang pekat dan sulit dihilangkan, melambangkan kedalaman dosa mereka. Namun, Tuhan berjanji untuk membersihkannya menjadi putih bersih, melambangkan pengampunan total dan pemulihan.</p>
+        <p>Namun, tawaran ini datang dengan syarat: pilihan. "Jika kamu menurut dan mau mendengar, maka kamu akan memakan hasil baik dari negeri ini. Tetapi jika kamu melawan dan memberontak, maka kamu akan dimakan pedang." Pilihan ada di tangan mereka: ketaatan membawa berkat dan kelimpahan, sedangkan pemberontakan membawa kehancuran. Ini adalah prinsip ilahi yang konsisten di seluruh Alkitab.</p>
+
+        <h3>5. Sion yang Korup dan Janji Pemurnian (Ayat 21-31)</h3>
+        <p>Yesaya kembali ke tema kemerosotan Yerusalem, yang dahulu dikenal sebagai "kota yang setia" dan "penuh keadilan," kini telah menjadi "sundal" dan "pembunuh-pembunuh." Gambaran ini menunjukkan kerusakan moral dan spiritual yang mendalam, sebuah pengkhianatan terhadap identitas ilahi Yerusalem. Para pemimpinnya digambarkan sebagai "pemberontak dan setongkol dengan pencuri," yang "cinta suap" dan "tidak membela hak anak yatim, dan perkara janda tidak sampai kepada mereka." Ini menggambarkan sistem peradilan yang rusak dan penindasan terhadap kaum yang paling rentan.</p>
+        <p>Sebagai tanggapan, Tuhan bersumpah akan pembalasan dan pemurnian: "Aku akan mengenakan tangan-Ku kepadamu untuk membersihkan sangamu sampai tuntas, dan membuang segala timahmu." Ini adalah janji pemurnian yang keras, seperti proses peleburan logam untuk menghilangkan kotoran. Tujuannya bukanlah penghancuran total, melainkan pemulihan: "Aku akan mengembalikan bagimu hakim-hakim seperti dahulu, dan penasihat-penasihat seperti semula. Sesudah itu engkau akan disebutkan kota keadilan, kota yang setia." Sion akan diselamatkan, tetapi hanya "oleh keadilan, dan orang-orangnya yang bertobat oleh kebenaran." Orang fasik dan berdosa akan dihancurkan, sementara mereka yang bertobat akan ditebus.</p>
+        <p>Pasal 1 diakhiri dengan peringatan bagi mereka yang mengandalkan praktik-praktik penyembahan berhala ("pohon-pohon tarbantin yang kamu ingini itu, dan ... taman-taman dewa") dan kekuatan manusia. Mereka akan "malu" dan "tersipu-sipu" dan akhirnya binasa seperti "pohon tarbantin yang daunnya layu" atau "serabut" yang terbakar. Ini adalah penekanan pada kesia-siaan mengandalkan hal-hal selain Tuhan.</p>
+
+        <h2>Yesaya Pasal 2: Visi Eskatologis tentang Sion dan Hari Tuhan</h2>
+        <p>Setelah gambaran suram tentang dosa dan penghakiman dalam Pasal 1, Pasal 2 membuka dengan visi yang kontras dan penuh harapan mengenai masa depan. Ini adalah gambaran tentang apa yang akan terjadi "pada hari-hari yang terakhir," sebuah era eskatologis di mana Tuhan akan menegakkan Kerajaan-Nya dan Yerusalem akan menjadi pusat spiritual dunia.</p>
+
+        <h3>1. Gunung Rumah TUHAN Ditinggikan (Ayat 2-4)</h3>
+        <p>Penglihatan Yesaya dimulai dengan janji yang luar biasa: "gunung rumah TUHAN akan berdiri tegak di hulu gunung-gunung dan menjulang tinggi di atas bukit-bukit; segala bangsa akan berduyun-duyun ke sana." Ini bukan berarti perubahan geografis secara harfiah, melainkan metafora untuk keunggulan dan supremasi rohani. Gunung Sion, tempat Bait Suci berada, akan ditinggikan secara rohani di atas semua kekuatan dan kerajaan duniawi.</p>
+        <p>Konsekuensinya adalah universal: "segala bangsa akan berduyun-duyun ke sana." Orang-orang dari berbagai suku bangsa akan datang ke Yerusalem, mencari hikmat dan pengajaran dari Tuhan. Mereka akan berkata: "Marilah, kita naik ke gunung TUHAN, ke rumah Allah Yakub, supaya Ia mengajar kita tentang jalan-jalan-Nya, dan supaya kita berjalan menempuhnya; sebab dari Sion akan keluar pengajaran dan firman TUHAN dari Yerusalem." Ini menunjukkan visi tentang Tuhan yang menjadi sumber kebenaran dan keadilan universal, di mana hukum-Nya bukan hanya untuk Israel tetapi untuk seluruh umat manusia.</p>
+        <p>Puncak dari visi ini adalah damai sejahtera global: "Ia akan menjadi hakim antara bangsa-bangsa dan akan menjadi wasit bagi banyak suku bangsa; maka mereka akan menempa pedang-pedangnya menjadi mata bajak dan tombak-tombaknya menjadi pisau pemangkas; bangsa tidak akan lagi mengangkat pedang terhadap bangsa, dan mereka tidak akan belajar perang lagi." Ini adalah salah satu nubuat paling ikonik dalam Alkitab, menggambarkan sebuah era di mana kekerasan dan konflik akan diakhiri, digantikan oleh perdamaian abadi yang diwujudkan melalui hukum dan keadilan Tuhan. Senjata perang akan diubah menjadi alat pertanian, melambangkan transisi dari kehancuran ke kemakmuran dan kehidupan.</p>
+
+        <h3>2. Panggilan untuk Berjalan dalam Terang TUHAN (Ayat 5)</h3>
+        <p>Setelah menggambarkan visi kemuliaan di masa depan, Yesaya segera kembali ke realitas saat ini dengan seruan yang mendesak kepada kaumnya: "Hai kaum keturunan Yakub, mari kita berjalan di dalam terang TUHAN!" Ini adalah ajakan untuk hidup sesuai dengan prinsip-prinsip ilahi <em>sekarang</em>, mempersiapkan diri untuk hari-hari yang dijanjikan. Ini menantang mereka untuk hidup sebagai bangsa perjanjian yang setia, bahkan sebelum kemuliaan eskatologis itu sepenuhnya terwujud.</p>
+
+        <h3>3. Dosa dan Kesombongan Manusia yang Menjijikkan (Ayat 6-9)</h3>
+        <p>Meskipun ada visi harapan yang agung, Yesaya tidak mengabaikan dosa yang sedang berlangsung. Ayat 6-9 kembali ke tema korupsi dan pemberontakan, menjelaskan mengapa penghakiman diperlukan. Yehuda telah "penuh dengan adat dari Timur," "tukang-tukang ramal seperti orang Filistin," dan "berjabatan tangan dengan anak-anak orang asing." Ini menunjukkan sinkretisme agama dan keterlibatan dengan praktik-praktik kafir yang dilarang. Mereka telah mencari kekuatan dan keamanan dari sumber-sumber non-ilahi.</p>
+        <p>Selain itu, mereka telah mengandalkan kekayaan dan kekuatan militer: "Negeri mereka penuh dengan perak dan emas... penuh dengan kuda, dan kereta-kereta mereka tidak terbilang banyaknya." Puncaknya adalah penyembahan berhala: "Negeri mereka penuh dengan berhala-berhala; buatan tangan mereka sendiri disembah mereka, yakni apa yang dibuat oleh jari-jari mereka." Ini adalah pelanggaran langsung terhadap perintah pertama dan kedua dalam Sepuluh Hukum. Ironisnya, manusia yang menyembah berhala yang dibuat oleh tangannya sendiri akan "merunduk dan orang akan merendahkan diri" (ayat 9) di hadapan Allah yang hidup, yang membuat mereka.</p>
+
+        <h3>4. Hari TUHAN: Penghakiman atas Kesombongan Manusia (Ayat 10-21)</h3>
+        <p>Bagian ini adalah penggambaran yang menakutkan tentang "hari TUHAN," sebuah konsep kenabian yang merujuk pada waktu di mana Allah akan campur tangan secara dramatis dalam sejarah untuk menghakimi dosa dan menegakkan keadilan-Nya. Ini adalah hari pembalasan dan pemurnian. "Masuklah ke dalam gunung batu dan sembunyilah dalam debu, oleh karena kedahsyatan TUHAN dan semarak kemegahan-Nya!" (Ayat 10). Ini menunjukkan keputusasaan dan ketidakmampuan manusia untuk menghadapi kehadiran Tuhan yang mulia.</p>
+        <p>Tema sentral dari Hari TUHAN dalam Yesaya 2 adalah perendahan kesombongan manusia: "Manusia yang sombong akan direndahkan, dan orang yang angkuh akan ditundukkan; hanya TUHAN sajalah yang maha tinggi pada hari itu." (Ayat 11). Penghakiman ini akan menimpa segala sesuatu yang tinggi, megah, dan disembah oleh manusia: "segala pohon aras di Libanon yang tinggi dan megah," "segala pohon tarbantin di Basan," "segala gunung yang tinggi, dan segala bukit yang menjulang tinggi," "segala menara yang tinggi, dan segala tembok yang berkubu," bahkan "segala kapal Tarshis, dan segala kapal yang indah-indah" (Ayat 12-16). Ini adalah daftar simbol-simbol kekuatan, kekayaan, keindahan, dan keamanan manusia yang akan dihancurkan. Tuhan akan meruntuhkan semua idola dan objek kepercayaan manusia, menegaskan bahwa hanya Dia yang Maha Tinggi dan layak disembah.</p>
+        <p>Sebagai akibatnya, "segala berhala akan dilenyapkan-Nya sama sekali" (Ayat 18). Manusia akan sangat ketakutan oleh "kedahsyatan TUHAN dan semarak kemegahan-Nya" sehingga mereka akan "masuk ke dalam gua-gua di gunung batu dan ke dalam liang-liang di tanah" (Ayat 19). Mereka akan membuang berhala-berhala perak dan emas mereka, "kepada kelelawar dan tikus," menunjukkan betapa tidak berharganya berhala-berhala itu dalam menghadapi kemuliaan Tuhan yang sebenarnya.</p>
+
+        <h3>5. Jangan Percaya kepada Manusia (Ayat 22)</h3>
+        <p>Pasal 2 diakhiri dengan peringatan yang tajam dan bijaksana: "Jangan lagi percaya kepada manusia, sebab ia tidak lebih dari pada embusan nafas, dan apakah harganya?" Ini adalah ringkasan yang kuat dari seluruh argumen pasal ini. Di tengah krisis dan ancaman penghakiman, manusia cenderung mengandalkan kekuatan, kekayaan, atau kebijaksanaan sesamanya. Namun, Yesaya dengan tegas menyatakan kesia-siaan kepercayaan semacam itu. Manusia fana, lemah, dan pada akhirnya tidak memiliki kekuasaan untuk menyelamatkan dirinya sendiri atau orang lain. Satu-satunya harapan dan tempat bergantung yang sejati adalah Allah yang hidup.</p>
+
+        <h2>Tema-tema Utama dari Yesaya 1-2</h2>
+        <p>Dua pasal pembuka kitab Yesaya ini kaya akan tema-tema teologis yang mendalam dan relevan:</p>
+
+        <h3>1. Dosa dan Pemberontakan Israel</h3>
+        <p>Tema ini sangat dominan di Pasal 1. Israel digambarkan sebagai bangsa yang telah mengkhianati perjanjiannya dengan Tuhan, melupakan pemeliharaan-Nya, dan terlibat dalam ketidakadilan serta penyembahan berhala. Dosa mereka bukan hanya pelanggaran hukum, tetapi penolakan terhadap kasih dan otoritas ilahi. Pasal 2 lebih lanjut menegaskan bahwa bangsa itu telah tenggelam dalam kesombongan, materialisme, dan sinkretisme, mengandalkan kekuatan manusia dan berhala daripada Tuhan.</p>
+
+        <h3>2. Keadilan dan Penghakiman Allah</h3>
+        <p>Allah Yesaya bukanlah dewa yang pasif. Dia adalah Tuhan yang adil dan benar, yang tidak akan mentolerir dosa. Pasal 1 menggambarkan penghakiman sebagai penyakit yang melanda seluruh bangsa dan sebagai konsekuensi alami dari pemberontakan. Pasal 2 memperkenalkan konsep "Hari TUHAN" sebagai waktu intervensi ilahi yang dahsyat untuk merendahkan kesombongan manusia dan menghancurkan semua idola. Penghakiman ini adalah manifestasi dari karakter kudus Allah dan merupakan bagian integral dari rencana-Nya untuk pemurnian.</p>
+
+        <h3>3. Panggilan untuk Pertobatan Sejati</h3>
+        <p>Di tengah ancaman penghakiman, ada undangan yang tulus untuk bertobat. Yesaya 1:16-17 dengan jelas menyatakan bahwa pertobatan sejati melampaui ritual keagamaan yang kosong. Ini menuntut perubahan hati dan perilaku, yang terwujud dalam perbuatan baik, penegakan keadilan, dan belas kasihan terhadap yang lemah. Pengampunan ditawarkan secara cuma-cuma ("Sekalipun dosamu merah seperti kirmizi, akan menjadi putih seperti salju") bagi mereka yang bersedia kembali kepada Tuhan.</p>
+
+        <h3>4. Janji Pemurnian dan Pemulihan Sion</h3>
+        <p>Meskipun penghakiman itu berat, tujuannya adalah pemurnian, bukan kehancuran total. Allah berjanji untuk membersihkan Sion dari sanga dan timahnya, mengembalikan hakim-hakim yang adil, dan memulihkan Yerusalem sebagai "kota keadilan, kota yang setia" (Yesaya 1:25-26). Ini mengarah pada visi eskatologis di Pasal 2, di mana Sion yang telah dimurnikan akan ditinggikan sebagai pusat spiritual dunia, dari mana ajaran Tuhan akan keluar untuk semua bangsa.</p>
+
+        <h3>5. Harapan Eskatologis dan Perdamaian Universal</h3>
+        <p>Visi "hari-hari yang terakhir" dalam Yesaya 2 adalah salah satu nubuat paling indah dan inspiratif dalam Alkitab. Ini melukiskan gambaran tentang masa depan di mana Allah akan memerintah atas segala bangsa dari Sion, membawa perdamaian yang belum pernah terjadi sebelumnya. Pedang akan diubah menjadi mata bajak, dan perang tidak akan dipelajari lagi. Ini adalah janji tentang kedatangan Kerajaan Mesias, di mana keadilan dan damai sejahtera akan memerintah secara universal. Visi ini memberikan kontras yang tajam dengan realitas suram Yehuda pada masa Yesaya, menawarkan harapan yang melampaui keadaan mereka saat itu.</p>
+
+        <h3>6. Kesia-siaan Ketergantungan pada Manusia dan Berhala</h3>
+        <p>Kedua pasal ini secara konsisten menegaskan bahwa mengandalkan manusia, kekayaan, kekuatan militer, atau berhala adalah hal yang sia-sia dan mengundang penghakiman. Yesaya 1:29-31 memperingatkan tentang malu yang akan menimpa penyembah berhala, sementara Yesaya 2:6-8 menunjukkan bagaimana Israel telah jatuh karena ketergantungan pada hal-hal duniawi. Puncak dari tema ini adalah Yesaya 2:22: "Jangan lagi percaya kepada manusia, sebab ia tidak lebih dari pada embusan nafas, dan apakah harganya?" Ini adalah seruan untuk mengalihkan kepercayaan sepenuhnya kepada Allah saja.</p>
+
+        <h2>Relevansi Yesaya 1-2 untuk Masa Kini</h2>
+        <p>Meskipun ditulis ribuan tahun yang lalu untuk konteks yang spesifik, pesan Yesaya 1-2 tetap relevan secara mengejutkan bagi individu, gereja, dan masyarakat modern.</p>
+
+        <h3>1. Peringatan terhadap Keagamaan yang Hampa</h3>
+        <p>Kritik Yesaya terhadap ritual keagamaan tanpa hati dan keadilan adalah peringatan abadi. Di era modern, di mana banyak orang mungkin terlibat dalam praktik keagamaan (pergi ke gereja, bersedekah, berdoa) tetapi mengabaikan tuntutan etis dan moral, pesan ini sangat tajam. Allah tetap mencari hati yang tulus dan kehidupan yang mencerminkan keadilan, belas kasihan, dan kerendahan hati, bukan sekadar kepatuhan lahiriah.</p>
+
+        <h3>2. Penekanan pada Keadilan Sosial</h3>
+        <p>Panggilan untuk "belajarlah berbuat baik; usahakanlah keadilan, kendalikanlah orang kejam; belalah hak anak yatim, perjuangkanlah perkara janda!" adalah inti dari etika kenabian. Ini menantang kita untuk secara aktif memerangi ketidakadilan, penindasan, dan korupsi di masyarakat kita. Gereja dan orang percaya dipanggil untuk menjadi suara bagi yang tidak bersuara dan pembela bagi yang tertindas, bukan hanya berfokus pada ibadah pribadi.</p>
+
+        <h3>3. Undangan untuk Pertobatan dan Pengampunan</h3>
+        <p>Janji "Sekalipun dosamu merah seperti kirmizi, akan menjadi putih seperti salju" adalah inti Injil. Terlepas dari kedalaman dosa kita, tawaran pengampunan dan pemulihan Allah selalu terbuka bagi mereka yang bersedia bertobat. Ini memberikan harapan bagi setiap individu yang bergumul dengan dosa dan masyarakat yang rusak.</p>
+
+        <h3>4. Harapan akan Kedatangan Kerajaan Allah</h3>
+        <p>Visi Yesaya 2 tentang Sion yang ditinggikan dan pedang yang diubah menjadi mata bajak memberikan pandangan ke depan tentang Kerajaan Allah yang akan datang. Bagi orang Kristen, ini menunjuk pada kedatangan pertama Yesus Kristus, yang membawa Kerajaan Allah ke bumi, dan kedatangan-Nya yang kedua, di mana Kerajaan itu akan ditegakkan sepenuhnya. Visi ini menginspirasi harapan dan komitmen untuk hidup sesuai dengan nilai-nilai Kerajaan sekarang, sambil menantikan penggenapan penuh damai sejahtera dan keadilan di masa depan.</p>
+
+        <h3>5. Bahaya Materialisme dan Kesombongan</h3>
+        <p>Peringatan terhadap ketergantungan pada kekayaan, kekuatan, dan berhala (dalam bentuk apa pun) masih sangat relevan. Di dunia yang seringkali mengagungkan kesuksesan finansial, status sosial, dan kekuatan teknologi, Yesaya mengingatkan kita bahwa semua ini fana dan rapuh. Peringatan "Jangan lagi percaya kepada manusia, sebab ia tidak lebih dari pada embusan nafas" menuntut kita untuk menempatkan kepercayaan kita hanya pada Allah yang kekal.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Dua pasal pertama kitab Yesaya adalah pengantar yang kuat dan padat, yang secara efektif menetapkan nada dan tema-tema penting untuk seluruh karya kenabian ini. Pasal 1 adalah sebuah panggilan pertobatan yang tajam, mengungkapkan penyakit rohani Yehuda melalui gambaran yang menyakitkan, dan mengkritik ritual keagamaan yang hampa. Di tengah tuduhan yang keras, Allah yang Mahakudus tetap menawarkan jalan pengampunan dan pemulihan, asalkan ada pertobatan yang tulus dan komitmen terhadap keadilan.</p>
+        <p>Pasal 2, di sisi lain, mengalihkan pandangan ke masa depan yang lebih cerah, sebuah visi eskatologis tentang kemuliaan Sion sebagai pusat rohani bagi semua bangsa. Ini adalah nubuat tentang damai sejahtera universal, di mana pedang akan diubah menjadi mata bajak, dan ajaran Tuhan akan keluar dari Yerusalem. Namun, sebelum visi ini terwujud, ada kebutuhan akan penghakiman atas kesombongan manusia dan penyembahan berhala yang menjangkiti Israel. "Hari TUHAN" akan datang untuk merendahkan semua yang tinggi dan mengangkat hanya Allah yang Maha Tinggi.</p>
+        <p>Secara keseluruhan, Yesaya 1-2 merupakan sebuah kanvas yang luas yang menampilkan kontras antara realitas dosa dan penghakiman di satu sisi, dan janji ilahi akan pertobatan, pemurnian, dan harapan eskatologis di sisi lain. Pesan-pesan ini, meskipun berakar pada konteks kuno, memiliki resonansi yang mendalam bagi zaman modern, menantang kita untuk memeriksa hati kita, mengejar keadilan, dan menaruh kepercayaan kita sepenuhnya kepada Allah yang hidup, sambil menantikan penggenapan penuh janji-janji-Nya yang agung.</p>
+        <p>Karya Yesaya di sini bukan hanya sekadar kecaman, melainkan juga undangan yang merangkul harapan yang kekal. Di tengah-tengah kehancuran yang diramalkan dan penyakit rohani yang mendalam, suara kenabian Yesaya menyuguhkan janji pemulihan yang ajaib, sebuah pemurnian ilahi yang akan membawa umat Allah kembali ke kebenaran dan keadilan, serta mendirikan sebuah kerajaan damai yang akan memancarkan cahayanya ke seluruh dunia. Ini adalah panggilan untuk melihat melampaui kehancuran masa kini dan merangkul visi Tuhan untuk masa depan, sebuah masa depan yang dimulai dengan pertobatan yang tulus di masa kini.</p>
+    </article>
+<div class='related-posts'><h3>Related Posts</h3><ul><li><a href="/1-samuel-20-23">1 Samuel 20 23</a></li>
+<li><a href="/1-korintus-7-1">1 Korintus 7 1</a></li>
+<li><a href="/amsal-5-20">Amsal 5 20</a></li>
+<li><a href="/yesaya-54-1">Yesaya 54 1</a></li>
+<li><a href="/2-samuel-19-6">2 Samuel 19 6</a></li>
+<li><a href="/2-korintus-9-10">2 Korintus 9 10</a></li>
+<li><a href="/lukas-24-30">Lukas 24 30</a></li>
+<li><a href="/galatia-5-2">Galatia 5 2</a></li>
+<li><a href="/daniel-2-41">Daniel 2 41</a></li>
+<li><a href="/amsal-21-3">Amsal 21 3</a></li></ul></div>
+<script src="/ik.js"></script>
+</body>
+</html>

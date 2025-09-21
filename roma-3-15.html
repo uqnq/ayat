@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roma 3:15 - Kehancuran di Jalan Mereka</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style>
+        /* Mengimpor font dari Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        /* Definisi variabel warna untuk kemudahan pengelolaan tema "sejuk cerah" */
+        :root {
+            --primary-bg: #F8FBFD; /* Latar belakang utama yang sangat terang, nuansa biru dingin */
+            --secondary-bg: #E6F3F7; /* Latar belakang sekunder, sedikit lebih gelap dari primary-bg */
+            --text-color: #2C3E50; /* Warna teks gelap, biru-abu untuk keterbacaan tinggi */
+            --heading-color: #007090; /* Warna judul yang sejuk dan cerah, biru kehijauan */
+            --accent-color: #4CAF50; /* Warna aksen, hijau segar untuk penekanan */
+            --border-color: #CCE4EB; /* Warna batas tipis, biru muda */
+            --warning-color: #E03A3A; /* Warna untuk elemen peringatan/destruktif dalam SVG */
+            --warning-light-color: #FF6F6F; /* Warna yang lebih terang dari warning-color */
+            --footprint-color: #9DD6DF; /* Warna jejak kaki dalam SVG */
+            --path-color: #CCDDEE; /* Warna jalur dalam SVG */
+        }
+
+        /* Gaya dasar untuk body */
+        body {
+            font-family: 'Open Sans', sans-serif; /* Font sans-serif modern dan mudah dibaca */
+            line-height: 1.7; /* Jarak antar baris untuk keterbacaan yang lebih baik */
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-bg); /* Menggunakan warna latar belakang utama */
+            color: var(--text-color); /* Menggunakan warna teks utama */
+            display: flex;
+            justify-content: center; /* Memusatkan artikel secara horizontal */
+            align-items: flex-start; /* Meletakkan artikel di bagian atas halaman */
+            min-height: 100vh; /* Memastikan body mengisi tinggi viewport */
+            box-sizing: border-box; /* Memasukkan padding dan border dalam total lebar/tinggi */
+        }
+
+        /* Gaya untuk elemen artikel */
+        article {
+            max-width: 800px; /* Lebar maksimum artikel untuk keterbacaan pada layar lebar */
+            width: 100%; /* Memastikan artikel mengisi lebar pada layar kecil */
+            padding: 2.5rem 1.5rem; /* Padding internal */
+            box-sizing: border-box;
+            background-color: #ffffff; /* Latar belakang putih bersih untuk konten */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Bayangan lembut untuk efek kedalaman */
+            border-radius: 12px; /* Sudut membulat */
+            margin: 2rem 1rem; /* Margin di sekitar artikel, menyesuaikan pada mobile */
+        }
+
+        /* Gaya untuk judul H1, H2, H3 */
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif; /* Font serif untuk judul, memberikan kesan klasik */
+            color: var(--heading-color); /* Menggunakan warna judul */
+            line-height: 1.3;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Ukuran font H1 */
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #005070; /* Warna biru yang lebih dalam untuk judul utama */
+        }
+
+        h2 {
+            font-size: 1.8rem; /* Ukuran font H2 */
+            border-bottom: 2px solid var(--border-color); /* Garis bawah tipis */
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        h3 {
+            font-size: 1.4rem; /* Ukuran font H3 */
+            margin-top: 2rem;
+            color: #006080;
+        }
+
+        /* Gaya untuk blockquote (kutipan) */
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid var(--accent-color); /* Garis kiri sebagai aksen */
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            background-color: var(--secondary-bg); /* Latar belakang sekunder untuk kutipan */
+            border-radius: 4px;
+            color: #3C5B6F; /* Warna teks sedikit berbeda untuk blockquote */
+        }
+
+        /* Gaya untuk paragraf */
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify; /* Teks rata kanan-kiri */
+        }
+
+        /* Gaya untuk teks yang ditebalkan */
+        strong {
+            color: #006080;
+        }
+
+        /* Gaya untuk daftar tak berurutan */
+        ul {
+            list-style-type: disc; /* Gaya bullet default */
+            margin-left: 20px; /* Indentasi daftar */
+            margin-bottom: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        /* Gaya khusus untuk menampilkan ayat Alkitab */
+        .verse-display {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--accent-color); /* Warna aksen untuk ayat */
+            margin: 1.5rem 0 2.5rem 0;
+            padding: 1.5rem;
+            background-color: var(--secondary-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Gaya untuk kontainer SVG */
+        .svg-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .svg-container svg {
+            max-width: 250px; /* Lebar maksimum SVG */
+            height: auto; /* Tinggi otomatis menjaga rasio aspek */
+            display: block;
+            margin: 0 auto; /* Memusatkan SVG */
+        }
+
+        /* Media queries untuk tampilan responsif */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+            article {
+                padding: 1.5rem 1rem;
+                margin: 1rem 0.5rem;
+            }
+            .verse-display {
+                font-size: 1.3rem;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            h3 {
+                font-size: 1.1rem;
+            }
+            .verse-display {
+                font-size: 1.1rem;
+            }
+            body {
+                padding: 0.5rem; /* Sedikit padding di body untuk mobile */
+            }
+            article {
+                margin: 0.5rem; /* Margin artikel lebih kecil pada mobile */
+                border-radius: 8px; /* Sudut sedikit lebih kecil pada mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Roma 3:15: Kaki Mereka Cepat untuk Menumpahkan Darah</h1>
+            <div class="verse-display">
+                <p>"Kaki mereka cepat untuk menumpahkan darah."</p>
+            </div>
+            <div class="svg-container">
+                <svg width="250" height="180" viewBox="0 0 250 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svgTitle svgDesc">
+                    <title id="svgTitle">Jejak Kaki Menuju Kehancuran</title>
+                    <desc id="svgDesc">Ilustrasi abstrak dua jejak kaki yang melaju cepat menuju area yang pecah dan chaotic, melambangkan kecepatan manusia menuju kehancuran dan penumpahan darah.</desc>
+                    <!-- Latar belakang jalur, secara halus mengindikasikan perjalanan -->
+                    <path d="M20 160 Q 70 140, 125 100 T 230 40" stroke="var(--path-color)" stroke-width="8" stroke-linecap="round"/>
+                    <!-- Jejak kaki pertama (abstrak) -->
+                    <path d="M40 150 L 55 130 L 70 145 L 55 165 Z" fill="var(--footprint-color)" />
+                    <!-- Jejak kaki kedua (abstrak) -->
+                    <path d="M70 130 L 85 110 L 100 125 L 85 145 Z" fill="var(--footprint-color)" />
+
+                    <!-- Area kehancuran/patahan, digambar dengan garis putus-putus merah -->
+                    <path d="M120 100 C 130 90, 150 80, 170 85 C 190 90, 210 70, 230 40" stroke="var(--warning-light-color)" stroke-width="6" stroke-linecap="round" stroke-dasharray="5 5"/>
+                    <path d="M125 95 C 135 85, 155 75, 175 80 C 195 85, 215 65, 235 35" stroke="var(--warning-color)" stroke-width="6" stroke-linecap="round" stroke-dasharray="5 5"/>
+
+                    <!-- Elemen "percikan" atau "kekacauan" abstrak di ujung jalur kehancuran -->
+                    <circle cx="230" cy="40" r="15" fill="var(--warning-light-color)" opacity="0.7"/>
+                    <path d="M220 45 L240 45 L230 25 L220 45 Z" fill="var(--warning-color)" opacity="0.8"/>
+                    <path d="M225 50 L235 50 L230 30 L225 50 Z" fill="var(--warning-color)" opacity="0.8"/>
+                </svg>
+            </div>
+        </header>
+
+        <section>
+            <h2>Pengantar: Menguak Kedalaman Dosa Manusia dalam Roma 3</h2>
+            <p>Kitab Roma, salah satu mahakarya teologis Rasul Paulus, berdiri sebagai pilar utama dalam pemahaman Kekristenan. Di dalamnya, Paulus secara sistematis membentangkan kabar baik Injil, dimulai dengan kebutuhan mendesak akan keselamatan. Sebelum memperkenalkan solusi ilahi dalam Kristus, Paulus dengan cermat dan tanpa kompromi melukiskan gambaran suram tentang kondisi manusia yang jatuh. Pasal 3 adalah puncaknya, sebuah penggabungan bukti-bukti dari Perjanjian Lama yang menegaskan bahwa “semua orang telah berbuat dosa dan telah kehilangan kemuliaan Allah.” (Roma 3:23).</p>
+            <p>Di tengah-tengah rentetan ayat-ayat yang memaparkan kerusakan moral dan spiritual manusia, kita menemukan Roma 3:15: <strong>"Kaki mereka cepat untuk menumpahkan darah."</strong> Ayat ini mungkin terasa singkat, namun dampaknya sangat mendalam. Ia bukan sekadar sebuah pernyataan observasi, melainkan sebuah tuduhan tajam yang mengungkapkan kecepatan dan kesediaan hati manusia yang berdosa untuk melakukan tindakan destruktif yang paling ekstrem, yaitu mengambil nyawa. Ayat ini tidak hanya berbicara tentang pembunuhan fisik, tetapi juga tentang kecenderungan hati yang secara inheren condong pada kehancuran dan kekerasan.</p>
+            <p>Untuk memahami sepenuhnya kekuatan dan makna dari Roma 3:15, kita harus melihatnya dalam konteks argumen Paulus secara keseluruhan. Ayat ini adalah bagian dari serangkaian kutipan Perjanjian Lama yang dirangkai Paulus untuk menunjukkan kerusakan total manusia – mulai dari pikiran, hati, mulut, dan kini, tindakan fisik. Melalui artikel ini, kita akan menyelami setiap frasa dari ayat ini, menelusuri akar teologisnya, memahami implikasinya bagi kehidupan kontemporer, dan pada akhirnya, melihat bagaimana kabar baik Injil menawarkan jalan keluar dari kehancuran yang digambarkan.</p>
+
+            <h2>Kontekstualisasi Luas Kitab Roma: Fondasi Injil</h2>
+            <p>Sebelum kita menggali lebih jauh ke dalam Roma 3:15, penting untuk menempatkannya dalam narasi besar Kitab Roma. Surat ini ditulis oleh Paulus kepada jemaat di Roma, yang saat itu merupakan pusat kekuasaan dunia. Paulus belum pernah mengunjungi Roma, dan tujuannya adalah untuk memperkenalkan dirinya, menguraikan Injil yang ia beritakan, dan mungkin juga mengumpulkan dukungan untuk misi selanjutnya ke Spanyol.</p>
+            <p>Struktur Kitab Roma dapat dibagi menjadi beberapa bagian utama:</p>
+            <ul>
+                <li><strong>Roma 1:1-17:</strong> Pendahuluan dan Tema Injil – Kebenaran Allah yang diwahyukan dari iman kepada iman. Paulus dengan tegas menyatakan bahwa Injil adalah kekuatan Allah yang menyelamatkan, membuka jalan bagi pembahasan tentang kebutuhan akan keselamatan.</li>
+                <li><strong>Roma 1:18-3:20:</strong> Kebutuhan Akan Injil – Ini adalah bagian krusial di mana Paulus membuktikan bahwa seluruh umat manusia, baik Yahudi maupun bukan Yahudi, berada di bawah kuasa dosa. Tanpa pengakuan akan dosa ini, nilai penebusan Kristus tidak akan sepenuhnya dipahami. Roma 3:15 adalah salah satu puncaknya.</li>
+                <li><strong>Roma 3:21-5:21:</strong> Solusi Allah Melalui Injil – Setelah menunjukkan kedalaman masalah, Paulus memperkenalkan solusi ilahi: pembenaran oleh iman dalam Yesus Kristus, yang tersedia bagi semua yang percaya. Ini adalah inti Injil.</li>
+                <li><strong>Roma 6:1-8:39:</strong> Kehidupan Baru dalam Roh – Konsekuensi praktis dari pembenaran, yaitu kekudusan, kebebasan dari dosa, dan hidup yang dipimpin oleh Roh Kudus. Bagian ini menjelaskan bagaimana orang percaya dapat mengalami kemenangan atas dosa.</li>
+                <li><strong>Roma 9:1-11:36:</strong> Rencana Allah bagi Israel – Sebuah pembahasan mendalam tentang kedudukan Israel dalam rencana keselamatan Allah, menunjukkan kedaulatan Allah dan kesetiaan-Nya pada janji-Nya.</li>
+                <li><strong>Roma 12:1-15:13:</strong> Aplikasi Praktis Injil – Implikasi etika dan praktik kehidupan Kristen, mencakup bagaimana orang percaya harus hidup dalam hubungan dengan Allah, sesama, dan pemerintah.</li>
+                <li><strong>Roma 15:14-16:27:</strong> Penutup dan Salam Pribadi – Paulus mengakhiri suratnya dengan salam, rencana perjalanan, dan doksologi.</li>
+            </ul>
+            <p>Roma 1:18-3:20 adalah bagian yang fundamental karena tanpa pemahaman yang mendalam tentang masalah dosa, solusi yang ditawarkan Injil tidak akan sepenuhnya dihargai. Paulus memulai dengan dosa orang bukan Yahudi (Roma 1:18-32), bergeser ke dosa orang Yahudi (Roma 2:1-3:8), dan akhirnya menyimpulkan bahwa “tidak ada seorang pun yang benar, seorang pun tidak” (Roma 3:10). Dalam bagian ini, Paulus mengumpulkan "mozaik dosa" dari berbagai kitab Perjanjian Lama, dan Roma 3:15 adalah salah satu kepingan paling mencolok dalam mozaik tersebut, menggambarkan eskalasi kerusakan manusia dari pikiran hingga tindakan yang paling ekstrem.</p>
+
+            <h2>Roma 3:10-18: Sebuah Mozaik Dosa Manusia</h2>
+            <p>Untuk benar-benar memahami Roma 3:15, kita harus melihatnya dalam konteks langsungnya, yaitu Roma 3:10-18. Bagian ini merupakan kumpulan kutipan dari Mazmur (Mazmur 14:1-3, 5:9, 140:3) dan Yesaya (Yesaya 59:7-8), yang Paulus gunakan untuk melukiskan potret komprehensif tentang kerusakan total manusia yang jatuh.</p>
+            <blockquote>
+                <p><sup>10</sup> seperti ada tertulis: "Tidak ada yang benar, seorang pun tidak.</p>
+                <p><sup>11</sup> Tidak ada seorang pun yang berakal budi, tidak ada seorang pun yang mencari Allah.</p>
+                <p><sup>12</sup> Semua orang telah menyeleweng, mereka semua tidak berguna; tidak ada seorang pun yang berbuat baik, seorang pun tidak.</p>
+                <p><sup>13</sup> Kerongkongan mereka adalah kubur yang ternganga, lidah mereka melancarkan tipu daya, bibir mereka mengandung bisa ular.</p>
+                <p><sup>14</sup> Mulut mereka penuh dengan sumpah serapah dan kepahitan.</p>
+                <p><sup>15</sup> Kaki mereka cepat untuk menumpahkan darah.</p>
+                <p><sup>16</sup> Kehancuran dan kesengsaraan ada di jalan mereka,</p>
+                <p><sup>17</sup> dan jalan damai tidak mereka kenal;</p>
+                <p><sup>18</sup> tidak ada rasa takut akan Allah di depan mata mereka."</p>
+            </blockquote>
+            <p>Perhatikan bagaimana Paulus bergerak secara sistematis, menunjukkan bagaimana dosa telah merasuki dan merusak setiap aspek keberadaan manusia, dari organ tubuh yang berbeda hingga motivasi terdalamnya:</p>
+            <ul>
+                <li><strong>Pikiran dan Hati (Ayat 11-12):</strong> Paulus memulai dengan kerusakan internal, yaitu pikiran dan hati. "Tidak ada yang berakal budi" berarti tidak ada yang memiliki pengertian spiritual yang benar, tidak ada yang dapat memahami kehendak Allah tanpa pencerahan ilahi. "Tidak ada seorang pun yang mencari Allah" menunjukkan bahwa manusia secara alami tidak memiliki kerinduan sejati terhadap Penciptanya, bahkan menolak-Nya. Akibatnya, "semua menyeleweng, mereka semua tidak berguna," menyiratkan bahwa seluruh arah hidup manusia telah menyimpang dari tujuan semula yang Allah tetapkan.</li>
+                <li><strong>Mulut dan Lidah (Ayat 13-14):</strong> Setelah pikiran dan hati, Paulus beralih ke ekspresi eksternal melalui ucapan. "Kerongkongan mereka adalah kubur yang ternganga" adalah metafora yang kuat, menggambarkan betapa menjijikkan dan mematikan perkataan mereka, seperti bau busuk yang keluar dari kuburan. "Lidah mereka melancarkan tipu daya" dan "bibir mereka mengandung bisa ular" menunjukkan bahwa kata-kata mereka penuh kebohongan, penipuan, dan bahkan niat jahat yang mematikan. Puncaknya, "mulut mereka penuh dengan sumpah serapah dan kepahitan," menunjukkan bahwa bahasa mereka dipenuhi dengan kutukan dan kebencian, bukan pujian atau berkat.</li>
+                <li><strong>Kaki dan Tindakan (Ayat 15-17):</strong> Kemudian, Paulus beralih ke tindakan nyata. Inilah bagian di mana Roma 3:15 berada. "Kaki mereka cepat untuk menumpahkan darah" menggambarkan kesiapan dan kegembiraan yang mengerikan untuk melakukan kekerasan. Ini bukan tindakan yang dilakukan dengan enggan, melainkan dengan antusiasme yang berasal dari hati yang rusak. Konsekuensinya, "kehancuran dan kesengsaraan ada di jalan mereka," karena tindakan mereka tidak menghasilkan kebaikan, melainkan malapetaka bagi diri sendiri dan orang lain. Sebagai hasil akhir, "jalan damai tidak mereka kenal," menunjukkan bahwa mereka tidak hanya menolak kedamaian, tetapi bahkan tidak memahami apa itu kedamaian sejati karena hati mereka condong pada konflik.</li>
+                <li><strong>Motivasi Utama (Ayat 18):</strong> Paulus menyimpulkan daftar ini dengan menyingkapkan akar dari semua kerusakan di atas: "tidak ada rasa takut akan Allah di depan mata mereka." Hilangnya rasa hormat, kekaguman, dan pengenalan akan kedaulatan serta kekudusan Allah adalah penyebab mendasar dari semua dosa yang disebutkan sebelumnya. Tanpa rasa takut akan Allah, tidak ada batasan bagi kejahatan yang dapat dilakukan manusia.</li>
+            </ul>
+            <p>Roma 3:15 adalah puncak dari gambaran mengerikan ini, di mana dosa tidak hanya memengaruhi pikiran dan perkataan, tetapi juga secara aktif mendorong pada tindakan kekerasan yang paling kejam. Ini adalah gambaran manusia yang secara fundamental telah berbalik dari Penciptanya dan kini berbalik melawan sesamanya dengan kecepatan dan kegembiraan yang mengejutkan, tanpa rasa takut akan Allah.</p>
+
+            <h2>Analisis Mendalam Roma 3:15: "Kaki Mereka Cepat untuk Menumpahkan Darah"</h2>
+            <p>Mari kita bedah setiap frasa dari ayat yang powerful ini untuk memahami kedalaman maknanya dan mengapa Paulus memilih kalimat ini untuk menekankan universalitas dosa.</p>
+
+            <h3>"Kaki mereka..."</h3>
+            <p>Dalam teologi Alkitab, "kaki" sering kali memiliki makna simbolis yang lebih dalam daripada sekadar anggota tubuh untuk berjalan. Kaki melambangkan arah hidup seseorang, perjalanannya, dan seluruh tindakan serta tingkah lakunya. Misalnya, Mazmur 119:105 menyatakan, "Firman-Mu itu pelita bagi kakiku dan terang bagi jalanku," menunjukkan bahwa kaki mewakili bukan hanya gerakan fisik, tetapi juga seluruh arah dan tujuan hidup seseorang yang dipandu (atau tidak dipandu) oleh firman Allah. Seorang yang "hidup menurut firman" adalah seseorang yang kakinya melangkah di jalan kebenaran.</p>
+            <p>Dalam konteks Roma 3:15, "kaki mereka" berarti tindakan-tindakan manusia yang berdosa, seluruh orientasi hidup mereka yang secara alami dan inheren mengarah pada kehancuran. Ini adalah kontras tajam dengan gambaran "kaki yang indah" yang membawa kabar baik (Yesaya 52:7, Roma 10:15). Kaki yang digambarkan di sini adalah kaki yang telah terdistorsi oleh dosa, yang tidak melangkah menuju kebaikan atau damai sejahtera, melainkan menuju konflik, kekerasan, dan malapetaka. Ini adalah potret manusia yang jalannya telah menyimpang jauh dari kehendak Allah yang baik.</p>
+
+            <h3>"...cepat..."</h3>
+            <p>Kata "cepat" (bahasa Yunani: ὀξεῖς, *oxeis*) di sini tidak hanya berarti laju fisik atau kecepatan gerak semata. Lebih dari itu, ia menggambarkan sebuah kesiapan, kegembiraan, antusiasme, dan bahkan kecenderungan yang mendalam. Ini bukan tindakan yang dilakukan dengan ragu-ragu, di bawah paksaan, atau sebagai pilihan terakhir. Sebaliknya, manusia yang berdosa digambarkan sebagai pihak yang memiliki dorongan dan antusiasme intrinsik untuk melakukan kejahatan. Mereka "cepat" dalam arti mereka tidak perlu didorong atau diyakinkan untuk berbuat jahat; kecenderungan itu sudah ada di dalam diri mereka dan mereka akan dengan mudah serta cepat mengikutinya. Kecepatan ini menggarisbawahi urgensi dan tanpa ragunya keinginan hati yang jatuh untuk melakukan tindakan merugikan. Ini bukan kecerobohan atau ketidaksengajaan, melainkan semacam gairah atau keinginan kuat untuk menghancurkan, yang merupakan manifestasi dari sifat dosa yang telah merasuki seluruh keberadaan manusia.</p>
+            <p>Perhatikan bahwa Paulus tidak mengatakan kaki mereka "terpaksa" atau "dipaksa" cepat, melainkan mereka *sendiri* cepat. Ini menyoroti bahwa kehendak manusia yang telah jatuh secara aktif terlibat dan bahkan menikmati jalannya menuju kejahatan.</p>
+
+            <h3>"...untuk menumpahkan darah."</h3>
+            <p>Frasa ini adalah yang paling mengerikan dan secara harfiah berarti membunuh. Dalam Perjanjian Lama, menumpahkan darah manusia dianggap sebagai dosa yang sangat serius, karena hidup manusia adalah kudus di mata Allah dan membawa gambar-Nya (Kejadian 9:6). Darah sering kali melambangkan kehidupan itu sendiri (Imamat 17:11), dan mengambil nyawa adalah melanggar otoritas dan hak prerogatif Allah sebagai Pemberi Hidup.</p>
+            <p>Namun, dalam konteks yang lebih luas, "menumpahkan darah" tidak hanya merujuk pada pembunuhan fisik secara harfiah. Kata ini dapat diperluas untuk mencakup segala bentuk kekerasan, kerusakan, dan penghancuran yang dilakukan terhadap orang lain – baik itu melalui fitnah yang merusak reputasi dan kehidupan sosial seseorang, penindasan yang menghancurkan semangat dan harapan, ketidakadilan yang merenggut hak hidup yang layak, atau bahkan kebencian di dalam hati yang Yesus sendiri katakan sama dengan membunuh (Matius 5:21-22). Intinya adalah tindakan yang secara aktif mencari atau menyebabkan kerusakan, penderitaan, atau kematian bagi sesama, yang muncul dari hati yang tidak mengenal Allah.</p>
+            <p>Kombinasi "cepat" dan "menumpahkan darah" menunjukkan sebuah hati yang bukan saja mampu berbuat kejahatan, tetapi yang secara aktif dan antusias mengejarnya. Ini adalah gambaran dari kerusakan total manusia (<em>total depravity</em>) – bahwa dosa telah memengaruhi setiap aspek keberadaan manusia, termasuk keinginan dan tindakannya, sehingga secara alami cenderung kepada kejahatan, bahkan kekerasan dan kehancuran. Paulus tidak hanya mengamati bahwa manusia kadang-kadang melakukan kejahatan, tetapi ia menegaskan bahwa ada kecenderungan intrinsik dan dorongan internal yang kuat untuk melakukan tindakan destruktif. Ini adalah realitas suram dari kondisi manusia yang telah jatuh, yang menjadi landasan mengapa Injil begitu penting dan mendesak.</p>
+
+            <h2>Akar Teologis Dosa Manusia: Kerusakan Total</h2>
+            <p>Roma 3:15 adalah ilustrasi yang sangat kuat dari doktrin kerusakan total (<em>total depravity</em>), salah satu pilar teologi Reformed. Penting untuk memahami apa arti doktrin ini dan apa yang tidak berarti.</p>
+            <p>Doktrin kerusakan total tidak berarti bahwa manusia sejatuh-jatuhnya, atau bahwa setiap orang selalu berbuat jahat sejahat-jahatnya di setiap kesempatan. Manusia masih mampu melakukan perbuatan baik secara moral di mata sesama manusia (misalnya, menolong tetangga, berdonasi untuk amal, dll.). Namun, doktrin ini berarti bahwa dosa telah memengaruhi dan merusak setiap bagian dari keberadaan manusia – pikiran, emosi, kehendak, dan tubuh – sehingga tidak ada bagian yang tidak tercemar. Akibatnya, manusia secara alami tidak mampu mencari atau menyenangkan Allah dengan usahanya sendiri, dan bahkan perbuatan baiknya pun tidak dapat menyelamatkan dirinya karena motivasi terdalamnya tidak murni di hadapan Allah.</p>
+            <p>Akar dari kerusakan total ini adalah <strong>dosa warisan</strong>, yang berasal dari kejatuhan Adam di Taman Eden. Roma 5:12 secara eksplisit menyatakan, "Sebab itu, sama seperti dosa telah masuk ke dalam dunia oleh satu orang, dan oleh dosa itu juga maut, demikianlah maut itu telah menjalar kepada semua orang, karena semua orang telah berbuat dosa." Ketika Adam berdosa, ia tidak hanya berdosa sebagai individu, tetapi juga sebagai wakil dari seluruh umat manusia. Akibatnya, sifat berdosa Adam diwariskan kepada semua keturunannya.</p>
+            <p>Roma 3:15 adalah manifestasi yang mengerikan dari dosa warisan ini. Kecenderungan yang cepat untuk menumpahkan darah bukanlah sesuatu yang dipelajari dari lingkungan semata, melainkan ekspresi dari sifat yang telah jatuh dan bejat yang ada di dalam hati manusia sejak lahir. Bahkan jika seseorang tidak pernah melakukan pembunuhan secara fisik, ayat ini berbicara tentang kecenderungan hati yang, jika tidak ditahan oleh kasih karunia Allah atau hukum sipil, akan dengan mudah mengarah pada tindakan-tindakan destruktif dan kekerasan. Setiap manusia memiliki "benih" kekerasan dan kehancuran di dalam hatinya.</p>
+            <p>Kerusakan total ini menyoroti bahwa manusia tidak hanya tidak mampu melakukan hal-hal yang baik secara sempurna di hadapan Allah, tetapi juga bahwa motivasi terdalamnya pun seringkali tercemar oleh egoisme, kebanggaan, dan pemberontakan terhadap Allah. Ayat ini tidak hanya mengamati perilaku, tetapi menembus ke inti hati manusia untuk mengungkapkan sumber keinginan yang gelap yang membuat kaki mereka "cepat untuk menumpahkan darah." Ini adalah alasan mengapa intervensi ilahi mutlak diperlukan untuk keselamatan manusia.</p>
+
+            <h2>Implikasi Praktis dan Kontemporer Roma 3:15</h2>
+            <p>Meskipun Roma 3:15 ditulis ribuan tahun yang lalu dan mengutip teks-teks kuno, relevansinya tetap tajam dan menusuk hingga hari ini. Ayat ini memaksa kita untuk melihat dengan jujur pada diri kita sendiri dan pada dunia yang kita tinggali. Ia mengingatkan kita bahwa masalah dosa bukanlah teori kuno, melainkan realitas yang sangat hidup dan merusak.</p>
+
+            <h3>Dosa dalam Wujud Modern</h3>
+            <p>Dalam masyarakat modern, konsep "menumpahkan darah" dapat terwujud dalam berbagai bentuk yang mungkin tidak selalu melibatkan kekerasan fisik secara langsung, namun dampaknya sama-sama destruktif. Tentu saja, kita masih menyaksikan kekerasan fisik dalam skala besar dan kecil: perang antarnegara, konflik etnis, terorisme, pembunuhan, kejahatan yang merajalela, dan kekerasan dalam rumah tangga. Ini adalah manifestasi literal dari "kaki mereka cepat untuk menumpahkan darah."</p>
+            <p>Namun, ada bentuk-bentuk "menumpahkan darah" lain yang lebih halus namun tak kalah merusak, yang seringkali kita abaikan atau bahkan terlibat di dalamnya:</p>
+            <ul>
+                <li><strong>Kekerasan Verbal dan Cyberbullying:</strong> Kata-kata tajam, fitnah, gosip, pembunuhan karakter, dan serangan daring (cyberbullying) dapat merusak reputasi, menghancurkan mental, menyebabkan trauma psikologis yang parah, dan bahkan mendorong seseorang untuk bunuh diri. Meskipun tidak menumpahkan darah secara fisik, efeknya seringkali sebanding dengan "pembunuhan" emosional dan psikologis. Internet memberikan platform bagi "kaki yang cepat" untuk menyebarkan kebencian dengan kecepatan yang belum pernah terjadi sebelumnya.</li>
+                <li><strong>Ketidakadilan Sosial dan Sistemik:</strong> Sistem yang menindas, eksploitasi ekonomi, diskriminasi berdasarkan ras, agama, gender, atau kelas sosial, serta penolakan akses terhadap kebutuhan dasar bagi sesama adalah cara-cara modern di mana "kaki" masyarakat dan individu secara kolektif "cepat untuk menumpahkan darah" orang-orang yang rentan. Kebijakan yang tidak adil, korupsi yang meluas, dan penolakan untuk membantu yang membutuhkan dapat secara perlahan membunuh semangat, harapan, dan bahkan kehidupan banyak orang.</li>
+                <li><strong>Aborsi:</strong> Bagi banyak orang percaya, praktik aborsi yang tidak terbatas adalah contoh langsung dan literal dari "menumpahkan darah" terhadap yang paling tidak berdaya: kehidupan manusia yang belum lahir. Ini adalah manifestasi mengerikan dari kecepatan manusia untuk mengakhiri kehidupan demi kenyamanan atau pilihan pribadi.</li>
+                <li><strong>Kebencian dan Dendam:</strong> Yesus sendiri mengajar bahwa kebencian di dalam hati terhadap saudara sama dengan membunuh (Matius 5:21-22). Ini menunjukkan bahwa akar masalahnya adalah kondisi hati, bukan hanya tindakan lahiriah. Hati yang penuh kebencian adalah hati yang "cepat" untuk melukai, bahkan jika tidak pernah memanifestasikannya secara fisik.</li>
+            </ul>
+            <p>Roma 3:15 mengingatkan kita bahwa kecenderungan ini adalah bagian yang tak terpisahkan dari kondisi manusia yang jatuh. Kita tidak perlu diajari untuk membenci atau melukai; kecenderungan itu sudah ada di dalam diri kita, dan kita seringkali "cepat" untuk mengikutinya jika tidak dikendalikan oleh kekuatan ilahi.</p>
+
+            <h3>Refleksi Diri dan Panggilan untuk Bertobat</h3>
+            <p>Bagi orang percaya, ayat ini adalah panggilan yang serius untuk introspeksi. Seberapa "cepat" kaki kita melangkah untuk melakukan sesuatu yang merugikan orang lain? Seberapa cepat kita melompat untuk menghakimi, menggosip, menyebarkan informasi negatif yang merusak, atau mengambil keuntungan dari kelemahan orang lain? Apakah kita memiliki "kaki" yang cepat untuk berdamai, memaafkan, dan membangun, atau justru cepat untuk memulai konflik, menyimpan dendam, dan menghancurkan? Ayat ini seharusnya menimbulkan kerendahan hati dan pengakuan yang jujur akan kebutuhan kita yang terus-menerus akan kasih karunia dan pengudusan ilahi. Ini adalah pengingat bahwa bahkan dalam tindakan-tindakan kecil sekalipun, kita bisa melihat cerminan dari hati yang "cepat untuk menumpahkan darah."</p>
+            <p>Ayat ini juga menyoroti pentingnya penguasaan diri dan disiplin rohani. Jika kecenderungan alami kita adalah kepada kehancuran, maka kita harus secara aktif dan dengan sengaja membiarkan Roh Kudus membimbing "kaki" kita menuju kebaikan, kasih, damai sejahtera, kesabaran, kemurahan, kebaikan, kesetiaan, kelemahlembutan, dan penguasaan diri (Galatia 5:22-23). Ini adalah pertempuran internal yang berkelanjutan yang membutuhkan ketergantungan penuh pada Kristus.</p>
+
+            <h2>Jalan Keluar: Kasih Karunia Allah dalam Kristus</h2>
+            <p>Paulus tidak meninggalkan kita dalam keputusasaan setelah melukiskan gambaran suram tentang dosa manusia. Tujuan dari bagian Roma 1:18-3:20 bukanlah untuk menghukum kita tanpa harapan, melainkan untuk menunjukkan kebutuhan universal yang mendesak akan seorang penyelamat. Tepat setelah rangkaian ayat tentang dosa ini, Paulus langsung memperkenalkan solusi ilahi, yang menjadi titik balik dan inti dari seluruh Injil:</p>
+            <blockquote>
+                <p><sup>21</sup> Tetapi sekarang, tanpa hukum Taurat kebenaran Allah telah dinyatakan, seperti yang disaksikan oleh hukum Taurat dan kitab para nabi,</p>
+                <p><sup>22</sup> yaitu kebenaran Allah oleh karena iman dalam Yesus Kristus bagi semua orang yang percaya. Sebab tidak ada perbedaan.</p>
+                <p><sup>23</sup> Karena semua orang telah berbuat dosa dan telah kehilangan kemuliaan Allah,</p>
+                <p><sup>24</sup> dan oleh kasih karunia telah dibenarkan dengan cuma-cuma karena penebusan dalam Kristus Yesus.</p>
+            </blockquote>
+            <p>Kondisi manusia yang digambarkan dalam Roma 3:15 – "cepat untuk menumpahkan darah" – adalah kondisi yang tidak dapat diatasi oleh upaya manusia sendiri, tidak peduli seberapa keras kita mencoba. Ini adalah masalah mendalam yang hanya dapat diselesaikan oleh intervensi ilahi, dan intervensi itu datang dalam pribadi Yesus Kristus. Di mana manusia cepat menumpahkan darah sesama, Allah Bapa tidak menahan Anak-Nya sendiri, tetapi "menyerahkan-Nya untuk kita semua" (Roma 8:32) agar darah-Nya yang kudus dapat ditumpahkan sebagai pendamaian bagi dosa-dosa kita.</p>
+            <p>Darah Kristus yang tertumpah di kayu salib adalah satu-satunya jawaban yang sempurna dan memadai untuk "kaki yang cepat menumpahkan darah" milik kita. Melalui iman kepada-Nya, kita dibenarkan, dosa-dosa kita diampuni, dan kita diberikan Roh Kudus yang memungkinkan kita untuk berjalan dalam "hidup yang baru" (Roma 6:4). Roh Kudus mengubah keinginan hati kita, sehingga alih-alih cepat berbuat jahat, kita sekarang dapat memiliki keinginan untuk berbuat baik dan hidup damai.</p>
+            <p>Transformasi ini bukan berarti kita tidak lagi berjuang melawan dosa, melainkan bahwa kita tidak lagi menjadi budak dosa. Kita memiliki kuasa untuk berkata "tidak" pada kecenderungan lama dan untuk mengikuti pimpinan Roh Kudus. Kaki kita, yang dulu cepat menumpahkan darah, kini dapat menjadi kaki yang "indah" yang membawa kabar baik dan berjalan dalam jalan kebenaran (Roma 10:15). Inilah anugerah Allah yang mengubah total, yang memungkinkan orang-orang berdosa yang tadinya "cepat" menuju kehancuran, kini menjadi alat damai dan kebaikan-Nya di dunia.</p>
+
+            <h2>Hubungan dengan Ayat-ayat Lain dalam Alkitab</h2>
+            <p>Paulus tidak menciptakan konsep kerusakan manusia yang ia ajukan dalam Roma 3:10-18; sebaliknya, ia dengan cemerlang merangkai kebenaran-kebenaran ini dari warisan Perjanjian Lama. Ini memberikan otoritas ilahi yang kuat pada argumennya dan menunjukkan konsistensi ajaran Alkitab tentang kondisi manusia.</p>
+
+            <h3>Kutipan Perjanjian Lama: Akar Kebenaran</h3>
+            <p>Berikut adalah beberapa sumber Perjanjian Lama yang digunakan Paulus, dan bagaimana mereka memperkaya pemahaman kita tentang Roma 3:15:</p>
+            <ul>
+                <li><strong>Mazmur 14:1-3 (dan Mazmur 53:1-3):</strong> Ayat-ayat ini adalah sumber utama dari Roma 3:10-12, yang menyatakan bahwa "tidak ada seorang pun yang berakal budi, tidak ada seorang pun yang mencari Allah." Pemazmur meratapi kebodohan spiritual manusia dan penolakannya terhadap Tuhan, yang mengarah pada kerusakan moral yang universal.</li>
+                <li><strong>Mazmur 5:9 (atau Mazmur 5:10 dalam terjemahan lain):</strong> "Kerongkongan mereka adalah kubur yang ternganga, lidah mereka melancarkan tipu daya." Ini menjadi bagian dari Roma 3:13, menyoroti kerusakan ucapan. Gambaran "kubur yang ternganga" menyiratkan bukan hanya kata-kata kosong, tetapi perkataan yang mematikan dan membawa kehancuran.</li>
+                <li><strong>Mazmur 140:3 (atau Mazmur 140:4 dalam terjemahan lain):</strong> "Bibir mereka mengandung bisa ular." Juga bagian dari Roma 3:13, ayat ini lebih lanjut menekankan sifat beracun dari kata-kata yang keluar dari hati yang berdosa, yang dapat meracuni dan menghancurkan kehidupan orang lain.</li>
+                <li><strong>Yesaya 59:7-8:</strong> Inilah sumber langsung dari Roma 3:15-17. Yesaya 59:7 mengatakan, "Kaki mereka cepat menuju kejahatan, dan bersegera menumpahkan darah orang yang tidak bersalah; rancangan mereka adalah rancangan yang jahat, kerusakan dan kehancuran ada di jalan mereka." Paulus mengutip bagian ini dengan sangat akurat, menegaskan bahwa kecenderungan untuk kekerasan adalah karakteristik umat manusia secara umum, bukan hanya satu kelompok tertentu. Ayat ini juga menambahkan bahwa "jalan damai tidak mereka kenal," yang menjadi Roma 3:17, menunjukkan ketidakmampuan manusia yang jatuh untuk menemukan atau mempertahankan kedamaian.</li>
+                <li><strong>Amsal 1:16:</strong> "Karena kaki mereka berlari menuju kejahatan dan mereka cepat untuk menumpahkan darah." Ayat ini adalah paralel yang sangat kuat dengan Yesaya 59:7 dan Roma 3:15. Dalam kitab hikmat, Amsal, peringatan ini ditujukan kepada orang muda agar tidak tergoda untuk mengikuti jalan orang fasik yang "cepat" untuk melakukan kejahatan dan kekerasan. Ini menggambarkan kecenderungan yang disengaja dan antusias terhadap kejahatan sebagai bahaya yang terus-menerus mengancam.</li>
+            </ul>
+            <p>Penggunaan ayat-ayat ini oleh Paulus menunjukkan bahwa ia tidak menciptakan ide kerusakan manusia; ia justru menarik dari kekayaan wahyu Perjanjian Lama untuk mendukung argumennya. Ini memberikan bobot otoritas ilahi yang tak terbantahkan pada klaimnya tentang universalitas dosa, menunjukkan bahwa kebenaran ini adalah kebenaran yang diwahyukan Allah sepanjang sejarah.</p>
+
+            <h3>Perjanjian Baru: Menggali Lebih Dalam</h3>
+            <p>Selain Perjanjian Lama, Perjanjian Baru juga menguatkan dan mengembangkan tema ini:</p>
+            <ul>
+                <li><strong>Matius 15:19:</strong> Yesus sendiri berkata, "Karena dari hati timbul segala pikiran jahat, pembunuhan, perzinahan, percabulan, pencurian, sumpah palsu dan hujat." Ini menegaskan bahwa "kaki yang cepat menumpahkan darah" berasal dari sumber yang lebih dalam dan fundamental – yaitu hati manusia yang berdosa dan pikiran-pikiran jahat yang muncul darinya. Ini menggarisbawahi bahwa dosa bukan hanya tindakan lahiriah, tetapi kondisi internal.</li>
+                <li><strong>Galatia 5:19-21:</strong> Paulus mencantumkan "perbuatan daging" yang mencakup "permusuhan, perselisihan, iri hati, amarah, kepentingan diri sendiri, percideraan, roh pemecah, kedengkian, kemabukan, pesta pora dan sebagainya." Banyak dari ini adalah manifestasi dari "kaki yang cepat menumpahkan darah" dalam bentuk non-fisik, menunjukkan bagaimana egoisme dan sifat manusia yang jatuh dapat memicu konflik dan kehancuran dalam komunitas.</li>
+                <li><strong>Yakobus 3:8:</strong> Meskipun berbicara tentang lidah, Yakobus menyatakan bahwa "tidak seorang pun yang berkuasa menjinakkan lidah; ia adalah sesuatu yang buas, penuh racun yang mematikan." Ini mirip dengan gambaran "bisa ular" di Roma 3:13 dan menunjukkan bagaimana anggota tubuh dapat menjadi alat kehancuran, baik melalui kata-kata maupun tindakan. Lidah yang tak terkendali adalah cerminan dari hati yang tak terkendali, yang dapat menyebabkan kehancuran yang tak terpulihkan.</li>
+                <li><strong>Efesus 2:1-3:</strong> Paulus mengingatkan orang percaya bahwa mereka "dahulu mati oleh pelanggaran-pelanggaran dan dosa-dosa," dan "hidup menurut keinginan daging dan pikiran yang jahat." Ini adalah gambaran lain tentang kondisi manusia yang jatuh sebelum anugerah Kristus, di mana "kaki" mereka diarahkan dan didorong oleh keinginan daging dan pikiran yang memberontak terhadap Allah.</li>
+            </ul>
+            <p>Ayat-ayat ini, baik dari Perjanjian Lama maupun Perjanjian Baru, secara konsisten menggarisbawahi kebenaran yang tidak menyenangkan: manusia dalam kondisi alaminya memiliki kecenderungan bawaan yang kuat untuk melakukan kejahatan, termasuk kekerasan dan kehancuran. Roma 3:15 berdiri sebagai ringkasan yang tajam dari kebenaran ini, menyoroti kecepatan dan kesiapan hati yang jatuh untuk berbuat dosa, sehingga menyoroti kebutuhan mendalam akan penyelamat dan pembaharuan ilahi.</p>
+
+            <h2>Kesimpulan: Kebutuhan Mendesak akan Penebusan</h2>
+            <p>Roma 3:15, "Kaki mereka cepat untuk menumpahkan darah," adalah sebuah ayat yang kuat dan menantang, yang mengundang kita pada refleksi mendalam tentang kondisi manusia. Ia tidak hanya menyajikan sebuah diagnosis yang jujur dan brutal tentang kondisi manusia yang jatuh, tetapi juga berfungsi sebagai pengingat yang mendesak akan universalitas dosa dan kerusakan total yang diakibatkannya.</p>
+            <p>Melalui mosaik kutipan Perjanjian Lama yang dirangkai dengan cermat oleh Paulus, kita melihat bahwa kejahatan manusia tidak terbatas pada pikiran atau perkataan saja. Dosa merasuki seluruh keberadaan kita, meluas hingga ke tindakan-tindakan nyata, di mana "kaki" kita dengan antusias melangkah menuju kekerasan, kehancuran, dan penderitaan bagi sesama. Kecepatan dan kesiapan yang digambarkan dalam ayat ini menyoroti bahwa dosa bukan hanya sebuah kecelakaan atau penyimpangan sesekali, melainkan sebuah kecenderungan yang melekat dan kuat dalam sifat manusia yang telah jatuh.</p>
+            <p>Namun, Injil tidak meninggalkan kita dalam keputusasaan. Gambaran kelam tentang dosa ini adalah latar belakang yang diperlukan agar terang kasih karunia Allah dapat bersinar lebih terang. Roma 3:15 mempersiapkan panggung bagi pernyataan mulia tentang pembenaran oleh iman dalam Yesus Kristus yang dimulai pada ayat 21. Di mana kaki manusia cepat menumpahkan darah, di sanalah darah Kristus yang kudus ditumpahkan, bukan untuk menghancurkan, tetapi untuk menebus dan memberi hidup yang kekal. Darah-Nya menjadi penebusan bagi dosa-dosa kita, jawaban ilahi terhadap kejahatan manusia.</p>
+            <p>Bagi kita hari ini, Roma 3:15 adalah panggilan untuk kerendahan hati dan pengakuan akan kebutuhan kita yang terus-menerus akan Juruselamat. Ini adalah pengingat bahwa transformasi sejati datang bukan dari upaya moral diri sendiri, tetapi dari pembaharuan hati yang radikal oleh Roh Kudus, yang dicurahkan kepada setiap orang yang percaya kepada Kristus. Roh Kuduslah yang memungkinkan kita untuk mengarahkan "kaki" kita bukan lagi ke jalan kehancuran dan kematian, melainkan ke jalan damai sejahtera, keadilan, kasih, dan kehidupan yang memuliakan Allah.</p>
+            <p>Semoga kita, yang telah ditebus oleh darah Kristus, memiliki "kaki yang indah" yang cepat untuk membawa kabar baik kepada dunia yang terluka, yang berjalan dalam ketaatan kepada Allah yang hidup, dan yang senantiasa mengarahkan langkah-langkah kita menuju kemuliaan-Nya. Kiranya hidup kita menjadi kesaksian akan kuasa Injil yang mengubah, dari kehancuran menuju penebusan, dari kegelapan menuju terang.</p>
+        </section>
+    </article>
+<div class='related-posts'><h3>Related Posts</h3><ul><li><a href="/2-petrus-2-18">2 Petrus 2 18</a></li>
+<li><a href="/amsal-29-23">Amsal 29 23</a></li>
+<li><a href="/2-tawarikh-31-2">2 Tawarikh 31 2</a></li>
+<li><a href="/1-samuel-17-58">1 Samuel 17 58</a></li>
+<li><a href="/kejadian-17-3">Kejadian 17 3</a></li>
+<li><a href="/yeremia-14-17">Yeremia 14 17</a></li>
+<li><a href="/rut-1-10">Rut 1 10</a></li>
+<li><a href="/2-samuel-16-6">2 Samuel 16 6</a></li>
+<li><a href="/yakobus-3-13">Yakobus 3 13</a></li>
+<li><a href="/mazmur-122-8">Mazmur 122 8</a></li></ul></div>
+<script src="/ik.js"></script>
+</body>
+</html>

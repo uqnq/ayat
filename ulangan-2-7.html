@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulangan 2:7 - Berkat &amp; Pemeliharaan Tuhan di Padang Gurun</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style>
+        /* Desain Dasar */
+        :root {
+            --color-bg-light: hsl(190, 100%, 97%); /* Sangat terang, sejuk */
+            --color-text-dark: hsl(210, 20%, 20%); /* Abu-abu gelap kebiruan */
+            --color-heading-primary: hsl(200, 70%, 30%); /* Biru tua sejuk */
+            --color-heading-secondary: hsl(200, 50%, 40%); /* Biru sedang */
+            --color-accent: hsl(170, 60%, 45%); /* Hijau kebiruan */
+            --color-border: hsl(190, 30%, 85%); /* Border abu-abu kebiruan */
+            --color-card-bg: hsl(0, 0%, 100%); /* Putih bersih */
+            --font-family-primary: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            --font-family-serif: 'Georgia', serif;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            line-height: 1.7;
+            color: var(--color-text-dark);
+            background-color: var(--color-bg-light);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Kontainer Utama Artikel */
+        .article-container {
+            max-width: 900px; /* Lebar maksimal untuk desktop */
+            width: 95%; /* Fleksibel untuk mobile */
+            margin: 20px auto;
+            padding: 30px;
+            background-color: var(--color-card-bg);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Bayangan lembut */
+            border: 1px solid var(--color-border);
+        }
+
+        /* Header Artikel */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        h1 {
+            font-family: var(--font-family-serif);
+            font-size: 2.6em;
+            color: var(--color-heading-primary);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .verse-text {
+            font-family: var(--font-family-serif);
+            font-style: italic;
+            font-size: 1.3em;
+            color: var(--color-heading-secondary);
+            margin-top: 10px;
+            padding: 15px 25px;
+            background-color: rgba(var(--color-accent-rgb, 170, 60, 45), 0.08); /* Warna accent dengan opacity */
+            border-left: 5px solid var(--color-accent);
+            border-radius: 6px;
+            line-height: 1.6;
+            text-align: left;
+            display: inline-block; /* Agar padding bekerja baik */
+        }
+        /* Convert HSL to RGB for rgba usage */
+        .verse-text {
+            --color-accent-rgb: 72, 179, 160; /* RGB for hsl(170, 60%, 45%) */
+        }
+
+
+        /* Konten Utama */
+        h2 {
+            font-family: var(--font-family-primary);
+            font-size: 2em;
+            color: var(--color-heading-secondary);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-family: var(--font-family-primary);
+            font-size: 1.5em;
+            color: var(--color-accent);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 25px;
+            margin-bottom: 1.5em;
+        }
+
+        li {
+            margin-bottom: 0.8em;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-heading-primary);
+            text-decoration: underline;
+        }
+
+        /* Gambar SVG */
+        .article-image {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            background-color: rgba(var(--color-accent-rgb, 72, 179, 160), 0.1);
+            padding: 15px;
+        }
+
+        /* Responsifitas */
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 20px;
+                margin: 15px auto;
+                width: 90%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .verse-text {
+                font-size: 1.1em;
+                padding: 12px 18px;
+            }
+            h2 {
+                font-size: 1.7em;
+            }
+            h3 {
+                font-size: 1.3em;
+            }
+            p {
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-container {
+                padding: 15px;
+                margin: 10px auto;
+                width: 95%;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .verse-text {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-container">
+        <header>
+            <h1>Ulangan 2:7 - Mengarungi Padang Gurun: Berkat, Pemeliharaan, dan Kecukupan Ilahi</h1>
+            <p class="verse-text">
+                "Sebab TUHAN, Allahmu, telah memberkati engkau dalam segala pekerjaan tanganmu; Ia memperhatikan perjalananmu melalui padang gurun yang besar ini; empat puluh tahun lamanya TUHAN, Allahmu, menyertai engkau, dan engkau tidak berkekurangan apa pun."
+            </p>
+        </header>
+
+        <main>
+            <p>Ayat yang terambil dari kitab Ulangan 2:7 ini adalah sebuah deklarasi kuat tentang karakter Allah, kasih-Nya yang tak terbatas, dan kesetiaan-Nya yang tak tergoyahkan terhadap umat-Nya. Konteksnya adalah Israel, yang setelah empat puluh tahun mengembara di padang gurun yang luas dan menakutkan, kini bersiap untuk memasuki Tanah Perjanjian. Melalui Musa, Allah mengingatkan mereka akan bagaimana Dia telah menuntun, memelihara, dan memberkati mereka di tengah kondisi yang paling sulit sekalipun. Ayat ini bukan sekadar catatan sejarah, melainkan sebuah prinsip abadi yang relevan bagi setiap orang di setiap zaman.</p>
+
+            <p>Perjalanan di padang gurun bukanlah perjalanan yang mudah. Padang gurun dalam Alkitab sering kali menjadi simbol kesulitan, tantangan, ketidakpastian, dan periode ujian. Namun, di tengah segala ancaman dan keterbatasan itu, Allah menyatakan bahwa Dia tidak pernah meninggalkan umat-Nya dalam kekurangan. Mari kita telaah lebih dalam setiap bagian dari ayat yang kaya makna ini dan melihat bagaimana pesan-pesan ini dapat kita aplikasikan dalam kehidupan kita hari ini.</p>
+
+            <svg class="article-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" alt="Gambar Ilustrasi Padang Gurun dengan Jalan Berkelok dan Sinar Matahari. Simbol Perjalanan dan Pemeliharaan Ilahi.">
+                <defs>
+                    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#A8DADC;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#457B9D;stop-opacity:1" />
+                    </linearGradient>
+                    <radialGradient id="sunGradient" cx="0.8" cy="0.2" r="0.4" fx="0.8" fy="0.2">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0" />
+                    </radialGradient>
+                </defs>
+                <rect x="0" y="0" width="800" height="400" fill="url(#skyGradient)"/>
+                <circle cx="640" cy="80" r="100" fill="url(#sunGradient)"/>
+                <path d="M0 250 C 150 200, 300 300, 450 250 S 600 350, 800 300 L 800 400 L 0 400 Z" fill="#90EE90"/>
+                <path d="M0 280 C 120 230, 280 330, 400 280 S 550 380, 800 330 L 800 400 L 0 400 Z" fill="#6B8E23"/>
+                <path d="M0 320 C 100 290, 250 360, 350 310 S 500 390, 800 350 L 800 400 L 0 400 Z" fill="#556B2F"/>
+                <path d="M-10 380 Q 200 300, 400 380 T 810 380 L 810 410 L -10 410 Z" fill="#DAA520"/>
+                <path d="M-10 395 Q 200 340, 400 395 T 810 395 L 810 410 L -10 410 Z" fill="#B8860B"/>
+                <path d="M0 380 L 100 370 L 200 385 L 300 375 L 400 380 L 500 370 L 600 385 L 700 375 L 800 380 L 800 400 L 0 400 Z" fill="#A0522D"/>
+                <path d="M 0 380 Q 150 350, 300 380 T 600 380 T 800 380 L 800 400 L 0 400 Z" fill="#CD853F"/>
+
+                <!-- Path berkelok-kelok (jalan) -->
+                <path d="M 50 380 Q 150 300, 300 350 T 500 300 Q 650 250, 750 290" 
+                      fill="none" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
+                      filter="url(#glow)"/>
+                <path d="M 50 380 Q 150 300, 300 350 T 500 300 Q 650 250, 750 290" 
+                      fill="none" stroke="#E6E6FA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <!-- Sun rays -->
+                <line x1="640" y1="80" x2="680" y2="20" stroke="#FFD700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+                <line x1="640" y1="80" x2="720" y2="60" stroke="#FFD700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+                <line x1="640" y1="80" x2="700" y2="120" stroke="#FFD700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+                <line x1="640" y1="80" x2="620" y2="150" stroke="#FFD700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+                <line x1="640" y1="80" x2="580" y2="120" stroke="#FFD700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+                <line x1="640" y1="80" x2="560" y2="70" stroke="#FFD700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+
+
+            <h2>1. Berkat Tuhan dalam Segala Pekerjaan Tangan</h2>
+            <p>Bagian pertama dari ayat ini menyatakan, "Sebab TUHAN, Allahmu, telah memberkati engkau dalam segala pekerjaan tanganmu." Ini adalah pengingat yang luar biasa akan anugerah Allah. Berkat di sini tidak hanya merujuk pada hasil akhir atau keuntungan materi, tetapi juga pada proses, pada kemampuan, dan pada kesempatan untuk bekerja itu sendiri. Bangsa Israel saat itu adalah bangsa yang baru saja keluar dari perbudakan, mereka tidak memiliki banyak pengalaman sebagai masyarakat merdeka dengan keahlian beragam, namun Allah berjanji untuk memberkati usaha mereka.</p>
+
+            <h3>1.1. Makna Berkat yang Luas</h3>
+            <p>Berkat Tuhan jauh melampaui sekadar kelimpahan materi. Tentu, itu bisa mencakup panen yang melimpah, ternak yang berkembang biak, atau keberhasilan dalam perdagangan. Namun, dalam konteks Ulangan, di mana umat sedang bersiap untuk masuk ke tanah yang baru dan membangun kehidupan baru, berkat juga berarti:</p>
+            <ul>
+                <li><strong>Hikmat dan Pengertian:</strong> Untuk membuat keputusan yang benar, mengelola sumber daya, dan membangun komunitas yang kuat.</li>
+                <li><strong>Kekuatan dan Kesehatan:</strong> Untuk menjalankan tugas fisik yang berat dalam mendirikan kota dan mengolah tanah.</li>
+                <li><strong>Keterampilan dan Kreativitas:</strong> Untuk mengembangkan keahlian dalam pertanian, pertukangan, kerajinan, dan berbagai aspek kehidupan masyarakat.</li>
+                <li><strong>Damai Sejahtera:</strong> Dalam hubungan antarpribadi dan dalam kehidupan sosial, yang memungkinkan masyarakat berfungsi dengan harmonis.</li>
+                <li><strong>Kesempatan:</strong> Pintu-pintu yang terbuka, ide-ide baru, atau kolaborasi yang produktif.</li>
+            </ul>
+            <p>Berkat ini adalah tanda pemeliharaan aktif Allah. Ia tidak hanya memberikan perintah, tetapi juga memberdayakan umat-Nya untuk memenuhi tujuan-Nya. Bahkan di padang gurun, mereka diberkati dengan manna, air dari batu, dan pakaian yang tidak usang—semua adalah "pekerjaan tangan" Allah yang memelihara hidup mereka.</p>
+
+            <h3>1.2. Aplikasi dalam Kehidupan Modern</h3>
+            <p>Bagi kita hari ini, prinsip ini tetap berlaku. Apapun pekerjaan atau panggilan kita—entah sebagai seorang pekerja kantoran, petani, seniman, ibu rumah tangga, mahasiswa, atau relawan—Tuhan berjanji untuk memberkati "pekerjaan tangan kita." Ini mendorong kita untuk bekerja dengan semangat, integritas, dan dedikasi, mengetahui bahwa upaya kita, sekecil apapun, dapat diberkati dan digunakan untuk kemuliaan-Nya. Ini berarti:</p>
+            <ul>
+                <li><strong>Bekerja dengan Hati yang Bersyukur:</strong> Mengenali bahwa setiap kemampuan, setiap kesempatan, adalah anugerah dari Tuhan.</li>
+                <li><strong>Melakukan yang Terbaik:</strong> Memberikan yang terbaik dari diri kita, bukan hanya untuk atasan atau diri sendiri, tetapi sebagai persembahan kepada Tuhan.</li>
+                <li><strong>Mencari Hikmat Ilahi:</strong> Dalam setiap proyek atau tantangan, meminta bimbingan dan kebijaksanaan dari Allah.</li>
+                <li><strong>Menggunakan Bakat untuk Kebaikan:</strong> Memanfaatkan talenta dan keterampilan kita tidak hanya untuk keuntungan pribadi, tetapi juga untuk melayani sesama dan membangun masyarakat.</li>
+            </ul>
+            <p>Ketika kita menyadari bahwa Tuhan memberkati pekerjaan tangan kita, itu mengubah perspektif kita. Pekerjaan bukan lagi hanya rutinitas atau sarana mencari nafkah semata, melainkan arena di mana kita dapat mengalami dan menyaksikan anugerah Allah yang berkelanjutan.</p>
+
+            <h2>2. Pemeliharaan Tuhan di Padang Gurun yang Besar</h2>
+            <p>Bagian kedua ayat ini mengemukakan, "Ia memperhatikan perjalananmu melalui padang gurun yang besar ini." Frasa "Ia memperhatikan" (dalam bahasa Ibrani: ידע - <em>yada</em>, yang juga bisa berarti "mengenal" atau "mengetahui secara intim") mengungkapkan kedalaman perhatian Allah. Ini bukan sekadar pengamatan sepintas lalu, melainkan keterlibatan yang mendalam dan pribadi dalam setiap detail perjalanan umat-Nya.</p>
+
+            <h3>2.1. Realitas Padang Gurun</h3>
+            <p>Padang gurun Israel adalah tempat yang ganas: kering, panas di siang hari, dingin di malam hari, penuh bahaya (ular, kalajengking, binatang buas), dan kekurangan sumber daya. Ini adalah lingkungan yang tidak ramah bagi kehidupan manusia. Namun, justru di tengah kondisi ekstrem inilah Allah menunjukkan keperkasaan pemeliharaan-Nya. Perjalanan Israel melalui padang gurun adalah ujian iman, sebuah sekolah di mana mereka diajar untuk bergantung sepenuhnya kepada Allah.</p>
+            <p>Dalam kehidupan kita, "padang gurun" dapat menjelma dalam berbagai bentuk: masa-masa sulit, ketidakpastian finansial, krisis kesehatan, kehilangan orang yang dicintai, periode kegagalan, atau bahkan kekeringan rohani. Ini adalah momen-momen ketika kita merasa tersesat, rentan, dan tidak tahu arah. Namun, janji Allah adalah bahwa Ia "memperhatikan" perjalanan kita di setiap padang gurun yang kita lalui.</p>
+
+            <svg class="article-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" alt="Gambar Ilustrasi Tangan Ilahi Menuntun dan Melindungi Sekelompok Orang yang Berjalan di Padang Gurun. Simbol Pemeliharaan Tuhan.">
+                <defs>
+                    <linearGradient id="desertGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#F5DAB6;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#D2B48C;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="skyGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ADD8E6;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="shadow">
+                        <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0,0,0,0.3)"/>
+                    </filter>
+                    <filter id="glowEffect">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                        <feMerge>
+                            <feMergeNode in="blur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+                <rect x="0" y="0" width="800" height="400" fill="url(#skyGradient2)"/>
+                <path d="M0 200 C 150 150, 300 250, 450 200 S 600 300, 800 250 L 800 400 L 0 400 Z" fill="url(#desertGradient)"/>
+                <path d="M0 240 C 120 200, 280 290, 400 240 S 550 330, 800 280 L 800 400 L 0 400 Z" fill="#C2B280"/>
+                <path d="M0 280 C 100 250, 250 320, 350 280 S 500 360, 800 320 L 800 400 L 0 400 Z" fill="#B2A578"/>
+
+                <!-- Orang-orang di padang gurun -->
+                <g filter="url(#shadow)">
+                    <rect x="150" y="300" width="10" height="30" fill="#36454F"/>
+                    <circle cx="155" cy="295" r="5" fill="#36454F"/>
+                    <rect x="170" y="310" width="10" height="25" fill="#5F9EA0"/>
+                    <circle cx="175" cy="305" r="5" fill="#5F9EA0"/>
+                    <rect x="190" y="295" width="10" height="35" fill="#4682B4"/>
+                    <circle cx="195" cy="290" r="5" fill="#4682B4"/>
+                    <rect x="210" y="305" width="10" height="28" fill="#6A5ACD"/>
+                    <circle cx="215" cy="300" r="5" fill="#6A5ACD"/>
+                    <rect x="230" y="290" width="10" height="32" fill="#8A2BE2"/>
+                    <circle cx="235" cy="285" r="5" fill="#8A2BE2"/>
+                    <rect x="250" y="315" width="10" height="20" fill="#7B68EE"/>
+                    <circle cx="255" cy="310" r="5" fill="#7B68EE"/>
+                </g>
+
+                <!-- Tangan Tuhan -->
+                <path d="M400 0 C 300 50, 250 150, 300 200 C 350 250, 450 250, 500 200 C 550 150, 500 50, 400 0 Z" 
+                      fill="#FFFAF0" stroke="#FFD700" stroke-width="3" filter="url(#glowEffect)" opacity="0.8">
+                    <animate attributeName="opacity" values="0.8;0.9;0.8" dur="3s" repeatCount="indefinite" />
+                </path>
+                <path d="M400 0 C 300 50, 250 150, 300 200 C 350 250, 450 250, 500 200 C 550 150, 500 50, 400 0 Z" 
+                      fill="#FFFAF0" stroke="#FFD700" stroke-width="3" filter="url(#glowEffect)" opacity="0.8">
+                    <animate attributeName="d"
+                             values="M400 0 C 300 50, 250 150, 300 200 C 350 250, 450 250, 500 200 C 550 150, 500 50, 400 0 Z;
+                                     M400 5 C 305 55, 255 155, 305 205 C 355 255, 455 255, 505 205 C 555 155, 505 55, 405 5 Z;
+                                     M400 0 C 300 50, 250 150, 300 200 C 350 250, 450 250, 500 200 C 550 150, 500 50, 400 0 Z"
+                             dur="4s" repeatCount="indefinite" />
+                </path>
+            </svg>
+
+            <h3>2.2. Keterlibatan Ilahi yang Intim</h3>
+            <p>Bagaimana Allah "memperhatikan" perjalanan kita?</p>
+            <ul>
+                <li><strong>Pengetahuan yang Sempurna:</strong> Ia mengetahui setiap langkah kita, setiap ketakutan, setiap harapan, setiap kebutuhan, bahkan yang tidak terucapkan sekalipun. Tidak ada yang tersembunyi dari pandangan-Nya.</li>
+                <li><strong>Bimbingan yang Konstan:</strong> Bagi Israel, ini adalah tiang awan di siang hari dan tiang api di malam hari. Bagi kita, ini mungkin melalui Firman-Nya, Roh Kudus, hikmat yang diberikan melalui orang lain, atau intuisi yang menuntun.</li>
+                <li><strong>Perlindungan yang Kuat:</strong> Melindungi dari musuh yang terlihat maupun tidak terlihat, dari bahaya fisik, dan dari keputusasaan yang melumpuhkan jiwa.</li>
+                <li><strong>Penguatan di Tengah Kelemahan:</strong> Memberikan kekuatan ketika kita merasa lelah, penghiburan ketika kita berduka, dan harapan ketika kita kehilangan semangat.</li>
+                <li><strong>Pengaturan Kondisi:</strong> Allah dapat mengizinkan kesulitan untuk mengajar kita, membentuk karakter kita, dan memperdalam iman kita, namun Ia tidak akan pernah meninggalkan kita tanpa jalan keluar.</li>
+            </ul>
+            <p>Pemeliharaan Allah bukanlah intervensi sesekali, melainkan suatu kehadiran yang berkelanjutan dan aktif. Ia adalah seorang Bapa yang tidak pernah mengalihkan pandangan-Nya dari anak-anak-Nya, bahkan ketika mereka sedang melalui lembah bayang-bayang kematian. Ini adalah janji yang memberikan kedamaian di tengah badai, keyakinan di tengah keraguan, dan kekuatan untuk terus maju.</p>
+
+            <h3>2.3. Menanggapi Pemeliharaan Tuhan</h3>
+            <p>Kesadaran akan pemeliharaan Allah yang intim seharusnya mendorong kita untuk:</p>
+            <ul>
+                <li><strong>Percaya Sepenuh Hati:</strong> Meletakkan semua kekhawatiran dan beban kita di kaki-Nya, yakin bahwa Ia peduli.</li>
+                <li><strong>Memperhatikan Tanda-tanda Kehadiran-Nya:</strong> Seringkali, pemeliharaan Allah terwujud dalam hal-hal kecil, dalam jawaban doa yang tidak terduga, dalam bantuan dari orang lain, atau dalam kekuatan yang muncul entah dari mana.</li>
+                <li><strong>Bersabar dalam Penantian:</strong> Terkadang, "padang gurun" adalah musim menunggu. Kita perlu belajar untuk tetap setia dan percaya bahwa Allah memiliki waktu dan rencana-Nya sendiri.</li>
+                <li><strong>Belajar dari Pengalaman:</strong> Mengingat kembali bagaimana Allah telah memelihara kita di masa lalu akan memperkuat iman kita untuk menghadapi tantangan di masa depan. Ini adalah tujuan dari kisah-kisah yang dicatat dalam kitab Ulangan, yaitu agar umat Israel tidak melupakan kesetiaan Allah.</li>
+            </ul>
+            <p>Sejarah Israel adalah bukti nyata bahwa Allah memperhatikan umat-Nya. Setiap tantangan di padang gurun menjadi kesempatan bagi mereka untuk menyaksikan mukjizat dan kuasa Allah. Demikian juga dalam hidup kita, setiap "padang gurun" adalah panggung bagi Allah untuk menyatakan diri-Nya sebagai Pemelihara yang setia.</p>
+
+            <h2>3. Penyertaan Tuhan Selama Empat Puluh Tahun</h2>
+            <p>Bagian ketiga ayat ini menyatakan, "empat puluh tahun lamanya TUHAN, Allahmu, menyertai engkau." Angka empat puluh tahun adalah periode yang signifikan dalam Alkitab, sering kali melambangkan masa ujian, pemurnian, atau persiapan. Bagi Israel, ini adalah waktu untuk membersihkan diri dari mentalitas budak dan menanamkan mentalitas umat Allah yang merdeka, yang bergantung sepenuhnya pada-Nya.</p>
+
+            <h3>3.1. Makna Empat Puluh Tahun</h3>
+            <p>Perjalanan empat puluh tahun di padang gurun bukanlah suatu kebetulan, melainkan bagian dari rencana ilahi. Selama periode ini:</p>
+            <ul>
+                <li><strong>Generasi Lama Berlalu:</strong> Generasi yang memberontak dan tidak percaya, yang takut menghadapi tantangan Kanaan, meninggal di padang gurun, kecuali Yosua dan Kaleb.</li>
+                <li><strong>Generasi Baru Bangkit:</strong> Generasi baru lahir dan dibesarkan di bawah pengajaran Taurat dan pemeliharaan langsung Allah. Mereka menyaksikan mukjizat manna setiap hari dan air dari batu.</li>
+                <li><strong>Pembentukan Identitas:</strong> Israel dibentuk sebagai sebuah bangsa yang unik, dengan hukum-hukum, ibadah, dan hubungan perjanjian yang eksklusif dengan Yahweh.</li>
+                <li><strong>Ujian dan Pembelajaran:</strong> Melalui tantangan kelaparan, kehausan, dan serangan musuh, mereka diajar tentang kesabaran, ketaatan, dan pentingnya bergantung sepenuhnya pada Allah.</li>
+            </ul>
+            <p>Penyertaan Allah di sini adalah inti dari pengalaman mereka. Ini bukan sekadar kehadiran pasif, melainkan kehadiran yang dinamis, aktif, dan menyelamatkan. Ia tidak hanya "memperhatikan," tetapi Ia "menyertai" mereka, menjadi bagian integral dari setiap momen perjalanan mereka.</p>
+
+            <h3>3.2. Wujud Penyertaan Ilahi</h3>
+            <p>Bagaimana Allah "menyertai" umat-Nya selama empat puluh tahun?</p>
+            <ul>
+                <li><strong>Kehadiran Fisik (Simbolis):</strong> Tiang awan dan tiang api adalah manifestasi nyata dari kehadiran Allah yang memimpin dan melindungi mereka. Ini adalah tanda visual yang meyakinkan mereka bahwa Allah ada bersama mereka.</li>
+                <li><strong>Bimbingan dan Arahan:</strong> Melalui Musa sebagai nabi-Nya, Allah secara konsisten memberikan instruksi, hukum, dan petunjuk untuk setiap situasi yang mereka hadapi.</li>
+                <li><strong>Perlindungan dari Musuh:</strong> Allah berperang di pihak mereka melawan musuh-musuh seperti orang Amalek.</li>
+                <li><strong>Penghiburan dan Peneguhan:</strong> Di tengah keluhan dan keraguan umat, Allah tidak pernah lelah untuk meneguhkan kembali janji-Nya dan menunjukkan kuasa-Nya.</li>
+                <li><strong>Relasi Perjanjian:</strong> Melalui perjanjian di Sinai, Allah memasuki hubungan yang intim dengan Israel, menjadi Allah mereka dan menjadikan mereka umat-Nya yang istimewa. Ini adalah penyertaan dalam tingkat yang paling mendalam.</li>
+            </ul>
+            <p>Konsep penyertaan Allah ini juga dikenal sebagai "Imanuel" ("Allah beserta kita"), sebuah tema sentral dalam Alkitab yang berpuncak pada kedatangan Yesus Kristus. Ini adalah janji bahwa kita tidak pernah sendirian dalam perjuangan kita. Baik dalam kegembiraan maupun kesedihan, dalam keberhasilan maupun kegagalan, Allah ada bersama kita.</p>
+
+            <h3>3.3. Mengalami Penyertaan Tuhan Hari Ini</h3>
+            <p>Bagaimana kita dapat mengalami penyertaan Tuhan yang sama kuatnya dalam kehidupan kita modern?</p>
+            <ul>
+                <li><strong>Melalui Roh Kudus:</strong> Setelah kenaikan Yesus, Roh Kudus dicurahkan untuk tinggal dalam hati orang percaya, menjadi Penolong, Penghibur, dan Pembimbing kita. Ini adalah bentuk penyertaan yang paling intim.</li>
+                <li><strong>Melalui Firman Tuhan:</strong> Alkitab adalah suara Allah yang hidup, yang menuntun, mengajar, dan menghibur kita. Merenungkan Firman-Nya adalah cara untuk merasakan kehadiran-Nya.</li>
+                <li><strong>Melalui Doa:</strong> Doa adalah saluran komunikasi kita dengan Allah, di mana kita dapat mencurahkan isi hati, meminta bimbingan, dan merasakan kedekatan-Nya.</li>
+                <li><strong>Melalui Persekutuan Orang Percaya:</strong> Dalam komunitas gereja, kita mengalami kehadiran Allah saat kita saling menguatkan, melayani, dan menyembah bersama.</li>
+                <li><strong>Melalui Sakramen:</strong> Perjamuan Kudus dan Baptisan adalah tanda-tanda nyata dari perjanjian Allah dan kehadiran-Nya yang terus-menerus dalam kehidupan kita.</li>
+            </ul>
+            <p>Penyertaan Tuhan adalah jangkar kita di tengah badai kehidupan. Ia memberikan kita keberanian untuk menghadapi masa depan, ketenangan dalam menghadapi ketidakpastian, dan keyakinan bahwa tujuan-Nya bagi kita akan tergenapi, apa pun rintangan yang mungkin kita hadapi.</p>
+
+            <h2>4. Tidak Berkekurangan Apa Pun</h2>
+            <p>Bagian terakhir dari ayat ini adalah klimaks dari deklarasi Allah: "dan engkau tidak berkekurangan apa pun." Ini adalah janji yang luar biasa, terutama mengingat kondisi padang gurun yang secara alami adalah tempat kekurangan. Namun, bagi umat yang dipelihara Allah, janji ini adalah realitas yang nyata.</p>
+
+            <h3>4.1. Realitas Kecukupan Ilahi</h3>
+            <p>Apa yang dimaksud dengan "tidak berkekurangan apa pun" dalam konteks ini?</p>
+            <ul>
+                <li><strong>Makanan dan Minuman:</strong> Allah menyediakan manna setiap pagi dan burung puyuh di malam hari. Ia mengeluarkan air dari batu untuk memuaskan dahaga jutaan orang.</li>
+                <li><strong>Pakaian dan Perlindungan:</strong> Alkitab mencatat bahwa pakaian dan sandal mereka tidak usang selama empat puluh tahun (Ulangan 29:5). Ini adalah mukjizat pemeliharaan yang terus-menerus.</li>
+                <li><strong>Kesehatan dan Kekuatan:</strong> Meskipun mereka melakukan perjalanan yang melelahkan, Allah menjaga kesehatan mereka.</li>
+                <li><strong>Kebutuhan Dasar:</strong> Secara keseluruhan, Allah memastikan bahwa semua kebutuhan dasar mereka terpenuhi. Mereka mungkin tidak selalu mendapatkan apa yang mereka inginkan (misalnya, daging setiap hari), tetapi mereka tidak pernah kekurangan apa yang mereka butuhkan untuk bertahan hidup dan berkembang.</li>
+                <li><strong>Bimbingan dan Arah:</strong> Mereka tidak berkekurangan petunjuk tentang ke mana harus pergi atau bagaimana harus hidup.</li>
+                <li><strong>Harapan dan Masa Depan:</strong> Meskipun di padang gurun, mereka selalu memiliki janji Tanah Perjanjian sebagai tujuan akhir, yang memberikan mereka harapan dan tujuan.</li>
+            </ul>
+            <p>Pernyataan ini bukan berarti tidak ada tantangan atau kesulitan. Justru sebaliknya, kesulitan ada, tetapi di tengah kesulitan itu, Allah memastikan bahwa kebutuhan esensial umat-Nya terpenuhi. Ini adalah bukti nyata bahwa Allah adalah penyedia yang setia.</p>
+
+            <svg class="article-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" alt="Gambar Ilustrasi Sebuah Keranjang Penuh dengan Berbagai Berkat (Makanan, Air, Bunga) di Tengah Lanskap yang Cukup. Simbol Kecukupan dan Kelimpahan.">
+                <defs>
+                    <linearGradient id="softSky" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#B0E0E6;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ADD8E6;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="softGround" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#E0FFFF;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FAFAD2;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="softShadow">
+                        <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="rgba(0,0,0,0.2)"/>
+                    </filter>
+                </defs>
+                <rect x="0" y="0" width="800" height="400" fill="url(#softSky)"/>
+                <path d="M0 250 C 150 200, 300 280, 450 230 S 600 320, 800 270 L 800 400 L 0 400 Z" fill="url(#softGround)"/>
+                <path d="M0 270 C 120 230, 280 300, 400 260 S 550 340, 800 300 L 800 400 L 0 400 Z" fill="#F0FFF0"/>
+                
+                <!-- Keranjang -->
+                <path d="M350 250 H 450 L 470 300 H 330 Z" fill="#A0522D" filter="url(#softShadow)"/>
+                <path d="M340 240 C 330 220, 320 200, 350 190 H 450 C 480 200, 470 220, 460 240 Z" fill="#D2B48C" filter="url(#softShadow)"/>
+                <ellipse cx="400" cy="195" rx="70" ry="15" fill="#CD853F" filter="url(#softShadow)"/>
+
+                <!-- Isi keranjang -->
+                <!-- Roti -->
+                <ellipse cx="370" cy="210" rx="25" ry="15" fill="#DAA520" filter="url(#softShadow)"/>
+                <ellipse cx="430" cy="200" rx="25" ry="15" fill="#DAA520" filter="url(#softShadow)"/>
+                <!-- Buah-buahan -->
+                <circle cx="360" cy="180" r="10" fill="#FF8C00"/>
+                <circle cx="440" cy="175" r="12" fill="#FF6347"/>
+                <circle cx="390" cy="170" r="10" fill="#32CD32"/>
+                <!-- Air -->
+                <rect x="385" y="215" width="30" height="25" fill="#87CEEB" rx="5" filter="url(#softShadow)"/>
+                <text x="400" y="235" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle">Air</text>
+                <!-- Bunga -->
+                <g transform="translate(410, 185) scale(0.8)">
+                    <circle cx="0" cy="0" r="5" fill="#FFC0CB"/>
+                    <circle cx="8" cy="0" r="4" fill="#FFC0CB"/>
+                    <circle cx="-8" cy="0" r="4" fill="#FFC0CB"/>
+                    <circle cx="0" cy="8" r="4" fill="#FFC0CB"/>
+                    <circle cx="0" cy="-8" r="4" fill="#FFC0CB"/>
+                    <path d="M0 5 L0 15" stroke="#32CD32" stroke-width="2"/>
+                </g>
+                <g transform="translate(350, 220) scale(0.7)">
+                    <circle cx="0" cy="0" r="5" fill="#FFD700"/>
+                    <circle cx="8" cy="0" r="4" fill="#FFD700"/>
+                    <circle cx="-8" cy="0" r="4" fill="#FFD700"/>
+                    <circle cx="0" cy="8" r="4" fill="#FFD700"/>
+                    <circle cx="0" cy="-8" r="4" fill="#FFD700"/>
+                    <path d="M0 5 L0 15" stroke="#32CD32" stroke-width="2"/>
+                </g>
+
+                <!-- Latar belakang bukit/pohon -->
+                <path d="M600 200 C 650 150, 700 180, 750 150 L 750 250 L 600 250 Z" fill="#98FB98"/>
+                <path d="M620 180 C 640 140, 660 170, 680 140 C 700 110, 720 140, 740 100 L 740 180 L 620 180 Z" fill="#2E8B57"/>
+                <path d="M50 200 C 100 150, 150 180, 200 150 L 200 250 L 50 250 Z" fill="#98FB98"/>
+                <path d="M70 180 C 90 140, 110 170, 130 140 C 150 110, 170 140, 190 100 L 190 180 L 70 180 Z" fill="#2E8B57"/>
+
+            </svg>
+
+            <h3>4.2. Perbedaan Antara Kebutuhan dan Keinginan</h3>
+            <p>Penting untuk memahami bahwa "tidak berkekurangan apa pun" tidak berarti mendapatkan setiap keinginan atau kemewahan. Sebaliknya, ini adalah tentang pemenuhan kebutuhan esensial yang memungkinkan kita untuk hidup dan berfungsi sesuai tujuan Allah. Seringkali, manusia modern terlalu fokus pada keinginan yang tidak terbatas, sehingga melupakan betapa melimpahnya berkat pemenuhan kebutuhan dasar.</p>
+            <p>Kisah manna di padang gurun adalah contoh klasik. Israel ingin daging, tetapi Allah memberikan manna—roti dari surga yang cukup untuk setiap hari. Ini mengajar mereka tentang ketergantungan harian pada Allah dan kesabaran. Allah tahu apa yang kita butuhkan, bahkan sebelum kita mengetahuinya, dan Ia menyediakan dengan cara yang paling bijaksana.</p>
+
+            <h3>4.3. Implikasi untuk Kehidupan Kekristenan</h3>
+            <p>Janji "tidak berkekurangan apa pun" menginspirasi kita untuk:</p>
+            <ul>
+                <li><strong>Mengembangkan Sikap Syukur:</strong> Mengakui dan menghargai setiap berkat, besar maupun kecil, sebagai bukti kesetiaan Allah.</li>
+                <li><strong>Belajar Hidup dalam Kecukupan:</strong> Menemukan kepuasan dalam apa yang telah Allah berikan, daripada terus-menerus mengejar lebih banyak.</li>
+                <li><strong>Percaya pada Penyediaan-Nya:</strong> Di tengah ketidakpastian ekonomi atau pribadi, kita dapat berpegang pada janji bahwa Allah akan memenuhi kebutuhan kita.</li>
+                <li><strong>Menjadi Saluran Berkat:</strong> Jika kita telah diberkati dengan kecukupan, kita juga dipanggil untuk menjadi saluran berkat bagi orang lain yang mungkin berkekurangan.</li>
+                <li><strong>Mengurangi Kekhawatiran:</strong> Yesus sendiri mengajarkan agar kita tidak khawatir tentang makanan, minuman, atau pakaian, karena Bapa kita yang di surga tahu bahwa kita membutuhkan semuanya itu (Matius 6:25-34).</li>
+            </ul>
+            <p>Janji ini menegaskan bahwa Allah adalah Tuhan yang memelihara dan memenuhi. Bahkan di padang gurun kehidupan yang paling tandus, Ia mampu mengubah kelaparan menjadi kenyang, kehausan menjadi kepuasan, dan keputusasaan menjadi harapan. Kita tidak perlu takut akan masa depan ketika kita memiliki Tuhan yang sedemikian setia.</p>
+
+            <h2>Kesimpulan: Memegang Teguh Janji di Setiap Musim</h2>
+            <p>Ulangan 2:7 adalah mercusuar harapan yang bersinar terang bagi setiap peziarah di padang gurun kehidupan. Ayat ini merangkum esensi dari karakter Allah: Ia adalah Allah yang memberkati setiap usaha kita, memperhatikan setiap langkah perjalanan kita, menyertai kita di setiap musim kehidupan, dan memastikan bahwa kita tidak berkekurangan apa pun yang kita butuhkan.</p>
+            <p>Kisah Israel di padang gurun bukan hanya sebuah narasi kuno; ini adalah metafora yang kuat untuk pengalaman manusia. Kita semua akan menghadapi "padang gurun" kita sendiri—periode tantangan, ketidakpastian, dan kesulitan. Dalam momen-momen itu, godaan untuk meragukan kesetiaan Allah atau mengeluh tentang situasi kita mungkin akan sangat kuat.</p>
+            <p>Namun, melalui Ulangan 2:7, Allah mengingatkan kita untuk melihat ke belakang, mengingat kesetiaan-Nya di masa lalu, dan melihat ke depan dengan iman. Ia telah membuktikan diri-Nya sebagai Allah yang setia. Ia tidak pernah gagal. Ia tidak pernah meninggalkan umat-Nya. Setiap tanda berkat, setiap detail pemeliharaan, setiap momen penyertaan, dan setiap kebutuhan yang terpenuhi adalah bukti yang tak terbantahkan akan kasih-Nya yang kekal.</p>
+            <p>Maka, marilah kita menjalani hidup ini dengan keyakinan yang teguh pada janji-janji Allah. Bekerjalah dengan semangat, karena Ia memberkati pekerjaan tanganmu. Hadapilah tantangan dengan keberanian, karena Ia memperhatikan perjalananmu di padang gurun yang besar ini. Jangan merasa sendirian, karena Ia menyertai engkau. Dan jangan khawatir akan kekurangan, karena Ia akan memastikan bahwa engkau tidak berkekurangan apa pun yang sesungguhnya engkau perlukan.</p>
+            <p>Di tengah dunia yang seringkali terasa kering dan tidak pasti, Ulangan 2:7 adalah oase yang menyegarkan jiwa, sebuah pengingat bahwa kita berada dalam tangan seorang Allah yang Mahakuasa, Mahatahu, dan Maha Penyayang. Puji syukur bagi-Nya atas kesetiaan-Nya yang tak terbatas!</p>
+            <p>Ayat ini adalah undangan untuk mempercayai Allah lebih dalam lagi, untuk menyerahkan seluruh hidup kita kepada pemeliharaan-Nya yang sempurna, dan untuk menemukan damai sejahtera dalam jaminan penyertaan-Nya yang abadi. Biarlah kebenaran ini mengakar kuat dalam hati kita dan menjadi sumber kekuatan kita setiap hari.</p>
+            <p>Semoga renungan ini menginspirasi Anda untuk melihat setiap aspek hidup Anda, baik yang terang maupun yang gelap, sebagai bagian dari rencana pemeliharaan Allah yang sempurna. Di setiap langkah, di setiap nafas, ingatlah: Tuhanmu menyertai engkau, dan engkau tidak akan berkekurangan apa pun.</p>
+
+            <p>Sebagai penutup, mari kita renungkan kembali kalimat inti dari Ulangan 2:7 ini, yang begitu kaya akan janji dan jaminan. Empat puluh tahun adalah rentang waktu yang panjang, cukup untuk menguji kesabaran dan iman siapa pun. Bayangkan berada di tengah padang gurun selama itu, dengan segala ketidaknyamanan, bahaya, dan godaannya. Tanpa pemeliharaan Ilahi yang konsisten, mustahil bagi jutaan orang untuk bertahan hidup, apalagi berkembang.</p>
+            <p>Allah tidak hanya menyediakan kebutuhan fisik seperti makanan, air, dan pakaian, tetapi juga kebutuhan rohani dan emosional. Dia memberi mereka hukum-Nya, mengajari mereka bagaimana hidup sebagai umat-Nya, membentuk identitas mereka. Dia mendengarkan keluhan mereka, menegur ketidakpercayaan mereka, tetapi juga menunjukkan belas kasihan dan pengampunan. Ini adalah gambaran lengkap tentang bagaimana Allah berinteraksi dengan umat-Nya dalam "padang gurun" kehidupan.</p>
+            <p>Pada akhirnya, Ulangan 2:7 adalah sebuah pernyataan iman. Ini adalah deklarasi tentang siapa Allah itu dan bagaimana Dia berinteraksi dengan ciptaan-Nya. Ini adalah janji yang abadi, bukan hanya untuk bangsa Israel di masa lalu, tetapi untuk setiap orang yang memilih untuk percaya kepada-Nya hari ini. Jadi, ketika Anda menghadapi "padang gurun" pribadi Anda—apakah itu dalam karier, keluarga, kesehatan, atau perjalanan spiritual Anda—ingatlah janji ini. Ingatlah bahwa Tuhan, Allahmu, telah memberkati pekerjaan tanganmu, memperhatikan perjalananmu, menyertai engkau, dan tidak akan membiarkan engkau berkekurangan apa pun. Berpeganglah pada janji ini, dan biarkan itu menjadi sumber kekuatan dan pengharapan Anda.</p>
+            <p>Kita hidup di dunia yang serba cepat dan seringkali penuh tekanan, di mana rasa tidak aman dan kekhawatiran menjadi teman sehari-hari. Berita buruk menghujani kita dari segala arah, dan tuntutan hidup terasa semakin berat. Dalam konteks seperti ini, janji Ulangan 2:7 menjadi lebih relevan dan menghibur dari sebelumnya. Ini menawarkan sebuah perspektif yang berbeda, sebuah jangkar di tengah lautan gejolak.</p>
+            <p>Ketika kita merasa kewalahan oleh pekerjaan kita, firman "TUHAN, Allahmu, telah memberkati engkau dalam segala pekerjaan tanganmu" adalah pengingat untuk menyerahkan hasil dan prosesnya kepada-Nya. Ini bukan berarti kita pasif, tetapi kita bekerja dengan giat sambil mengakui bahwa sumber sejati dari setiap keberhasilan dan kemampuan adalah dari Tuhan. Ini menanamkan sikap kerendahan hati dan kepercayaan, melepaskan kita dari beban untuk selalu mengandalkan kekuatan sendiri.</p>
+            <p>Saat kita menghadapi pilihan sulit, menghadapi jalan yang tidak jelas, atau merasa tersesat dalam hidup, kalimat "Ia memperhatikan perjalananmu melalui padang gurun yang besar ini" menjadi suar harapan. Kita tidak perlu tahu semua jawabannya. Kita hanya perlu tahu bahwa ada Mata yang Mahatahu yang mengawasi setiap langkah kita, dan Tangan yang Maha Kuat yang membimbing kita. Ini memberikan keberanian untuk melangkah maju meskipun dalam ketidakpastian.</p>
+            <p>Ketika kesepian menyelimuti, atau kita merasa terisolasi dalam perjuangan, jaminan "empat puluh tahun lamanya TUHAN, Allahmu, menyertai engkau" adalah pelipur lara yang paling mendalam. Kita tidak pernah sendiri. Kehadiran Ilahi adalah konstan, bahkan ketika kita tidak merasakannya atau tidak melihat tanda-tanda-Nya. Ini adalah janji kebersamaan yang tak terputus, sebuah persahabatan ilahi yang melampaui segala bentuk perpisahan.</p>
+            <p>Dan ketika ketakutan akan kemiskinan atau kekurangan materi mengancam kedamaian kita, bagian terakhir ayat ini, "dan engkau tidak berkekurangan apa pun," menegaskan bahwa Allah adalah Penyedia yang sempurna. Dia tahu persis apa yang kita butuhkan, dan Dia memiliki kemampuan untuk menyediakannya. Ini mendorong kita untuk hidup dengan iman, bukan dengan kekhawatiran, percaya bahwa Allah akan memenuhi kebutuhan kita sesuai kekayaan kemuliaan-Nya.</p>
+            <p>Jadi, setiap kali Anda membaca atau mendengar Ulangan 2:7, biarkan kata-kata ini meresap ke dalam jiwa Anda. Biarkan itu mengubah cara Anda melihat pekerjaan, tantangan, kesendirian, dan kebutuhan Anda. Ini adalah janji hidup dari Allah yang hidup, yang setia kemarin, hari ini, dan sampai selama-lamanya. Terima dan hiduplah di dalamnya.</p>
+        </main>
+    </div>
+<div class='related-posts'><h3>Related Posts</h3><ul><li><a href="/imamat-26-7">Imamat 26 7</a></li>
+<li><a href="/2-timotius-3-11">2 Timotius 3 11</a></li>
+<li><a href="/2-samuel-19-6">2 Samuel 19 6</a></li>
+<li><a href="/2-samuel-6-15">2 Samuel 6 15</a></li>
+<li><a href="/mazmur-26-2">Mazmur 26 2</a></li>
+<li><a href="/yesaya-44-6">Yesaya 44 6</a></li>
+<li><a href="/lukas-20-20">Lukas 20 20</a></li>
+<li><a href="/matius-28-5">Matius 28 5</a></li>
+<li><a href="/roma-13-14">Roma 13 14</a></li>
+<li><a href="/markus-14-10">Markus 14 10</a></li></ul></div>
+<script src="/ik.js"></script>
+</body>
+</html>

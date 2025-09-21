@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efesus 2:5: Hidup Baru dalam Anugerah Kristus</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        :root {
+            --color-bg-light: hsl(210, 60%, 98%); /* Very light blue */
+            --color-text-dark: hsl(210, 30%, 20%); /* Dark blue-gray */
+            --color-heading: hsl(190, 70%, 30%); /* Teal */
+            --color-accent: hsl(150, 60%, 40%); /* Medium green */
+            --color-light-accent: hsl(150, 60%, 85%); /* Lighter green for subtle highlights */
+            --color-border: hsl(210, 20%, 90%);
+            --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --border-radius-large: 12px;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--color-text-dark);
+            background-color: var(--color-bg-light);
+            margin: 0;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .article-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: var(--border-radius-large);
+            box-shadow: var(--shadow-subtle);
+            padding: 30px;
+            margin: 20px;
+            box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            color: var(--color-heading);
+            line-height: 1.3;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 4vw + 0.5rem, 2.8rem);
+            text-align: center;
+            margin-bottom: 1em;
+            color: var(--color-accent);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: clamp(1.4rem, 3vw + 0.5rem, 2.2rem);
+            border-bottom: 2px solid var(--color-light-accent);
+            padding-bottom: 8px;
+            margin-top: 2.5em;
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 2.5vw + 0.3rem, 1.8rem);
+            color: var(--color-heading);
+            margin-top: 2em;
+        }
+
+        h4 {
+            font-size: clamp(1.1rem, 2vw + 0.2rem, 1.4rem);
+            color: var(--color-text-dark);
+            margin-top: 1.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+            font-size: clamp(1rem, 2vw + 0.1rem, 1.15rem);
+        }
+
+        .ayat-isi {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            text-align: center;
+            font-size: clamp(1.1rem, 2.5vw + 0.2rem, 1.35rem);
+            color: var(--color-heading);
+            margin: 1.5em 0 2.5em 0;
+            padding: 15px;
+            background-color: var(--color-bg-light);
+            border-left: 5px solid var(--color-accent);
+            border-right: 5px solid var(--color-accent);
+            border-radius: var(--border-radius-large);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-heading);
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin-bottom: 1em;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+            font-size: clamp(1rem, 2vw + 0.1rem, 1.15rem);
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 3em 0;
+            padding: 20px;
+            background-color: var(--color-bg-light);
+            border-radius: var(--border-radius-large);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+        }
+
+        .image-container svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+            }
+
+            h2 {
+                font-size: clamp(1.2rem, 5vw, 1.8rem);
+            }
+
+            .ayat-isi {
+                font-size: clamp(1rem, 4.5vw, 1.25rem);
+                padding: 10px;
+            }
+
+            p, li {
+                font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-container {
+                padding: 15px;
+                margin: 5px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .ayat-isi {
+                font-size: 1.1rem;
+            }
+
+            p, li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-container">
+        <h1>Efesus 2:5: Hidup Baru dalam Anugerah Kristus</h1>
+
+        <p class="ayat-isi">
+            "sekalipun kita telah mati oleh pelanggaran-pelanggaran kita, Ia telah menghidupkan kita bersama-sama dengan Kristus—(dengan anugerah kamu diselamatkan)—"
+        </p>
+
+        <div class="image-container">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 500 400" style="enable-background:new 0 0 500 400;" xml:space="preserve"
+                 alt="Salib Kristus sebagai sumber kehidupan baru dan anugerah. Terbit dari tanah yang gelap, salib ini memancarkan cahaya terang ke arah tanaman yang bertunas dan kupu-kupu yang beterbangan, melambangkan kebangkitan rohani dan kehidupan baru melalui anugerah Allah.">
+            <style type="text/css">
+                .st0{fill:#2C3E50;} /* Dark earth/sin */
+                .st1{fill:#3498DB;} /* Cross body */
+                .st2{fill:#F1C40F;} /* Light source from cross */
+                .st3{fill:#2ECC71;} /* New life - plant */
+                .st4{fill:#ECF0F1;} /* Butterfly wings */
+                .st5{fill:#9B59B6;} /* Butterfly body - subtle */
+                .st6{fill:#E74C3C;} /* Subtle shadow/darker part of plant */
+                .st7{fill:none;stroke:#FFF;stroke-width:3;stroke-miterlimit:10;} /* Light rays outline */
+            </style>
+            <g id="Background">
+                <rect x="0" y="250" class="st0" width="500" height="150"/>
+                <path class="st0" d="M0,250c0,0,125-50,250-50s250,50,250,50V250H0z"/>
+            </g>
+            <g id="Cross">
+                <rect x="235" y="100" class="st1" width="30" height="200"/>
+                <rect x="200" y="145" class="st1" width="100" height="30"/>
+            </g>
+            <g id="Light">
+                <circle class="st2" cx="250" cy="150" r="80" opacity="0.8"/>
+                <path class="st2" d="M250,150c0,0,100,50,150,0c50-50,0-150,0-150C350-50,250,0,250,0C150,0,50-50,0,0c0,0-50,100,0,150C150,200,250,150,250,150z" opacity="0.3"/>
+            </g>
+            <g id="New_Life">
+                <path class="st3" d="M120,290c-15-20-30-50,0-70c30-20,40,10,20,30C120,270,135,290,120,290z"/>
+                <path class="st6" d="M125,295c-10-15-20-40,0-55c20-15,25,5,15,20C125,280,130,295,125,295z"/>
+
+                <path class="st3" d="M380,290c15-20,30-50,0-70c-30-20-40,10-20,30C380,270,365,290,380,290z"/>
+                <path class="st6" d="M375,295c10-15,20-40,0-55c-20-15-25,5-15,20C375,280,370,295,375,295z"/>
+
+                <path class="st3" d="M110,310c-5-10-10-25,0-35c10-10,15,5,10,15C110,300,115,310,110,310z"/>
+                <path class="st3" d="M390,310c5-10,10-25,0-35c-10-10-15,5-10,15C390,300,385,310,390,310z"/>
+
+                <path class="st3" d="M250,280c-10,0-15-10-15-20s5-20,15-20s15,10,15,20S260,280,250,280z"/>
+                <path class="st3" d="M250,260c-5-10-10-20,0-25c10-5,15,0,10,5C250,250,255,260,250,260z"/>
+            </g>
+            <g id="Butterfly">
+                <path class="st5" d="M280,100c0-10-10-20-20-20s-20,10-20,20c0,10,10,20,20,20S280,110,280,100z"/>
+                <path class="st4" d="M260,90c-15-20-30-50,0-70c30-20,40,10,20,30C260,70,275,90,260,90z"/>
+                <path class="st4" d="M260,90c15-20,30-50,0-70c-30-20-40,10-20,30C260,70,245,90,260,90z"/>
+            </g>
+            </svg>
+        </div>
+
+        <p>
+            Kitab Efesus adalah salah satu surat Paulus yang paling kaya secara teologis, dan di dalamnya, Efesus 2:5 menonjol sebagai sebuah permata kebenaran yang menjelaskan intisari Injil Kristus. Ayat ini adalah sebuah pengingat yang kuat tentang kondisi manusia sebelum Kristus, tindakan kasih karunia Allah yang luar biasa, dan kehidupan baru yang kita terima melalui Dia. Dalam satu kalimat pendek, Paulus merangkum perjalanan transformatif dari kematian spiritual menuju kehidupan yang penuh harapan dan tujuan, sepenuhnya karena anugerah Allah yang tak terhingga. Ayat ini bukan sekadar pernyataan teologis; ia adalah fondasi bagi identitas, jaminan, dan misi setiap orang percaya.
+        </p>
+
+        <p>
+            Untuk memahami sepenuhnya kedalaman Efesus 2:5, kita harus terlebih dahulu melihat konteks yang mendahuluinya. Paulus tidak memulai dengan kabar baik secara langsung; ia terlebih dahulu melukiskan gambaran yang suram tentang kondisi manusia tanpa Kristus. Ini bukan untuk menakut-nakuti, melainkan untuk menyoroti betapa dahsyatnya anugerah Allah. Tanpa pemahaman yang jelas tentang sejauh mana kita telah jatuh, kita tidak akan pernah sepenuhnya menghargai ketinggian kasih karunia yang telah mengangkat kita.
+        </p>
+
+        <h2>Kondisi Manusia: Mati oleh Pelanggaran (Efesus 2:1-3)</h2>
+
+        <p>
+            Sebelum Efesus 2:5, Paulus dengan tegas menyatakan realitas spiritual yang mengerikan: "Kamu dahulu sudah mati karena pelanggaran-pelanggaran dan dosa-dosamu" (Efesus 2:1). Kata "mati" di sini bukan merujuk pada kematian fisik, tetapi pada kematian spiritual. Ini adalah keadaan keterpisahan total dari Allah, Sumber Kehidupan.
+        </p>
+
+        <h3>1. Realitas Kematian Spiritual</h3>
+        <p>
+            Kematian spiritual berarti kita tidak memiliki kemampuan untuk merespons Allah atau melakukan hal-hal yang menyenangkan Dia. Seperti mayat yang tidak dapat mendengar, melihat, atau merasakan, orang yang mati secara spiritual tidak dapat memahami kebenaran Allah, menginginkan kekudusan-Nya, atau mencari persekutuan dengan-Nya. Ini adalah keadaan tanpa harapan, di mana kita sepenuhnya tunduk pada kekuatan dosa dan kejahatan. Kita adalah mayat rohani yang bergerak, hidup dalam dunia tetapi terputus dari Pencipta dan tujuan sejati kita.
+        </p>
+        <p>
+            Paulus menjelaskan lebih lanjut bahwa kondisi mati ini adalah akibat dari "pelanggaran-pelanggaran dan dosa-dosa" kita. Pelanggaran (para-ptoma) adalah langkah menyimpang dari jalan yang benar, jatuh di luar batas yang ditetapkan oleh Allah. Dosa (hamartia) adalah kegagalan untuk mencapai standar Allah, sasaran yang meleset. Keduanya menunjukkan bahwa kita tidak hanya sesekali berbuat salah, tetapi bahwa sifat dasar kita telah rusak dan cenderung memberontak terhadap Allah. Dosa bukanlah sekadar tindakan, melainkan suatu kondisi yang meresapi seluruh keberadaan kita, menguasai kehendak dan pikiran kita.
+        </p>
+
+        <h3>2. Dikuasai oleh Kuasa Gelap dan Kedagingan</h3>
+        <p>
+            Ayat 2 melanjutkan, "Kamu hidup di dalamnya, karena kamu mengikuti jalan dunia ini, karena kamu menaati penguasa kerajaan angkasa, yaitu roh yang sekarang sedang bekerja di antara orang-orang durhaka." Ini adalah gambaran yang mengerikan:
+        </p>
+        <ul>
+            <li>
+                <strong>Mengikuti Jalan Dunia Ini:</strong> Artinya, kita hidup sesuai dengan nilai-nilai, prioritas, dan filosofi masyarakat yang tidak mengenal Allah. Kita terperangkap dalam arus budaya yang menolak kebenaran ilahi, mengejar kepuasan diri, kekayaan, kekuasaan, dan kehormatan manusia. Cara berpikir ini pada akhirnya menjauhkan kita dari Allah dan kebenaran-Nya.
+            </li>
+            <li>
+                <strong>Menaati Penguasa Kerajaan Angkasa:</strong> Paulus merujuk pada Iblis dan kuasa-kuasa roh jahat yang mendominasi dunia ini. Orang yang mati secara spiritual secara tidak sadar berada di bawah pengaruh dan kendali mereka, menjadi alat bagi tujuan jahat mereka. Ini adalah perbudakan yang tak terlihat tetapi nyata, yang mengikat manusia dalam kegelapan dan penipuan.
+            </li>
+            <li>
+                <strong>Roh yang Sedang Bekerja di antara Orang-orang Durhaka:</strong> Roh jahat ini secara aktif memengaruhi dan memanipulasi mereka yang tidak memiliki Kristus, mendorong mereka untuk melakukan kejahatan dan menolak Allah. Mereka adalah "anak-anak durhaka," hidup dalam pemberontakan yang disengaja terhadap Pencipta mereka.
+            </li>
+        </ul>
+
+        <h3>3. Anak-anak Kemurkaan</h3>
+        <p>
+            Ayat 3 menyimpulkan, "Sebenarnya dahulu kami semua juga termasuk di antara mereka, ketika kami hidup di dalam hawa nafsu kedagingan kami dan menuruti kehendak daging dan pikiran kami yang jahat. Secara kodrat kami adalah anak-anak kemurkaan, sama seperti yang lain." Paulus tidak mengecualikan dirinya atau orang Yahudi lainnya. Semua manusia, tanpa terkecuali, berada dalam kondisi ini. Kita semua:
+        </p>
+        <ul>
+            <li>
+                <strong>Hidup dalam Hawa Nafsu Kedagingan:</strong> Kita dikuasai oleh keinginan dosa, nafsu duniawi yang memimpin kita ke dalam kehancuran.
+            </li>
+            <li>
+                <strong>Menuruti Kehendak Daging dan Pikiran Jahat:</strong> Bukan hanya tindakan fisik, tetapi juga pikiran dan motif kita tercemar oleh dosa. Kehendak kita sendiri, yang seharusnya mencari Allah, malah terpusat pada diri sendiri dan keinginan yang berdosa.
+            </li>
+            <li>
+                <strong>Secara Kodrat adalah Anak-anak Kemurkaan:</strong> Ini berarti bahwa bukan hanya karena dosa-dosa yang kita lakukan, tetapi karena sifat dasar kita yang telah rusak sejak lahir, kita layak menerima penghukuman Allah. Kita dilahirkan dalam kondisi pemberontakan terhadap Allah.
+            </li>
+        </ul>
+        <p>
+            Gambaran ini sangatlah suram. Manusia mati secara rohani, diperbudak oleh dosa, dikuasai oleh kuasa kegelapan, dan secara alami layak menerima murka Allah. Dari perspektif manusia, tidak ada harapan. Tidak ada yang bisa kita lakukan untuk mengubah kondisi ini. Kita benar-benar tidak berdaya.
+        </p>
+
+        <h2>Tetapi Allah: Kasih Karunia yang Melimpah (Efesus 2:4)</h2>
+
+        <p>
+            Setelah melukiskan gambaran yang begitu kelam, Paulus memperkenalkan sebuah kata yang mengubah segalanya: "Tetapi Allah..." (Efesus 2:4). Frasa singkat ini adalah jembatan dari kegelapan menuju terang, dari kematian menuju kehidupan. Ini adalah titik balik dalam narasi keselamatan, di mana fokus beralih dari kondisi manusia yang tak berdaya kepada kedaulatan dan kemurahan hati Allah.
+        </p>
+
+        <h3>1. Allah yang Kaya dengan Rahmat</h3>
+        <p>
+            "Tetapi Allah yang kaya dengan rahmat, karena kasih-Nya yang besar, yang dilimpahkan-Nya kepada kita..." (Efesus 2:4). Allah digambarkan sebagai "kaya dengan rahmat" (plousios en eleei). Kata "kaya" (plousios) menunjukkan kelimpahan, kemewahan, dan kemakmuran yang tak terbatas. Rahmat (eleos) adalah belas kasihan Allah yang termotivasi oleh penderitaan kita, simpati-Nya terhadap kondisi kita yang menyedihkan. Ini adalah tindakan aktif Allah untuk meringankan beban kita, untuk menolong mereka yang tidak berdaya.
+        </p>
+
+        <h3>2. Didorong oleh Kasih yang Besar</h3>
+        <p>
+            Rahmat ini tidak datang secara acak, melainkan didorong oleh "kasih-Nya yang besar, yang dilimpahkan-Nya kepada kita" (dia ten pollen agapen autou hen egapesen hemas). Kasih (agape) di sini adalah kasih ilahi, kasih yang rela berkorban, yang tidak didasarkan pada kelayakan objeknya, melainkan pada sifat pemberi. Ini adalah kasih yang aktif dan inisiatif. Paulus menekankan bahwa kasih ini adalah "besar" (polys), melimpah, tak terbatas. Allah tidak hanya memiliki rahmat, Dia kaya akan rahmat. Dia tidak hanya memiliki kasih, Dia memiliki kasih yang melimpah ruah, kasih yang luar biasa besarnya, yang Dia berikan kepada kita yang tidak layak.
+        </p>
+        <p>
+            Ayat 4 ini menetapkan dasar teologis untuk tindakan penyelamatan Allah. Penyelamatan kita bukanlah hasil dari kebajikan kita, bukan karena kita mencari-Nya, bukan karena kita layak, melainkan semata-mata karena sifat Allah sendiri: rahmat-Nya yang melimpah dan kasih-Nya yang tak terbatas. Ini adalah kebenaran yang membebaskan, karena menghilangkan beban pencapaian diri dan menggantinya dengan kelegaan penerimaan anugerah.
+        </p>
+
+        <h2>Inti Efesus 2:5: Dari Kematian menuju Kehidupan dalam Kristus</h2>
+
+        <p>
+            Dengan latar belakang yang suram dari kematian spiritual manusia (ayat 1-3) dan gambaran mulia tentang rahmat serta kasih Allah (ayat 4), Paulus akhirnya sampai pada puncaknya di Efesus 2:5, yang adalah jantung dari Injil:
+        </p>
+        <p class="ayat-isi">
+            "sekalipun kita telah mati oleh pelanggaran-pelanggaran kita, Ia telah menghidupkan kita bersama-sama dengan Kristus—(dengan anugerah kamu diselamatkan)—"
+        </p>
+
+        <h3>1. "Sekalipun Kita Telah Mati oleh Pelanggaran-pelanggaran Kita"</h3>
+        <p>
+            Frasa pembuka ini menegaskan kembali kondisi putus asa yang dijelaskan di ayat 1. Paulus tidak ingin kita melupakan dari mana kita berasal. Penyelamatan bukanlah perbaikan minor pada keadaan yang sedikit rusak; itu adalah kebangkitan total dari kematian yang mutlak. Kita bukan hanya sakit, kita mati. Kita bukan hanya tersesat, kita tidak bergerak sama sekali, terpisah dari kehidupan. Penekanan pada "sekalipun" (kaiper) menyoroti kontras yang dramatis. Meskipun kondisi kita adalah kematian, Allah bertindak. Keadaan kita yang tidak berdaya dan tidak layak sama sekali tidak menghalangi, melainkan menyoroti kemuliaan tindakan Allah.
+        </p>
+
+        <h4>Mati: Suatu Keadaan Total</h4>
+        <p>
+            Konsep "mati" (nekrous) di sini adalah fundamental. Ini bukan sekadar lemah atau sakit, melainkan benar-benar tidak berdaya. Seseorang yang mati tidak dapat membantu dirinya sendiri, tidak dapat melakukan upaya, tidak dapat menanggapi rangsangan. Begitulah kondisi kita di hadapan Allah dalam dosa kita. Kehendak kita diperbudak, pikiran kita dibutakan, hati kita dikeraskan. Kita tidak mencari Allah karena kita tidak dapat. Ini adalah bukti dari doktrin total depravity (kerusakan total), yang tidak berarti bahwa setiap orang sejahat mungkin, tetapi bahwa setiap bagian dari keberadaan manusia telah dipengaruhi dan rusak oleh dosa. Tanpa intervensi ilahi, kita akan tetap dalam keadaan mati ini selamanya, menghadapi konsekuensi kekal dari dosa kita.
+        </p>
+
+        <h3>2. "Ia Telah Menghidupkan Kita Bersama-sama dengan Kristus"</h3>
+        <p>
+            Inilah inti dari berita baik! Kata kuncinya adalah "menghidupkan" (syzoopoieo). Ini adalah kata majemuk yang berarti "membuat hidup bersama-sama dengan" atau "meregenerasi bersama-sama dengan." Ini adalah tindakan yang sepenuhnya dari Allah, sebuah kebangkitan spiritual. Sebagaimana Allah membangkitkan Kristus dari kematian fisik, Dia juga membangkitkan kita dari kematian spiritual. Ini adalah tindakan penciptaan baru, bukan sekadar perbaikan.
+        </p>
+
+        <h4>A. Tindakan Allah: Menghidupkan</h4>
+        <p>
+            Kata kerja "menghidupkan" (syzoopoieo) dalam bentuk Aorist Tense yang aktif, menunjukkan tindakan yang selesai dan pasti yang dilakukan oleh Allah (subjek implisit dari "Ia" adalah Allah, yang disebutkan di ayat 4). Ini bukan sesuatu yang kita lakukan, melainkan sesuatu yang Allah lakukan kepada kita. Ini adalah pekerjaan regenerasi atau kelahiran baru, di mana Roh Kudus mengembuskan kehidupan rohani ke dalam jiwa yang mati. Hasilnya adalah kita menjadi mampu merespons Allah, memahami Firman-Nya, dan menginginkan kebenaran-Nya.
+        </p>
+        <p>
+            Tindakan ini sangat mirip dengan penciptaan Adam di Taman Eden, di mana Allah mengembuskan napas kehidupan ke dalam tubuh yang tidak bernyawa, atau kebangkitan Lazarus dari kubur. Sama seperti Kristus dibangkitkan dari kubur oleh kuasa Allah (Roma 8:11), demikian pula kita yang mati dalam dosa dibangkitkan oleh kuasa yang sama. Ini adalah mukjizat, sebuah demonstrasi kekuatan ilahi yang melampaui segala pemahaman manusia.
+        </p>
+
+        <h4>B. Identifikasi dengan Kristus: "Bersama-sama dengan Kristus"</h4>
+        <p>
+            Frasa "bersama-sama dengan Kristus" (syn Christo) adalah krusial. Ini bukan hanya Allah menghidupkan kita *seperti* Dia menghidupkan Kristus, tetapi Allah menghidupkan kita *karena* kita dipersatukan dengan Kristus. Kematian dan kebangkitan Kristus adalah dasar dari kehidupan baru kita. Ketika Kristus mati, kita yang percaya mati bersama-Nya terhadap dosa. Ketika Kristus dibangkitkan, kita yang percaya dibangkitkan bersama-Nya menuju kehidupan baru.
+        </p>
+        <p>
+            Konsep "bersama-sama dengan Kristus" ini dikenal sebagai "persatuan dengan Kristus" (union with Christ), yang merupakan salah satu doktrin sentral dalam teologi Paulus. Ini berarti bahwa segala sesuatu yang Kristus capai melalui hidup, kematian, kebangkitan, dan kenaikan-Nya, kini dihitung dan dialami oleh mereka yang ada di dalam Dia.
+        </p>
+        <ul>
+            <li>
+                <strong>Kematian Kristus adalah Kematian Kita terhadap Dosa:</strong> Dalam Kristus, kita telah mati terhadap tuntutan hukum dan kuasa dosa (Roma 6:3-4).
+            </li>
+            <li>
+                <strong>Kebangkitan Kristus adalah Kebangkitan Kita Menuju Kehidupan Baru:</strong> Kita dibangkitkan bersama Dia untuk berjalan dalam kehidupan yang baru, kehidupan yang ditandai oleh kekudusan dan ketaatan (Roma 6:4; Kolose 2:12-13).
+            </li>
+            <li>
+                <strong>Kenaikan Kristus adalah Kenaikan Kita ke Posisi Baru:</strong> Efesus 2:6 melanjutkan bahwa kita "duduk bersama-sama dengan Dia di sorga," menunjukkan posisi otoritas dan kedekatan dengan Allah yang kita miliki di dalam Kristus.
+            </li>
+        </ul>
+        <p>
+            Persatuan ini bukan hanya metafora; itu adalah realitas spiritual yang mengubah segalanya. Identitas kita sekarang terikat erat dengan Kristus. Kita tidak lagi didefinisikan oleh dosa dan kematian, melainkan oleh kehidupan dan kebenaran Kristus. Kehidupan baru yang kita miliki bukanlah kehidupan yang kita hasilkan sendiri, melainkan kehidupan Kristus yang mengalir melalui kita.
+        </p>
+
+        <h3>3. "(Dengan Anugerah Kamu Diselamatkan)"</h3>
+        <p>
+            Bagian dalam kurung ini, "(dengan anugerah kamu diselamatkan)," adalah sebuah interjeksi penting yang Paulus masukkan untuk menegaskan kembali prinsip fundamental dari seluruh pekerjaan penyelamatan. Ini seperti tanda seru yang memastikan tidak ada kesalahpahaman.
+        </p>
+
+        <h4>A. Anugerah (Charis)</h4>
+        <p>
+            Anugerah (charis) adalah kasih karunia atau kebaikan yang tidak layak kita terima, yang diberikan secara cuma-cuma. Ini adalah lawan dari "pekerjaan" atau "jasa." Jika kita mati dalam dosa dan tidak berdaya, maka kita tidak dapat melakukan apapun untuk menyelamatkan diri kita sendiri. Oleh karena itu, keselamatan harus datang sebagai hadiah, bukan sebagai upah.
+        </p>
+        <p>
+            Paulus selalu menekankan bahwa anugerah adalah sarana tunggal keselamatan. Tidak ada percampuran antara anugerah dan pekerjaan. Jika itu karena pekerjaan, maka bukan lagi anugerah (Roma 11:6). Jika itu karena anugerah, maka itu tidak dapat diklaim sebagai hasil dari pekerjaan manusia.
+        </p>
+        <p>
+            Anugerah menyoroti kedaulatan Allah dan kerendahan hati manusia. Tidak ada ruang untuk kesombongan atau klaim atas jasa pribadi. Semuanya adalah pemberian dari Allah. Ini mencegah kita dari merasa lebih baik dari orang lain atau berpikir bahwa kita telah mendapatkan tempat kita di hadapan Allah.
+        </p>
+
+        <h4>B. Diselamatkan (Sesosmenoi)</h4>
+        <p>
+            Kata "diselamatkan" (sesosmenoi) di sini adalah partisip pasif yang sempurna.
+        </p>
+        <ul>
+            <li>
+                <strong>Pasif:</strong> Menunjukkan bahwa kita adalah penerima tindakan, bukan pelaku tindakan. Allah yang menyelamatkan kita, bukan kita yang menyelamatkan diri kita sendiri.
+            </li>
+            <li>
+                <strong>Sempurna:</strong> Menunjukkan tindakan yang telah selesai di masa lalu tetapi memiliki hasil dan keadaan yang berkelanjutan hingga saat ini dan di masa depan. Artinya, kita telah diselamatkan, dan kita tetap dalam keadaan diselamatkan. Ini memberikan jaminan dan kepastian bagi orang percaya.
+            </li>
+        </ul>
+        <p>
+            Keselamatan yang dibicarakan Paulus ini adalah keselamatan dari murka Allah, dari kuasa dosa dan kematian, serta dari hukuman kekal. Ini adalah pemulihan hubungan dengan Allah, penerimaan ke dalam keluarga-Nya, dan janji kehidupan kekal. Dan semua ini, sekali lagi, "dengan anugerah."
+        </p>
+
+        <p>
+            Pengulangan penekanan pada anugerah di ayat 5 (dan kemudian di ayat 8 dan 9) menunjukkan betapa pentingnya kebenaran ini bagi Paulus. Ini adalah pilar dari Injil dan kebebasan yang dibawa oleh Kristus. Tanpa anugerah, tidak akan ada harapan bagi manusia yang mati dalam dosa.
+        </p>
+
+        <h2>Implikasi Teologis dan Praktis dari Efesus 2:5</h2>
+
+        <p>
+            Kebenaran yang terkandung dalam Efesus 2:5 memiliki implikasi yang mendalam, baik secara teologis maupun praktis, bagi kehidupan orang percaya.
+        </p>
+
+        <h3>1. Kebangkitan Rohani dan Regenerasi</h3>
+        <p>
+            Efesus 2:5 adalah pernyataan tegas tentang doktrin regenerasi atau kelahiran baru. Ini bukan sekadar keputusan manusia untuk "menerima Kristus" sebagai permulaan, melainkan suatu pekerjaan ilahi yang memungkinkan keputusan itu. Kita tidak memilih Kristus sampai Allah terlebih dahulu menghidupkan kita. Kebangkitan rohani ini adalah mukjizat penciptaan baru, di mana hati yang keras diubah menjadi hati yang lembut, keinginan yang berdosa digantikan dengan kerinduan akan Allah. Ini adalah fondasi dari setiap pengalaman pertobatan dan iman yang sejati. Tanpa regenerasi, tidak ada perubahan sejati yang mungkin terjadi.
+        </p>
+
+        <h3>2. Hakikat Keselamatan: Past, Present, and Future</h3>
+        <p>
+            Frasa "kamu diselamatkan" (sesosmenoi) dalam bentuk lampau sempurna menunjukkan bahwa keselamatan memiliki tiga aspek waktu:
+        </p>
+        <ul>
+            <li>
+                <strong>Masa Lalu (Justifikasi):</strong> Kita telah diselamatkan dari hukuman dosa. Di hadapan Allah, kita dinyatakan benar dan dibebaskan dari kesalahan kita. Ini adalah tindakan ilahi yang pasti dan selesai.
+            </li>
+            <li>
+                <strong>Masa Kini (Pengudusan):</strong> Kita sedang diselamatkan dari kuasa dosa. Roh Kudus bekerja dalam diri kita setiap hari, mengubah kita semakin menyerupai Kristus. Ini adalah proses berkelanjutan yang mencakup pertumbuhan dalam kekudusan dan perjuangan melawan dosa.
+            </li>
+            <li>
+                <strong>Masa Depan (Pemuliaan):</strong> Kita akan diselamatkan dari hadirat dosa. Ketika Kristus datang kembali, tubuh kita akan dimuliakan, dan kita akan sepenuhnya dibebaskan dari keberadaan dosa dan penderitaan.
+            </li>
+        </ul>
+        <p>
+            Efesus 2:5 terutama berbicara tentang aspek masa lalu dan sekarang dari keselamatan kita—kita *telah* dihidupkan, dan oleh anugerah kita *telah* diselamatkan dan *tetap* diselamatkan. Ini memberikan jaminan yang kokoh bagi orang percaya.
+        </p>
+
+        <h3>3. Peran Trinitas dalam Keselamatan</h3>
+        <p>
+            Meskipun tidak secara eksplisit disebut dalam Efesus 2:5, peran setiap Pribadi Tritunggal Mahakudus sangat jelas:
+        </p>
+        <ul>
+            <li>
+                <strong>Allah Bapa:</strong> Dialah yang "kaya dengan rahmat" dan memiliki "kasih yang besar" (ayat 4) yang menginisiasi rencana keselamatan dan menghidupkan kita.
+            </li>
+            <li>
+                <strong>Allah Anak (Yesus Kristus):</strong> Dialah yang menjadi sarana keselamatan. Kita dihidupkan "bersama-sama dengan Kristus." Kematian dan kebangkitan-Nya adalah dasar bagi kehidupan baru kita.
+            </li>
+            <li>
+                <strong>Allah Roh Kudus:</strong> Meskipun tidak disebutkan langsung di Efesus 2:5, ayat-ayat lain (seperti Titus 3:5, "melalui permandian kelahiran kembali dan pembaharuan yang dikerjakan oleh Roh Kudus") menunjukkan bahwa Roh Kudus adalah agen yang menerapkan pekerjaan Kristus kepada kita, yang menghidupkan kita secara rohani.
+            </li>
+        </ul>
+        <p>
+            Keselamatan adalah karya tunggal Allah Tritunggal, sebuah kesatuan tujuan dan tindakan untuk menebus manusia.
+        </p>
+
+        <h3>4. Fondasi untuk Kerendahan Hati dan Syukur</h3>
+        <p>
+            Karena keselamatan adalah sepenuhnya karena anugerah, itu seharusnya menghasilkan kerendahan hati yang mendalam dalam diri orang percaya. Tidak ada ruang untuk kesombongan atau kebanggaan rohani. Kita tidak bisa membual tentang perbuatan baik kita atau menganggap diri lebih baik dari orang lain, karena semua itu adalah anugerah. Kebenaran ini menghilangkan setiap dasar untuk kebanggaan manusia (Efesus 2:9).
+        </p>
+        <p>
+            Sebaliknya, anugerah melahirkan rasa syukur yang melimpah. Ketika kita menyadari betapa dalamnya kita telah jatuh dan betapa besarnya kasih yang mengangkat kita, hati kita dipenuhi dengan rasa terima kasih kepada Allah. Syukur ini menjadi motivasi utama bagi ketaatan dan pelayanan kita. Kita melayani bukan *untuk* diselamatkan, melainkan *karena* kita telah diselamatkan.
+        </p>
+
+        <h3>5. Dorongan untuk Hidup Kudus (Efesus 2:10)</h3>
+        <p>
+            Meskipun Efesus 2:5 (dan ayat 8-9) secara tegas menyatakan bahwa keselamatan bukanlah karena pekerjaan, ini tidak berarti bahwa pekerjaan baik tidak penting. Sebaliknya, Efesus 2:10 menjelaskan hubungan antara anugerah dan pekerjaan: "Karena kita ini buatan Allah, diciptakan dalam Kristus Yesus untuk melakukan pekerjaan baik, yang dipersiapkan Allah sebelumnya. Ia mau, supaya kita hidup di dalamnya."
+        </p>
+        <p>
+            Kita dihidupkan kembali bukan untuk tetap pasif, tetapi untuk tujuan yang mulia: melakukan pekerjaan baik. Pekerjaan baik ini bukanlah penyebab keselamatan kita, melainkan bukti dan buah dari keselamatan kita. Kita adalah "buatan Allah" (poiema theo), mahakarya Allah, yang diciptakan kembali dalam Kristus Yesus. Ini adalah kehidupan baru yang aktif, yang berbuah. Hidup kudus adalah respons alami dan logis dari hati yang telah diubah oleh anugerah ilahi.
+        </p>
+        <p>
+            Ini mengubah perspektif tentang ketaatan. Ketaatan bukan lagi beban hukum, melainkan sukacita dari hati yang merespons kasih karunia yang begitu besar. Kita tidak lagi hidup di bawah kuk hukum, tetapi di bawah pimpinan Roh Kudus, yang memampukan kita untuk memenuhi kehendak Allah.
+        </p>
+
+        <h3>6. Jaminan Keselamatan</h3>
+        <p>
+            Karena keselamatan adalah pekerjaan Allah dan bukan kita, maka jaminan keselamatan kita terletak pada kesetiaan dan kuasa Allah, bukan pada performa kita yang tidak konsisten. Frasa "kamu diselamatkan" dalam bentuk lampau sempurna menegaskan ini. Jika Allah yang memulai pekerjaan baik ini dalam kita, Dia juga yang akan menyelesaikannya (Filipi 1:6).
+        </p>
+        <p>
+            Jaminan ini tidak berarti lisensi untuk berbuat dosa, melainkan dasar yang kuat untuk hidup berani dan taat. Ketika kita tahu bahwa kita aman dalam Kristus, kita memiliki kebebasan untuk mengambil risiko dalam iman, melayani Allah dengan sepenuh hati tanpa takut kehilangan keselamatan kita karena kegagalan sesekali.
+        </p>
+
+        <h3>7. Dasar Persatuan dalam Kristus</h3>
+        <p>
+            Dalam konteks Efesus, Paulus seringkali berbicara tentang bagaimana anugerah Allah menyatukan Yahudi dan bukan Yahudi menjadi satu tubuh dalam Kristus (Efesus 2:11-22). Jika semua diselamatkan oleh anugerah, maka tidak ada dasar bagi kebanggaan etnis atau legalistik. Baik Yahudi maupun bukan Yahudi sama-sama "mati oleh pelanggaran" dan sama-sama "dihidupkan bersama-sama dengan Kristus" oleh anugerah. Ini menghancurkan tembok pemisah dan menciptakan satu umat Allah yang didasarkan pada Kristus saja.
+        </p>
+        <p>
+            Implikasi praktisnya adalah bahwa gereja harus menjadi komunitas yang hidup di luar perbedaan sosial, ekonomi, ras, dan latar belakang. Kita semua adalah penerima anugerah yang sama, dan ini harus mendorong kita untuk mengasihi dan melayani satu sama lain, mencerminkan persatuan yang telah kita terima dalam Kristus.
+        </p>
+
+        <h3>8. Panggilan untuk Membagikan Injil</h3>
+        <p>
+            Jika kita telah menerima kehidupan yang begitu luar biasa dari kematian oleh anugerah Allah yang begitu besar, bagaimana mungkin kita tidak membagikannya? Pengalaman akan anugerah yang transformatif ini seharusnya memotivasi kita untuk memberitakan kabar baik kepada mereka yang masih "mati oleh pelanggaran-pelanggaran." Kita tahu persis apa yang Allah telah lakukan untuk kita, dan kita tahu bahwa Dia sanggup melakukan hal yang sama untuk orang lain. Kesaksian hidup kita, yang dibentuk oleh anugerah, menjadi alat yang kuat untuk Injil.
+        </p>
+
+        <h2>Perbandingan dengan Ayat-ayat Lain</h2>
+
+        <p>
+            Kebenaran dalam Efesus 2:5 tidak berdiri sendiri, melainkan bergema di seluruh Perjanjian Baru, memperkuat konsistensi pesan Injil.
+        </p>
+
+        <h3>Roma 6:3-4</h3>
+        <p>
+            "Atau tidak tahukah kamu, bahwa kita semua yang telah dibaptis dalam Kristus Yesus, telah dibaptis dalam kematian-Nya? Dengan demikian kita telah dikuburkan bersama-sama dengan Dia oleh baptisan dalam kematian, supaya, sama seperti Kristus telah dibangkitkan dari antara orang mati oleh kemuliaan Bapa, demikian juga kita akan hidup dalam kehidupan yang baru."
+            Ayat ini sangat paralel dengan Efesus 2:5, menjelaskan bagaimana persatuan kita dengan Kristus terjadi melalui kematian dan kebangkitan-Nya. Baptisan di sini melambangkan identifikasi rohani kita dengan Kristus, menunjukkan bahwa kita mati terhadap dosa dan bangkit untuk kehidupan baru. Ini adalah ilustrasi visual dari kebenaran rohani yang Paulus nyatakan di Efesus 2:5—kita dihidupkan bersama-sama dengan Kristus.
+        </p>
+
+        <h3>Kolose 2:12-13</h3>
+        <p>
+            "karena dengan Dia kamu dikuburkan dalam baptisan, dan di dalam Dia kamu turut dibangkitkan juga oleh kepercayaanmu kepada kerja kuasa Allah, yang telah membangkitkan Dia dari orang mati. Kamu juga, meskipun dahulu mati karena pelanggaran-pelanggaranmu dan karena tidak disunatkannya dagingmu, telah dihidupkan Allah bersama-sama dengan Dia, sesudah Ia mengampuni segala pelanggaran kita."
+            Kolose 2:13 adalah cerminan yang hampir identik dengan Efesus 2:5, bahkan mengulangi frasa kunci "mati karena pelanggaran-pelanggaranmu" dan "telah dihidupkan Allah bersama-sama dengan Dia." Ini menegaskan bahwa pesan ini adalah inti dari ajaran Paulus tentang keselamatan. Ini juga menambahkan bahwa pengampunan dosa adalah bagian integral dari tindakan Allah menghidupkan kita.
+        </p>
+
+        <h3>Titus 3:5</h3>
+        <p>
+            "pada waktu itu Dia telah menyelamatkan kita, bukan karena perbuatan baik yang telah kita lakukan, tetapi karena rahmat-Nya oleh permandian kelahiran kembali dan pembaharuan yang dikerjakan oleh Roh Kudus,"
+            Ayat ini adalah penegasan kuat lainnya tentang keselamatan yang murni karena rahmat Allah, bukan karena pekerjaan. Ini juga menyoroti peran Roh Kudus dalam "permandian kelahiran kembali dan pembaharuan," yaitu proses menghidupkan dan mengubah hati yang mati secara rohani. Ini adalah deskripsi lebih lanjut tentang bagaimana Allah menghidupkan kita.
+        </p>
+
+        <h3>Yohanes 5:24</h3>
+        <p>
+            "Aku berkata kepadamu: Sesungguhnya barangsiapa mendengar perkataan-Ku dan percaya kepada Dia yang mengutus Aku, ia mempunyai hidup yang kekal dan tidak turut dihukum, karena ia sudah pindah dari dalam maut ke dalam hidup."
+            Yesus sendiri berbicara tentang transisi dari maut ke dalam hidup melalui iman. Meskipun bukan anugerah secara eksplisit disebut, ini menekankan bahwa hidup kekal adalah hadiah yang diterima melalui iman, bukan hasil dari usaha manusia. Ini adalah perspektif Yesus tentang kematian spiritual dan kehidupan baru.
+        </p>
+
+        <p>
+            Ayat-ayat ini, dan banyak lagi, memperkuat kebenaran Efesus 2:5: keselamatan adalah sepenuhnya pekerjaan Allah, didasarkan pada anugerah-Nya yang melimpah, dan diterapkan kepada kita melalui persatuan dengan Kristus yang mati dan bangkit. Ini adalah kebenaran yang konsisten dan berulang dalam Kitab Suci, menunjukkan kepentingannya yang sentral.
+        </p>
+
+        <h2>Menghayati Anugerah dalam Kehidupan Sehari-hari</h2>
+
+        <p>
+            Memahami Efesus 2:5 secara intelektual adalah satu hal; menghayatinya dalam kehidupan sehari-hari adalah hal lain. Bagaimana kebenaran yang begitu agung ini memengaruhi cara kita hidup, berpikir, dan berinteraksi?
+        </p>
+
+        <h3>1. Hidup dalam Kebebasan dari Rasa Bersalah dan Malu</h3>
+        <p>
+            Sebelum Kristus, kita adalah "anak-anak kemurkaan," hidup dalam rasa bersalah dan malu karena dosa-dosa kita. Anugerah berarti bahwa kita telah sepenuhnya diampuni, dibenarkan, dan diterima. Kehidupan baru dalam Kristus membebaskan kita dari beban dosa di masa lalu. Kita tidak perlu lagi hidup dalam ketakutan akan penghukuman, karena kita telah diselamatkan. Kebebasan ini memungkinkan kita untuk mendekat kepada Allah dengan keyakinan, bukan dengan rasa takut.
+        </p>
+
+        <h3>2. Menolak Daging dan Hidup dalam Roh</h3>
+        <p>
+            Meskipun kita telah dihidupkan, "daging" atau sifat dosa lama masih ada dan berperang melawan roh (Galatia 5:17). Namun, Efesus 2:5 memberi kita perspektif baru. Kita tidak lagi diperbudak oleh dosa. Kita memiliki kemampuan untuk menolak keinginan dosa dan berjalan dalam ketaatan karena kita telah dibangkitkan bersama Kristus. Ini adalah pertarungan yang nyata, tetapi kita berjuang dari posisi kemenangan, bukan dari posisi kekalahan. Hidup dalam anugerah berarti mengandalkan Roh Kudus untuk memberikan kekuatan yang kita butuhkan untuk hidup kudus, daripada mencoba mengandalkan kekuatan kita sendiri yang tidak mencukupi.
+        </p>
+
+        <h3>3. Mengasihi dan Melayani Orang Lain</h3>
+        <p>
+            Anugerah yang telah kita terima seharusnya mengalir keluar kepada orang lain. Jika Allah mengasihi kita ketika kita adalah musuh-Nya, bagaimana mungkin kita tidak mengasihi sesama kita, bahkan mereka yang sulit untuk dikasihi? Anugerah mendorong kita untuk melayani, untuk berkorban, dan untuk memberi. Kita melayani bukan untuk mendapatkan pahala, tetapi sebagai respons yang tulus atas kasih karunia yang begitu besar. Ini adalah kasih yang tidak mengharapkan balasan, kasih yang mengorbankan diri, seperti kasih yang telah kita terima dari Kristus.
+        </p>
+
+        <h3>4. Hidup dengan Harapan dan Tujuan</h3>
+        <p>
+            Kematian spiritual adalah keadaan tanpa harapan; kehidupan baru dalam Kristus adalah kehidupan yang penuh dengan harapan dan tujuan kekal. Kita sekarang memiliki tujuan yang lebih besar dari sekadar mengejar kesenangan duniawi. Kita adalah bagian dari rencana kekal Allah, dipanggil untuk memuliakan Dia dan memajukan Kerajaan-Nya. Harapan ini bukanlah sekadar angan-angan, melainkan keyakinan yang kokoh akan janji-janji Allah yang pasti. Ini memberikan makna pada setiap aspek kehidupan kita, bahkan dalam penderitaan dan kesulitan.
+        </p>
+
+        <h3>5. Mempraktikkan Pengampunan</h3>
+        <p>
+            Karena kita telah menerima pengampunan yang begitu besar melalui anugerah, kita dipanggil untuk mengampuni orang lain (Efesus 4:32). Sulit untuk menahan dendam atau kepahitan ketika kita sepenuhnya memahami bahwa kita sendiri telah diampuni dari begitu banyak pelanggaran yang jauh lebih besar terhadap Allah yang kudus. Pengampunan bukan hanya tindakan yang membebaskan orang lain, tetapi juga membebaskan diri kita dari rantai kepahitan.
+        </p>
+
+        <h3>6. Bersaksi tentang Kristus dengan Keberanian</h3>
+        <p>
+            Kisah kita sendiri tentang transisi dari kematian spiritual menuju kehidupan baru adalah kesaksian yang paling kuat tentang kuasa anugerah Allah. Ketika kita berbagi bagaimana Allah "menghidupkan kita bersama-sama dengan Kristus," kita bukan hanya menceritakan sebuah cerita, tetapi kita memberitakan Injil yang hidup dan berkuasa. Keberanian kita untuk bersaksi tidak datang dari kemampuan kita sendiri, tetapi dari keyakinan kita akan kuasa Allah untuk mengubah hati yang paling gelap sekalipun.
+        </p>
+
+        <h2>Penutup</h2>
+
+        <p>
+            Efesus 2:5 adalah ringkasan yang indah dan mendalam tentang pesan Injil. Dari kematian spiritual yang mutlak, yang disebabkan oleh pelanggaran dan dosa-dosa kita, Allah dalam kekayaan rahmat dan kasih-Nya yang besar, telah melakukan tindakan yang luar biasa: Dia telah menghidupkan kita bersama-sama dengan Kristus. Dan kebenaran paling penting dari semua ini ditegaskan dengan tegas: semua ini adalah "dengan anugerah kamu diselamatkan."
+        </p>
+
+        <p>
+            Ayat ini mengingatkan kita akan kondisi awal kita yang tanpa harapan, menyoroti kedaulatan dan kebaikan Allah yang tak terhingga, dan menyatakan realitas transformatif dari kehidupan baru dalam Kristus. Ini adalah fondasi bagi kerendahan hati dan syukur yang mendalam, dasar bagi jaminan keselamatan, dan motivasi untuk hidup kudus serta melayani sesama.
+        </p>
+
+        <p>
+            Marilah kita terus merenungkan kebenaran yang membebaskan ini. Biarlah Efesus 2:5 senantiasa menjadi jangkar bagi iman kita, pengingat akan kasih Allah yang tak berkesudahan, dan sumber kekuatan untuk menjalani kehidupan yang memuliakan Dia yang telah menghidupkan kita. Kita diselamatkan oleh anugerah, untuk anugerah, dan demi kemuliaan Anugerah itu sendiri. Amin.
+        </p>
+
+    </div>
+<div class='related-posts'><h3>Related Posts</h3><ul><li><a href="/yesaya-61-1">Yesaya 61 1</a></li>
+<li><a href="/2-korintus-13-4">2 Korintus 13 4</a></li>
+<li><a href="/mazmur-119-25">Mazmur 119 25</a></li>
+<li><a href="/markus-16-19">Markus 16 19</a></li>
+<li><a href="/markus-12-29">Markus 12 29</a></li>
+<li><a href="/yeremia-20-9">Yeremia 20 9</a></li>
+<li><a href="/keluaran-18-12">Keluaran 18 12</a></li>
+<li><a href="/2-samuel-19-18">2 Samuel 19 18</a></li>
+<li><a href="/2-samuel-22-4">2 Samuel 22 4</a></li>
+<li><a href="/lukas-21-23">Lukas 21 23</a></li></ul></div>
+<script src="/ik.js"></script>
+</body>
+</html>

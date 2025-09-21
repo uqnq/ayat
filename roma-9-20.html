@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedaulatan Ilahi dan Pertanyaan Manusia: Roma 9:20</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset and Base Styles */
+        :root {
+            --primary-bg: hsl(200, 60%, 98%); /* Very light cool blue */
+            --secondary-bg: hsl(0, 0%, 100%); /* Pure white */
+            --text-color: hsl(200, 30%, 20%); /* Dark blue-gray */
+            --heading-color: hsl(200, 50%, 30%); /* Bolder blue */
+            --accent-color: hsl(180, 70%, 70%); /* Light teal/aqua */
+            --border-color: hsl(200, 10%, 90%); /* Light gray-blue */
+            --blockquote-border: hsl(180, 50%, 80%); /* Softer teal */
+            --shadow-color: hsla(200, 15%, 70%, 0.1); /* Subtle shadow */
+
+            --font-body: 'Open Sans', sans-serif;
+            --font-heading: 'Merriweather', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-bg);
+            padding: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Main Container */
+        main {
+            background-color: var(--secondary-bg);
+            max-width: 800px;
+            margin: 1.5rem auto;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px var(--shadow-color);
+            flex-grow: 1; /* Allow main to grow and fill space */
+        }
+
+        @media (min-width: 768px) {
+            main {
+                padding: 2.5rem 3rem;
+            }
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--heading-color);
+            margin-bottom: 0.8em;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: hsl(200, 60%, 25%); /* Slightly darker for main title */
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 1.8rem;
+            color: hsl(200, 40%, 35%);
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            color: hsl(200, 35%, 45%);
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            font-size: 1.1rem; /* Slightly larger for readability */
+        }
+
+        .verse-content {
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 1.25rem;
+            text-align: center;
+            margin: 1.5rem 0 2.5rem 0;
+            padding: 1.5rem;
+            background-color: var(--primary-bg);
+            border-left: 5px solid var(--accent-color);
+            border-radius: 8px;
+            color: hsl(200, 30%, 30%);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid var(--blockquote-border);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            color: hsl(200, 25%, 35%);
+        }
+
+        ul, ol {
+            margin: 0 0 1.2em 1.5rem;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--heading-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--heading-color);
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2.5rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+        }
+
+        /* Horizontal Rule */
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 3rem 0;
+        }
+
+        /* SVG Styles - to match theme */
+        .potter-svg {
+            max-width: 300px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            /* Styling for the SVG elements */
+        }
+        .potter-svg .background-shape {
+            fill: var(--primary-bg);
+            stroke: var(--border-color);
+            stroke-width: 2;
+        }
+        .potter-svg .hand-color {
+            fill: hsl(25, 70%, 75%); /* Skin tone */
+            stroke: hsl(25, 60%, 65%);
+            stroke-width: 1.5;
+        }
+        .potter-svg .clay-color {
+            fill: hsl(30, 40%, 65%); /* Earthy clay */
+            stroke: hsl(30, 30%, 55%);
+            stroke-width: 1.5;
+        }
+        .potter-svg .details-color {
+            fill: none;
+            stroke: var(--text-color);
+            stroke-width: 1;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Roma 9:20</h1>
+            <p class="verse-content">
+                "Hai manusia, siapakah engkau, maka engkau membantah Allah? Dapatkah yang dibentuk berkata kepada yang membentuknya: 'Mengapa engkau membuat aku demikian?'"
+            </p>
+        </header>
+
+        <article>
+            <p>
+                Ayat Roma 9:20 adalah salah satu bagian Alkitab yang paling menantang dan mendalam, mengundang perenungan serius tentang kedaulatan Allah, kehendak bebas manusia, dan keadilan ilahi. Dalam beberapa kalimat singkat, Rasul Paulus menohok inti dari berbagai perdebatan teologis yang telah berlangsung berabad-abad dan terus relevan hingga hari ini. Ayat ini tidak hanya mengajukan pertanyaan retoris yang kuat, tetapi juga menuntut kerendahan hati dan pengakuan akan keterbatasan akal budi manusia di hadapan Penciptanya.
+            </p>
+            <p>
+                Bagi banyak orang, khususnya di era modern yang menekankan otonomi individu dan hak untuk mempertanyakan segala sesuatu, gagasan bahwa manusia tidak berhak membantah Allah bisa terasa tidak nyaman atau bahkan tidak adil. Namun, Paulus tidak sekadar membatasi hak manusia untuk bertanya; ia mengajak kita untuk merenungkan siapa sebenarnya yang berbicara dan siapa yang dibicarakan. Siapakah manusia, makhluk ciptaan, sehingga berani mempertanyakan hikmat dan kehendak mutlak Sang Pencipta alam semesta? Inilah inti dari kontemplasi yang akan kita selami dalam artikel ini.
+            </p>
+            <p>
+                Kita akan memulai dengan menempatkan ayat ini dalam konteks besar surat Roma, khususnya pasal 9, yang membahas tentang Israel, janji Allah, dan pilihan ilahi. Pemahaman konteks ini sangat penting untuk mencegah penafsiran yang dangkal atau melenceng dari maksud Paulus yang sebenarnya. Kemudian, kita akan melakukan analisis mendalam terhadap setiap frasa dalam ayat 9:20, mengeksplorasi metafora tukang periuk dan tanah liat, serta menghubungkannya dengan ajaran Alkitab lainnya mengenai kedaulatan Allah.
+            </p>
+            <p>
+                Tidak hanya berhenti pada interpretasi, kita juga akan membahas isu-isu teologis terkait yang sering muncul dari ayat ini, seperti ketegangan antara kedaulatan ilahi dan kehendak bebas manusia, serta pertanyaan tentang keadilan Allah. Terakhir, kita akan melihat bagaimana pemahaman akan Roma 9:20 seharusnya memengaruhi iman dan kehidupan praktis orang percaya, mengarahkan kita kepada kerendahan hati, penyerahan, dan penyembahan yang mendalam. Mari kita memulai perjalanan ini untuk memahami salah satu permata teologis yang paling berharga dan menantang dalam Alkitab.
+            </p>
+
+            <hr>
+
+            <h2>I. Konteks Surat Roma dan Pasal 9</h2>
+            <p>
+                Untuk memahami Roma 9:20 secara utuh, kita harus terlebih dahulu menempatkannya dalam konteks surat Roma secara keseluruhan dan khususnya pasal 9. Surat Roma adalah sebuah mahakarya teologis yang ditulis oleh Rasul Paulus, yang menjelaskan Injil kasih karunia Allah kepada jemaat di Roma, yang terdiri dari orang Yahudi dan non-Yahudi. Paulus ingin menegaskan bahwa keselamatan datang melalui iman kepada Kristus, bukan melalui hukum Taurat atau keturunan etnis.
+            </p>
+
+            <h3>A. Tema Besar Surat Roma: Kebenaran Allah dan Keselamatan melalui Iman</h3>
+            <p>
+                Seluruh surat Roma adalah eksposisi tentang kebenaran Allah yang dinyatakan dalam Injil. Paulus memulai dengan menyatakan bahwa semua manusia, baik Yahudi maupun non-Yahudi, telah berdosa dan berada di bawah murka Allah (Roma 1:18-3:20). Namun, Allah yang mahakudus juga adalah Allah yang penuh kasih karunia, yang menyediakan jalan keselamatan melalui iman kepada Yesus Kristus, tanpa perbuatan baik atau ketaatan pada hukum Taurat (Roma 3:21-5:21).
+            </p>
+            <p>
+                Setelah membahas pembenaran oleh iman, Paulus melanjutkan dengan menjelaskan tentang pengudusan (Roma 6), kebebasan dari hukum (Roma 7), dan kehidupan dalam Roh (Roma 8). Dalam pasal-pasal ini, ia menunjukkan bagaimana anugerah Allah mengubah hidup orang percaya. Namun, ada satu pertanyaan besar yang muncul: Jika keselamatan datang melalui iman dan bukan melalui keturunan Yahudi atau ketaatan pada Taurat, lalu bagaimana dengan janji-janji Allah kepada Israel? Apakah Allah telah gagal menepati janji-Nya kepada umat pilihan-Nya? Pertanyaan inilah yang menjadi fokus utama pasal 9, 10, dan 11.
+            </p>
+
+            <h3>B. Masalah Israel dalam Pasal 9, 10, dan 11</h3>
+            <p>
+                Pasal 9, 10, dan 11 dari surat Roma sering disebut sebagai "blok Israel" karena Paulus membahas nasib Israel. Paulus, sebagai seorang Yahudi yang mengasihi bangsanya, merasakan kesedihan yang mendalam karena banyak dari mereka telah menolak Kristus. Ia tahu bahwa penolakan Israel terhadap Mesias yang dijanjikan menimbulkan pertanyaan serius tentang kesetiaan dan kedaulatan Allah. Jika Allah memilih Israel, memberikan mereka perjanjian, hukum, dan janji-janji, mengapa sebagian besar dari mereka kini tertinggal dan orang-orang non-Yahudi yang tidak diharapkan justru menerima Injil?
+            </p>
+            <p>
+                Paulus menjawab pertanyaan ini dengan argumen yang sangat hati-hati dan teologis. Ia menegaskan bahwa Allah tidak pernah gagal menepati janji-Nya. Sebaliknya, penolakan Israel adalah bagian dari rencana ilahi yang lebih besar, yang pada akhirnya akan membawa keselamatan bagi orang non-Yahudi dan pada akhirnya juga bagi seluruh Israel.
+            </p>
+
+            <h3>C. Kedaulatan Allah dalam Pemilihan (Roma 9:1-18)</h3>
+            <p>
+                Sebelum sampai pada ayat 9:20, Paulus terlebih dahulu membangun argumen tentang kedaulatan Allah dalam pemilihan. Ia ingin menunjukkan bahwa pilihan Allah tidak didasarkan pada keturunan biologis atau perbuatan manusia, melainkan sepenuhnya pada kehendak dan tujuan Allah sendiri.
+            </p>
+            <ul>
+                <li>
+                    <strong>Bukan Semua Keturunan Israel Adalah Israel Sejati (Ayat 6-8):</strong> Paulus menjelaskan bahwa tidak semua orang yang lahir dari Israel secara fisik adalah Israel sejati dalam pandangan Allah. Janji Allah diberikan kepada keturunan yang dipilih-Nya, seperti Ishak, bukan Ismael, meskipun keduanya adalah anak Abraham.
+                </li>
+                <li>
+                    <strong>Pemilihan Yakub dan Esau (Ayat 10-13):</strong> Paulus memberikan contoh Yakub dan Esau. Sebelum mereka lahir atau melakukan sesuatu yang baik atau jahat, Allah telah berfirman, "Aku mengasihi Yakub, tetapi membenci Esau." Ini menunjukkan bahwa pilihan Allah tidak didasarkan pada perbuatan mereka, tetapi pada kehendak-Nya yang berdaulat, "supaya rencana Allah tentang pemilihan-Nya diteguhkan, bukan berdasarkan perbuatan, tetapi berdasarkan panggilan-Nya."
+                </li>
+                <li>
+                    <strong>Keadilan Allah (Ayat 14-16):</strong> Paulus mengantisipasi pertanyaan, "Apakah Allah tidak adil?" Ia dengan tegas menjawab, "Sekali-kali tidak!" Allah memiliki hak untuk mengasihi dan mengasihani siapa yang Dia kehendaki. Ia mengutip Keluaran 33:19, "Aku akan berbelas kasihan kepada siapa yang Kubelaskasihan dan bermurah hati kepada siapa yang Kumurahhati." Keadilan Allah tidak boleh diukur dengan standar manusia.
+                </li>
+                <li>
+                    <strong>Contoh Firaun (Ayat 17-18):</strong> Sebagai bukti lebih lanjut tentang kedaulatan-Nya, Paulus mengutip kisah Firaun. Allah berfirman kepada Firaun, "Justru untuk maksud inilah Aku membangkitkan engkau, yaitu supaya dalam dirimu Aku menyatakan kekuasaan-Ku, dan supaya nama-Ku diwartakan di seluruh bumi." Ini berarti Allah mengeraskan hati Firaun untuk menunjukkan kemuliaan-Nya. Paulus menyimpulkan, "Jadi Ia menunjukkan belas kasihan kepada siapa yang dikehendaki-Nya dan mengeraskan hati siapa yang dikehendaki-Nya."
+                </li>
+            </ul>
+            <p>
+                Melalui serangkaian argumen ini, Paulus menegaskan bahwa Allah adalah mutlak berdaulat dalam segala hal, termasuk dalam memilih siapa yang akan menerima kasih karunia-Nya. Pemilihan-Nya tidak dapat dipertanyakan oleh manusia karena didasarkan pada hikmat dan kehendak-Nya yang sempurna. Latar belakang inilah yang membawa kita langsung ke ayat Roma 9:20, yang merupakan respons Paulus terhadap potensi keberatan manusia terhadap kedaulatan Allah yang sedemikian rupa.
+            </p>
+            <p>
+                Setelah menegaskan hak mutlak Allah untuk memilih dan mengeraskan hati sesuai kehendak-Nya, Paulus tahu bahwa akan ada keberatan dari pembacanya. Objeksi yang paling mungkin adalah: "Jika demikian, mengapa Ia masih menyalahkan kita? Sebab siapa yang dapat melawan kehendak-Nya?" (Roma 9:19). Pertanyaan ini adalah ekspresi dari rasa tidak adil dan pemberontakan manusia terhadap kedaulatan yang mutlak. Dan inilah yang langsung direspons Paulus dengan ayat Roma 9:20.
+            </p>
+
+            <hr>
+
+            <h2>II. Analisis Mendalam Roma 9:20</h2>
+            <p>
+                Roma 9:20 adalah respons tajam Paulus terhadap keberatan manusia mengenai kedaulatan Allah yang telah ia jelaskan sebelumnya. Setiap frasa dalam ayat ini memiliki bobot teologis yang signifikan dan layak untuk direnungkan secara mendalam.
+            </p>
+
+            <h3>A. "Hai manusia, siapakah engkau, maka engkau membantah Allah?"</h3>
+            <p>
+                Frasa pembuka ini adalah sebuah teguran retoris yang kuat. Kata "Hai manusia" (bahasa Yunani: ὦ ἄνθρωπε, <em>ō anthrōpe</em>) bukanlah panggilan biasa, melainkan seruan yang menekankan keterbatasan dan kerentanan manusia. Ini adalah cara Paulus untuk menempatkan manusia pada tempatnya yang semestinya: sebagai ciptaan, bukan Pencipta.
+            </p>
+            <p>
+                Pertanyaan "siapakah engkau?" (τίς εἶ σύ, <em>tis ei sy</em>) menunjukkan keheranan dan ketidaksetujuan. Paulus tidak mencari jawaban faktual tentang identitas seseorang, melainkan menyoroti status ontologis manusia yang rendah dibandingkan dengan Allah. Manusia adalah makhluk fana, terbatas dalam pengetahuan, hikmat, dan kekuasaan. Bagaimana mungkin makhluk yang sedemikian rupa berani "membantah Allah" (ὁ ἀνταποκρινόμενος τῷ Θεῷ, <em>ho antapokrinomenos tō Theō</em>)? Kata "membantah" di sini berarti membantah balik, mengajukan keberatan, atau berdebat melawan. Ini menunjukkan sikap menentang, tidak menerima otoritas, dan bahkan pemberontakan.
+            </p>
+            <p>
+                Poin utama Paulus di sini adalah bahwa manusia, dengan segala keterbatasannya, tidak berada dalam posisi untuk mengajukan keberatan yang sah terhadap tindakan atau kehendak Allah. Kedaulatan Allah begitu mutlak sehingga mempertanyakan-Nya dari posisi manusia adalah sebuah kesombongan atau ketidaktahuan yang luar biasa. Ini bukan berarti Allah kejam atau tidak adil, tetapi lebih kepada pengakuan bahwa standar keadilan dan hikmat-Nya jauh melampaui pemahaman manusia. Membantah Allah sama dengan mengklaim memiliki pemahaman yang lebih baik atau otoritas yang lebih tinggi dari-Nya, sebuah klaim yang absurd.
+            </p>
+
+            <h3>B. "Dapatkah yang dibentuk berkata kepada yang membentuknya: 'Mengapa engkau membuat aku demikian?'"</h3>
+            <p>
+                Bagian kedua dari ayat ini menggunakan metafora yang sangat akrab dalam tradisi Alkitab: tukang periuk dan tanah liat. Metafora ini bukanlah sesuatu yang baru bagi pembaca Yahudi, karena telah digunakan secara luas dalam Perjanjian Lama untuk menggambarkan hubungan antara Allah dan manusia.
+            </p>
+            <ul>
+                <li>
+                    <strong>"Yang dibentuk" (τὸ πλάσμα, <em>to plasma</em>):</strong> Ini mengacu pada tanah liat yang sedang dibentuk atau benda jadi yang telah dibentuk. Dalam konteks ini, ini adalah manusia, ciptaan Allah.
+                </li>
+                <li>
+                    <strong>"Yang membentuknya" (τῷ πλάσαντι, <em>tō plasanti</em>):</strong> Ini mengacu pada tukang periuk, sang pencipta. Dalam konteks ini, ini adalah Allah.
+                </li>
+            </ul>
+            <p>
+                Pertanyaan retorisnya adalah: "Dapatkah yang dibentuk berkata kepada yang membentuknya: 'Mengapa engkau membuat aku demikian?'" (Μὴ ἐρεῖ τὸ πλάσμα τῷ πλάσαντι, Τί με ἐποίησας οὕτως; <em>Mē erei to plasma tō plasanti, Ti me epoiēsas houtōs?</em>). Ini adalah sebuah pertanyaan yang secara implisit dijawab "Tidak!". Tanah liat tidak memiliki kehendak, suara, atau hak untuk mempertanyakan bagaimana atau mengapa ia dibentuk. Tukang periuk memiliki hak penuh atas tanah liatnya untuk membentuknya sesuai kehendaknya, untuk tujuan apa pun yang ia anggap baik.
+            </p>
+            <p>
+                Metafora ini sangat efektif karena menekankan beberapa poin kunci:
+            </p>
+            <ol>
+                <li>
+                    <strong>Perbedaan Status Fundamental:</strong> Ada jurang pemisah yang tak terhingga antara Pencipta dan ciptaan. Allah adalah Penguasa mutlak, manusia adalah ciptaan yang bergantung sepenuhnya.
+                </li>
+                <li>
+                    <strong>Hak Pencipta:</strong> Sang Pencipta memiliki hak penuh dan tak terbatas atas ciptaan-Nya. Seperti halnya seorang tukang periuk berhak membuat bejana untuk kehormatan atau untuk penggunaan biasa dari gumpalan tanah liat yang sama, demikian pula Allah berhak atas manusia.
+                </li>
+                <li>
+                    <strong>Ketidaklayakan Pertanyaan:</strong> Pertanyaan "Mengapa engkau membuat aku demikian?" dari sudut pandang ciptaan adalah tidak pada tempatnya. Tanah liat tidak memiliki kapasitas atau wewenang untuk menantang maksud tukang periuk. Ini bukan karena tukang periuk otoriter, tetapi karena perbedaan mendasar dalam sifat keberadaan dan peran.
+                </li>
+                <li>
+                    <strong>Maksud dan Tujuan:</strong> Allah memiliki maksud dan tujuan yang spesifik dalam menciptakan setiap individu dan dalam setiap tindakan-Nya. Maksud ini mungkin tidak selalu dapat kita pahami sepenuhnya, tetapi itu tidak berarti maksud tersebut tidak ada atau cacat.
+                </li>
+            </ol>
+            <p>
+                Metafora ini telah digunakan di berbagai bagian Alkitab, misalnya:
+                <ul>
+                    <li><strong>Yesaya 29:16:</strong> "Sungguh dungu kamu! Apakah tukang periuk sama dengan tanah liat, sehingga buatan dapat berkata tentang pembuatnya: 'Bukan dia yang membuat aku!' atau bentuk dapat berkata tentang pembentuknya: 'Dia tidak mengerti?'"</li>
+                    <li><strong>Yesaya 45:9:</strong> "Celakalah orang yang berbantah dengan Pembentuknya; biarlah ia menjadi pecahan-pecahan periuk belanga! Adakah tanah liat berkata kepada pembentuknya: 'Apakah yang kaubuat?' atau: 'Apa karyamu itu tidak ada tangkainya?'"</li>
+                    <li><strong>Yeremia 18:1-10:</strong> Nabi Yeremia diutus ke rumah tukang periuk untuk melihatnya bekerja. Di sana, Allah menyatakan, "Bukankah Aku dapat bertindak kepadamu seperti tukang periuk ini, hai kaum Israel? Demikianlah firman TUHAN. Sungguh, seperti tanah liat di tangan tukang periuk, demikianlah kamu di tangan-Ku, hai kaum Israel."</li>
+                </ul>
+                Ayat-ayat ini menggarisbawahi kebenaran yang sama: bahwa Allah adalah berdaulat atas ciptaan-Nya, dan manusia tidak berhak mempertanyakan tindakan-Nya. Konsep ini bukan untuk menekan atau merendahkan manusia, melainkan untuk meninggikan Allah dan mendorong penyerahan diri yang rendah hati. Ini adalah landasan untuk memahami lebih lanjut tentang "perabot murka" dan "perabot kemuliaan" yang akan Paulus bahas pada ayat-ayat berikutnya.
+            </p>
+
+            <svg class="potter-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="svgTitle svgDesc">
+                <title id="svgTitle">Tukang Periuk dan Tanah Liat</title>
+                <desc id="svgDesc">Tangan tukang periuk membentuk bejana tanah liat, melambangkan kedaulatan Allah atas ciptaan-Nya.</desc>
+                <!-- Background shadow/surface -->
+                <path class="background-shape" d="M 10 90 C 20 80, 80 80, 90 90 L 90 10 C 80 20, 20 20, 10 10 Z" fill="none" stroke-width="0"/>
+
+                <!-- Potter's Wheel base (implied) -->
+                <ellipse cx="50" cy="85" rx="40" ry="8" class="clay-color" opacity="0.4"/>
+
+                <!-- Clay on the wheel -->
+                <path d="M 50 80 C 40 70, 60 70, 50 80 Z" class="clay-color"/>
+                <path d="M 50 80 C 45 75, 55 75, 50 80 Z" class="clay-color" opacity="0.8"/>
+
+                <!-- The vessel being formed -->
+                <path d="M 45 75 C 40 60, 40 40, 45 35 C 50 30, 55 30, 60 35 C 60 40, 60 60, 55 75 Z" class="clay-color"/>
+                <path d="M 46 73 C 42 63, 42 45, 46 38 C 50 34, 54 34, 58 38 C 58 45, 58 63, 54 73 Z" class="details-color"/>
+
+                <!-- Potter's left hand -->
+                <path d="M 20 60 C 15 50, 25 40, 35 45 C 40 50, 30 65, 20 60 Z" class="hand-color"/>
+                <path d="M 25 55 C 23 50, 27 48, 30 50" class="details-color"/> <!-- fingers -->
+                <path d="M 27 57 C 25 52, 29 50, 32 52" class="details-color"/>
+
+                <!-- Potter's right hand -->
+                <path d="M 80 60 C 85 50, 75 40, 65 45 C 60 50, 70 65, 80 60 Z" class="hand-color"/>
+                <path d="M 75 55 C 77 50, 73 48, 70 50" class="details-color"/> <!-- fingers -->
+                <path d="M 73 57 C 75 52, 71 50, 68 52" class="details-color"/>
+            </svg>
+
+
+            <hr>
+
+            <h2>III. Metafora Tukang Periuk dan Tujuan Ilahi (Roma 9:21-23)</h2>
+            <p>
+                Setelah menantang hak manusia untuk membantah Allah, Paulus melanjutkan argumennya dengan memperluas metafora tukang periuk dan tanah liat. Ia tidak hanya menegaskan hak Pencipta, tetapi juga menjelaskan tujuan di balik hak tersebut, yang terkait dengan manifestasi kemuliaan dan keadilan Allah.
+            </p>
+
+            <h3>A. Hak Mutlak atas Tanah Liat yang Sama (Ayat 21)</h3>
+            <p>
+                Roma 9:21 menyatakan: "Bukankah tukang periuk memiliki hak atas tanah liatnya, dari satu gumpal tanah liat untuk membuat bejana yang satu untuk kehormatan dan yang lain untuk penggunaan biasa?" Ayat ini memperkuat argumen Paulus tentang kedaulatan Allah.
+            </p>
+            <ul>
+                <li>
+                    <strong>"Satu gumpal tanah liat":</strong> Frasa ini menekankan bahwa tukang periuk tidak memiliki dua jenis tanah liat yang berbeda, satu yang secara inheren "baik" dan yang lain "buruk". Sebaliknya, dari bahan baku yang sama, ia memiliki kebebasan penuh untuk membentuknya menjadi dua jenis bejana dengan tujuan yang berbeda. Ini menyiratkan bahwa semua manusia pada dasarnya berasal dari "bahan" yang sama di hadapan Allah.
+                </li>
+                <li>
+                    <strong>"Bejana yang satu untuk kehormatan dan yang lain untuk penggunaan biasa":</strong>
+                    <ul>
+                        <li><strong>Bejana kehormatan (σκεῦος εἰς τιμήν, <em>skeuos eis timēn</em>):</strong> Merujuk pada bejana yang digunakan untuk tujuan mulia, seperti menyimpan persembahan suci, minum anggur di meja bangsawan, atau dekorasi yang indah.</li>
+                        <li><strong>Bejana penggunaan biasa (σκεῦος εἰς ἀτιμίαν, <em>skeuos eis atimian</em>):</strong> Merujuk pada bejana yang digunakan untuk tujuan sehari-hari, bahkan untuk menampung kotoran atau limbah.</li>
+                    </ul>
+                    Intinya adalah bahwa tukang periuklah yang menentukan tujuan dan nilai dari bejana yang ia bentuk, bukan tanah liat itu sendiri. Ia tidak berkonsultasi dengan tanah liat; ia hanya melaksanakannya sesuai kehendaknya. Demikian pula, Allah memiliki hak mutlak untuk menentukan tujuan bagi setiap ciptaan-Nya. Ini tidak berarti bahwa Allah menciptakan manusia untuk menjadi jahat, melainkan bahwa Ia berdaulat dalam memilih siapa yang akan menerima belas kasihan-Nya dan siapa yang akan menunjukkan keadilan-Nya dalam murka-Nya.
+                </li>
+            </ul>
+
+            <h3>B. Perabot Murka dan Perabot Kemuliaan (Ayat 22-23)</h3>
+            <p>
+                Paulus kemudian menerapkan metafora ini secara langsung pada manusia, membedakan antara "perabot murka" (σκεύη ὀργῆς, <em>skeuē orgēs</em>) dan "perabot kemuliaan" (σκεύη ἐλέους, <em>skeuē eleous</em>).
+            </p>
+            <ul>
+                <li>
+                    <strong>Perabot Murka (Ayat 22):</strong> "Jika demikian, bukankah Allah, yang mau menunjukkan murka-Nya dan menyatakan kuasa-Nya, telah menanggung dengan sangat sabar perabot-perabot murka, yang telah disiapkan untuk kebinasaan?"
+                    <ul>
+                        <li><strong>"Menunjukkan murka-Nya dan menyatakan kuasa-Nya":</strong> Ini adalah tujuan Allah dalam menyingkapkan kedaulatan-Nya. Murka Allah bukan emosi yang tak terkendali, melainkan manifestasi keadilan-Nya terhadap dosa dan ketidaktaatan. Dengan "perabot murka," Allah menunjukkan kesabaran-Nya yang luar biasa dan akhirnya keadilan-Nya yang tak terhindarkan.</li>
+                        <li><strong>"Menanggung dengan sangat sabar":</strong> Frasa ini sangat penting. Allah tidak serta-merta menghancurkan "perabot murka" ini. Sebaliknya, Ia menanggung mereka dengan kesabaran yang besar, memberikan mereka waktu dan kesempatan untuk bertobat (meskipun di ayat 18 dikatakan Ia mengeraskan hati siapa yang Dia kehendaki). Kesabaran ini bertujuan untuk memberikan waktu bagi rencana-Nya untuk terungkap sepenuhnya, termasuk kesempatan bagi "perabot kemuliaan" untuk muncul.</li>
+                        <li><strong>"Disiapkan untuk kebinasaan":</strong> Kata "disiapkan" (κατηρτισμένα, <em>katērtismena</em>) dalam bahasa Yunani bisa berarti "diperbaiki," "diadaptasi," atau "disempurnakan." Ini menyiratkan bahwa mereka telah menuju kebinasaan sebagai akibat dosa mereka sendiri, dan Allah, dalam kedaulatan-Nya, memperbolehkan ini terjadi untuk tujuan-Nya yang lebih besar. Ini bukan berarti Allah secara aktif menyebabkan dosa mereka, tetapi bahwa Ia menggunakan konsekuensi dari dosa mereka untuk kemuliaan-Nya. Ini adalah misteri yang mendalam yang harus diterima dengan kerendahan hati.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Perabot Kemuliaan (Ayat 23):</strong> "Dan Ia berbuat demikian untuk menyatakan kekayaan kemuliaan-Nya atas perabot-perabot kemurahan hati, yang telah dipersiapkan-Nya sebelumnya untuk kemuliaan."
+                    <ul>
+                        <li><strong>"Menyatakan kekayaan kemuliaan-Nya atas perabot-perabot kemurahan hati":</strong> Tujuan utama Allah adalah menyatakan kemuliaan-Nya, khususnya melalui belas kasihan-Nya yang melimpah. "Perabot kemurahan hati" adalah mereka yang dipilih Allah untuk menerima anugerah dan keselamatan-Nya.</li>
+                        <li><strong>"Dipersiapkan-Nya sebelumnya untuk kemuliaan":</strong> Kata "dipersiapkan" (προητοίμασεν, <em>proētoimasen</em>) di sini secara eksplisit menunjukkan tindakan pra-persiapan Allah. Ini adalah tindakan aktif Allah dalam menetapkan mereka yang akan menerima kasih karunia dan menjadi ahli waris kemuliaan-Nya. Ini menegaskan kembali doktrin pemilihan atau predestinasi.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                Perbandingan antara "perabot murka" dan "perabot kemuliaan" sangat jelas. Allah mengizinkan keberadaan perabot murka untuk menunjukkan kesabaran-Nya dan pada akhirnya keadilan-Nya, sementara Ia secara aktif mempersiapkan perabot kemuliaan untuk menyatakan kekayaan belas kasihan-Nya dan kemuliaan-Nya. Kedua tindakan ini, baik dalam murka maupun belas kasihan, pada akhirnya berfungsi untuk memuliakan Allah.
+            </p>
+            <p>
+                Bagian ini mungkin yang paling sulit untuk diterima oleh akal budi manusia. Apakah Allah adil jika Ia menciptakan seseorang untuk kebinasaan? Apakah manusia memiliki kehendak bebas jika nasibnya telah ditentukan sebelumnya? Paulus tidak menyediakan jawaban sederhana yang memuaskan semua pertanyaan ini, tetapi ia mengajak kita untuk menerima misteri kedaulatan Allah dengan iman, bukan dengan memberontak.
+            </p>
+            <p>
+                Kedaulatan Allah tidak menghilangkan tanggung jawab manusia. Manusia tetap bertanggung jawab atas dosa-dosanya, dan ia memang layak menerima murka Allah. Poin Paulus adalah bahwa tidak ada manusia yang memiliki hak untuk membantah Allah ketika Allah memilih untuk menunjukkan belas kasihan kepada sebagian orang dan membiarkan sebagian lainnya menerima konsekuensi dosa mereka, semua untuk kemuliaan nama-Nya. Ini adalah panggilan untuk kerendahan hati yang radikal dan pengakuan bahwa Allah berada dalam kategori yang sama sekali berbeda dari ciptaan-Nya.
+            </p>
+
+            <hr>
+
+            <h2>IV. Kedaulatan Ilahi dalam Kitab Suci Lainnya</h2>
+            <p>
+                Gagasan tentang Allah yang berdaulat mutlak bukanlah konsep baru yang diperkenalkan Paulus. Sepanjang Alkitab, dari Perjanjian Lama hingga Perjanjian Baru, kesaksian tentang kedaulatan Allah konsisten dan meluas. Pemahaman ini membantu kita melihat Roma 9:20 bukan sebagai anomali, tetapi sebagai bagian integral dari narasi besar Allah yang memegang kendali atas segala sesuatu.
+            </p>
+
+            <h3>A. Kedaulatan Allah di Perjanjian Lama</h3>
+            <p>
+                Perjanjian Lama dipenuhi dengan pernyataan tentang Allah sebagai Pencipta, Penguasa, dan Pemelihara alam semesta yang mutlak.
+                <ul>
+                    <li>
+                        <strong>Kitab Kejadian:</strong> Allah menciptakan segala sesuatu dari ketiadaan (<em>ex nihilo</em>) melalui firman-Nya. Ini menunjukkan kuasa dan hak mutlak-Nya atas ciptaan. Manusia diciptakan menurut gambar dan rupa-Nya, tetapi sebagai ciptaan, bukan sejajar dengan-Nya.
+                    </li>
+                    <li>
+                        <strong>Ayub 40-42:</strong> Setelah Ayub mempertanyakan keadilan Allah di tengah penderitaannya, Allah menjawabnya dari badai. Ia tidak memberikan penjelasan langsung tentang mengapa Ayub menderita, melainkan menantang Ayub dengan serangkaian pertanyaan retoris tentang penciptaan dan pemeliharaan alam semesta.
+                        <blockquote>
+                            "Siapakah yang menutupi rancangan-Ku dengan perkataan yang tidak berpengetahuan? Bersiaplah sekarang, jadilah laki-laki, dan Aku akan bertanya kepadamu, dan engkau akan memberi tahu Aku. Di manakah engkau ketika Aku meletakkan dasar bumi? Beritahukanlah, jika engkau mempunyai pengertian!" (Ayub 38:2-4).
+                        </blockquote>
+                        Tanggapan Allah ini merendahkan Ayub dan membuatnya mengakui keterbatasan dan kebodohannya di hadapan hikmat Allah yang tak terbatas. Ayub akhirnya berkata: "Sesungguhnya, aku terlalu hina; apakah yang dapat kujawab kepada-Mu? Tangan di mulutku kuletakkan." (Ayub 40:4). Dan kemudian, "Aku tahu, bahwa Engkau sanggup melakukan segala sesuatu, dan tidak ada rencana-Mu yang gagal." (Ayub 42:2). Ini adalah esensi dari apa yang Paulus sampaikan di Roma 9:20.
+                    </li>
+                    <li>
+                        <strong>Yesaya:</strong> Nabi Yesaya berulang kali menekankan kedaulatan Allah yang tak tertandingi di atas segala dewa-dewa palsu dan bangsa-bangsa.
+                        <blockquote>
+                            "Celakalah orang yang berbantah dengan Pembentuknya; biarlah ia menjadi pecahan-pecahan periuk belanga! Adakah tanah liat berkata kepada pembentuknya: 'Apakah yang kaubuat?' atau: 'Apa karyamu itu tidak ada tangkainya?'" (Yesaya 45:9).
+                        </blockquote>
+                        Ayat ini adalah paralel langsung dengan Roma 9:20, bahkan mungkin menjadi sumber inspirasi bagi Paulus. Yesaya juga menyatakan:
+                        <blockquote>
+                            "Ingatlah hal-hal yang dahulu dari sejak purbakala, bahwa Akulah Allah dan tidak ada yang lain; Akulah Allah dan tidak ada yang seperti Aku, yang memberitahukan dari mulanya hal yang kemudian dan dari zaman purbakala apa yang belum terjadi, yang berkata: Keputusan-Ku akan sampai, dan segala kehendak-Ku akan Kulaksanakan" (Yesaya 46:9-10).
+                        </blockquote>
+                        Ini menegaskan bahwa Allah adalah Penguasa sejarah dan takdir, dan tidak ada yang dapat menghalangi rencana-Nya.
+                    </li>
+                    <li>
+                        <strong>Kitab Yeremia:</strong> Seperti yang telah disebutkan, Yeremia 18:1-10 juga menggunakan analogi tukang periuk dan tanah liat untuk menggambarkan hak Allah atas Israel dan bangsa-bangsa. Allah memiliki hak untuk membangun atau meruntuhkan, untuk menanam atau mencabut, sesuai dengan respon dan kehendak-Nya yang berdaulat.
+                    </li>
+                </ul>
+                Dari Perjanjian Lama, kita belajar bahwa kedaulatan Allah adalah fundamental bagi identitas-Nya sebagai Yahweh, Allah Israel. Ia adalah Pencipta, Hakim, dan Raja yang mutlak.
+            </p>
+
+            <h3>B. Kedaulatan Allah di Perjanjian Baru</h3>
+            <p>
+                Perjanjian Baru melanjutkan dan memperdalam pemahaman tentang kedaulatan Allah, terutama dalam kaitannya dengan penebusan dan pemilihan.
+                <ul>
+                    <li>
+                        <strong>Yesus Kristus:</strong> Yesus sendiri menegaskan kedaulatan Bapa-Nya. Ia berkata, "Tidak seorang pun dapat datang kepada-Ku, jikalau ia tidak ditarik oleh Bapa yang mengutus Aku" (Yohanes 6:44). Dan lagi, "Segala sesuatu telah diserahkan kepada-Ku oleh Bapa-Ku dan tidak seorang pun mengenal Anak selain Bapa, dan tidak seorang pun mengenal Bapa selain Anak dan orang yang kepadanya Anak itu berkenan menyatakannya" (Matius 11:27). Ayat-ayat ini menunjukkan bahwa keselamatan dan pengenalan akan Allah tidak tergantung pada kehendak atau upaya manusia semata, tetapi pada tindakan kedaulatan Allah yang menarik dan menyatakan diri-Nya.
+                    </li>
+                    <li>
+                        <strong>Karya Roh Kudus:</strong> Roh Kudus mendistribusikan karunia-karunia rohani "kepada tiap-tiap orang secara khusus, seperti yang dikehendaki-Nya" (1 Korintus 12:11). Ini menunjukkan kedaulatan Roh dalam memperlengkapi gereja.
+                    </li>
+                    <li>
+                        <strong>Surat-surat Paulus lainnya:</strong> Paulus secara konsisten mengajarkan kedaulatan Allah.
+                        <ul>
+                            <li>
+                                <strong>Efesus 1:11:</strong> "Di dalam Dia kita juga telah menjadi ahli waris yang ditentukan dari semula menurut maksud Dia, yang dalam segala sesuatu bekerja menurut keputusan kehendak-Nya." Ayat ini adalah salah satu pernyataan paling jelas tentang kedaulatan Allah yang universal, bahwa Ia bekerja dalam segala sesuatu sesuai dengan tujuan kehendak-Nya. Tidak ada yang luput dari kendali atau rencana-Nya.
+                            </li>
+                            <li>
+                                <strong>Filipi 2:13:</strong> "Karena Allahlah yang mengerjakan di dalam kamu baik kemauan maupun pekerjaan menurut kerelaan-Nya." Bahkan keinginan dan kemampuan kita untuk berbuat baik berasal dari Allah, menunjukkan kedaulatan-Nya dalam keselamatan dan pengudusan.
+                            </li>
+                            <li>
+                                <strong>Kolose 1:16-17:</strong> Mengenai Kristus, Paulus berkata, "Karena oleh Dia-lah diciptakan segala sesuatu yang ada di surga dan yang ada di bumi, yang kelihatan dan yang tidak kelihatan, baik takhta maupun kerajaan, baik pemerintah maupun penguasa; segala sesuatu diciptakan oleh Dia dan untuk Dia. Ia ada sebelum segala sesuatu dan segala sesuatu ada di dalam Dia." Ini menunjukkan kedaulatan kosmik Kristus, yang tak terpisahkan dari kedaulatan Allah Bapa.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>1 Petrus 2:8:</strong> Petrus berbicara tentang Kristus sebagai "batu sandungan dan batu karang yang membuat mereka jatuh," dan menambahkan, "Sebab mereka tersandung pada firman, karena mereka tidak taat kepada-Nya, dan untuk itu memang mereka telah ditentukan." Ayat ini, meskipun kontroversial, juga menunjuk pada takdir yang ditentukan Allah bagi mereka yang menolak-Nya.
+                    </li>
+                </ul>
+                Konsistensi ajaran tentang kedaulatan Allah di seluruh Alkitab menegaskan bahwa Roma 9:20 bukanlah sebuah pernyataan yang terisolasi, melainkan sebuah penegasan fundamental tentang karakter Allah. Ini adalah kebenaran yang harus kita terima, meskipun mungkin menimbulkan pertanyaan yang sulit bagi akal budi kita yang terbatas. Penerimaan kedaulatan Allah adalah langkah awal menuju penyembahan yang benar dan penyerahan diri yang total.
+            </p>
+
+            <hr>
+
+            <h2>V. Isu-isu Teologis Terkait: Kedaulatan Allah vs. Kehendak Bebas Manusia, dan Keadilan Allah</h2>
+            <p>
+                Roma 9:20 dan pasal-pasal di sekitarnya mengangkat beberapa isu teologis yang paling menantang dalam kekristenan. Ketegangan antara kedaulatan Allah dan tanggung jawab manusia, serta pertanyaan tentang keadilan ilahi, telah menjadi sumber perdebatan sengit sepanjang sejarah gereja. Memahami nuansa ini adalah krusial untuk menafsirkan Roma 9:20 dengan benar.
+            </p>
+
+            <h3>A. Kedaulatan Allah vs. Kehendak Bebas Manusia</h3>
+            <p>
+                Salah satu dilema terbesar yang muncul dari doktrin kedaulatan Allah adalah bagaimana hal itu dapat diselaraskan dengan kehendak bebas dan tanggung jawab moral manusia. Jika Allah berdaulat penuh atas segala sesuatu, termasuk takdir manusia, apakah manusia benar-benar bebas dalam pilihan-pilihannya? Dan jika tidak, apakah adil menyalahkan manusia atas dosa-dosanya?
+            </p>
+            <h4>1. Posisi Calvinisme (Reformasi)</h4>
+            <p>
+                Tradisi Reformed, atau Calvinisme, cenderung menekankan kedaulatan Allah yang mutlak, termasuk dalam hal keselamatan (predestinasi). Mereka berpendapat bahwa manusia, karena kejatuhan dalam dosa, tidak memiliki kemampuan sejati untuk memilih Allah secara mandiri (kerusakan total). Oleh karena itu, Allah harus secara berdaulat memilih dan menarik individu kepada diri-Nya agar mereka dapat percaya. Dalam pandangan ini, Roma 9:20 adalah penegasan bahwa manusia tidak memiliki hak untuk mempertanyakan pilihan Allah, bahkan jika itu berarti Allah memilih sebagian untuk keselamatan dan membiarkan sebagian lainnya dalam dosa mereka yang adil.
+                <blockquote>
+                    "Manusia telah jatuh ke dalam keadaan yang berdosa dan tidak mampu; namun demikian, ia tetap bertanggung jawab di hadapan Allah."
+                </blockquote>
+                Calvinisme sering mengacu pada konsep "compatibilism," yaitu gagasan bahwa kehendak bebas manusia dan kedaulatan Allah tidaklah saling bertentangan tetapi justru saling melengkapi. Manusia tetap membuat pilihan-pilihan yang autentik dan bertanggung jawab, meskipun pilihan-pilihan tersebut pada akhirnya berada dalam kerangka rencana dan kehendak Allah yang berdaulat. Bagaimana ini terjadi tetap menjadi misteri yang mendalam.
+            </p>
+            <h4>2. Posisi Arminianisme</h4>
+            <p>
+                Arminianisme, sebagai lawan dari Calvinisme, cenderung lebih menekankan kehendak bebas manusia dan kemampuan manusia untuk merespons kasih karunia Allah. Mereka berpendapat bahwa Allah memang berdaulat, tetapi Ia memilih untuk membatasi kedaulatan-Nya sendiri demi memberi ruang bagi pilihan bebas manusia. Dalam pandangan ini, Allah "mengetahui terlebih dahulu" siapa yang akan memilih-Nya, dan pilihan-Nya didasarkan pada pengetahuan itu, bukan pada dekrit pra-penciptaan yang tidak bersyarat.
+                <br>
+                Bagi Arminian, Roma 9:20 dapat ditafsirkan sebagai teguran terhadap kesombongan manusia yang menolak kedaulatan Allah dalam hal menyediakan keselamatan melalui cara-Nya sendiri (iman kepada Kristus), bukan sebagai penegasan predestinasi individu yang tidak bersyarat. Ayat ini menyerukan agar manusia tunduk pada hikmat Allah, yang menawarkan anugerah kepada semua, tetapi menghormati pilihan manusia untuk menerima atau menolak.
+            </p>
+            <h4>3. Pendekatan "Misteri"</h4>
+            <p>
+                Banyak teolog dan orang percaya mengakui bahwa ketegangan antara kedaulatan Allah yang mutlak dan kehendak bebas manusia adalah sebuah misteri yang melampaui pemahaman penuh manusia. Alkitab dengan jelas mengajarkan kedua kebenaran ini: Allah berdaulat atas segala sesuatu, dan manusia bertanggung jawab atas pilihan-pilihannya. Daripada mencoba meruntuhkan salah satu kebenaran demi yang lain, pendekatan ini memilih untuk memegang teguh kedua-duanya, mengakui bahwa Allah lebih besar dari kemampuan kita untuk memahami-Nya sepenuhnya. Roma 9:20 mengingatkan kita bahwa kita, sebagai ciptaan, tidak berada dalam posisi untuk menuntut penjelasan yang lengkap dari Sang Pencipta. Kita dipanggil untuk percaya pada hikmat-Nya yang tak terbatas.
+            </p>
+
+            <h3>B. Keadilan Allah</h3>
+            <p>
+                Pertanyaan tentang keadilan Allah sering muncul ketika membahas kedaulatan-Nya, terutama dalam konteks Roma 9. Jika Allah memilih sebagian orang untuk keselamatan dan membiarkan sebagian lainnya dalam dosa mereka yang mengarah pada kebinasaan, apakah Allah adil? Paulus sendiri mengantisipasi pertanyaan ini di Roma 9:14: "Jika demikian, apakah kita akan berkata: Allah tidak adil? Sekali-kali tidak!"
+            </p>
+            <h4>1. Allah Itu Adil</h4>
+            <p>
+                Paulus dengan tegas menyatakan bahwa Allah itu adil. Argumennya terletak pada definisi keadilan Allah itu sendiri. Keadilan Allah bukanlah keadilan manusia, yang seringkali terbatas dan terkadang bias. Keadilan Allah adalah atribut mutlak dari karakter-Nya yang sempurna.
+                <ul>
+                    <li>
+                        <strong>Hak Allah untuk Memilih Belas Kasihan:</strong> Paulus mengutip Keluaran 33:19, "Aku akan berbelas kasihan kepada siapa yang Kubelaskasihan dan bermurah hati kepada siapa yang Kumurahhati" (Roma 9:15). Ini menunjukkan bahwa belas kasihan adalah hak prerogatif Allah yang berdaulat, bukan sesuatu yang dapat dituntut atau dihakiki manusia. Jika ada yang menerima belas kasihan, itu murni karena anugerah-Nya, bukan karena mereka layak.
+                    </li>
+                    <li>
+                        <strong>Semua Manusia Berdosa dan Layak Menerima Murka:</strong> Alkitab mengajarkan bahwa "semua orang telah berbuat dosa dan telah kehilangan kemuliaan Allah" (Roma 3:23). Karena itu, setiap manusia secara inheren layak menerima murka Allah. Jika Allah memilih untuk menunjukkan belas kasihan kepada beberapa orang, itu adalah tindakan belas kasihan yang luar biasa, bukan ketidakadilan bagi mereka yang tidak menerima belas kasihan yang sama. Tidak ada yang "berhak" atas belas kasihan Allah.
+                    </li>
+                    <li>
+                        <strong>Allah Menanggung dengan Sabar "Perabot Murka":</strong> Roma 9:22 menyatakan bahwa Allah "menanggung dengan sangat sabar perabot-perabot murka, yang telah disiapkan untuk kebinasaan." Kesabaran Allah ini menunjukkan bahwa Ia tidak terburu-buru dalam menjatuhkan hukuman, bahkan kepada mereka yang menolak-Nya. Ia memberikan waktu, dan dalam kesabaran-Nya, Ia terus mengundang semua orang untuk bertobat (2 Petrus 3:9). Murka-Nya adil dan terukur, bukan sembarangan atau kejam.
+                    </li>
+                    <li>
+                        <strong>Tujuan Akhir untuk Kemuliaan-Nya:</strong> Semua tindakan Allah, baik dalam murka maupun belas kasihan, pada akhirnya bertujuan untuk menyatakan kemuliaan-Nya (Roma 9:23). Ini adalah tujuan tertinggi dari semua keberadaan. Dalam murka-Nya, Ia menyatakan kekudusan, keadilan, dan kuasa-Nya. Dalam belas kasihan-Nya, Ia menyatakan kasih, anugerah, dan kemurahan hati-Nya. Kedua-duanya memuliakan Dia.
+                    </li>
+                </ul>
+            </p>
+            <h4>2. Pertanyaan tentang "Mengapa Tidak Semua?"</h4>
+            <p>
+                Meskipun argumen di atas menegaskan keadilan Allah, pertanyaan "Mengapa tidak semua?" tetap menghantui banyak pikiran. Mengapa Allah, yang sanggup menyelamatkan semua orang, memilih untuk tidak melakukannya? Ini adalah pertanyaan yang tidak dijawab secara eksplisit oleh Paulus dengan penjelasan yang rasional dan memuaskan sepenuhnya bagi manusia. Sebaliknya, ia mendorong kita untuk tunduk pada otoritas Allah.
+                <br>
+                Jika Allah menyelamatkan semua orang, maka kita tidak akan pernah melihat kedalaman murka-Nya yang adil terhadap dosa. Sebaliknya, jika Ia menghukum semua orang, kita tidak akan pernah memahami kekayaan belas kasihan-Nya yang tak terbatas. Dalam kedaulatan-Nya untuk memilih beberapa dan membiarkan yang lain, Allah menyingkapkan kedua aspek karakter-Nya—keadilan dan kasih karunia—dengan cara yang paling mencolok dan memuliakan Diri-Nya. Ini adalah paradoks yang harus kita terima dengan iman, tahu bahwa "jalan-jalan-Ku lebih tinggi dari jalan-jalanmu, dan pikiran-Ku dari pikiranmu" (Yesaya 55:9).
+            </p>
+            <p>
+                Pada akhirnya, Roma 9:20 adalah sebuah seruan untuk kerendahan hati yang radikal. Ini adalah pengingat bahwa kita, sebagai ciptaan, tidak memiliki posisi untuk menghakimi Sang Pencipta. Sebaliknya, kita dipanggil untuk mengagumi hikmat-Nya yang tak terbatas, menerima kedaulatan-Nya yang tak dapat ditembus, dan menyembah-Nya untuk anugerah-Nya yang telah Ia tunjukkan kepada kita, "perabot-perabot kemurahan hati, yang telah dipersiapkan-Nya sebelumnya untuk kemuliaan."
+            </p>
+            <p>
+                Kita harus berhati-hati agar tidak menafsirkan kedaulatan Allah sebagai determinisme yang membuat manusia menjadi robot tanpa kehendak. Alkitab mengajarkan bahwa manusia memang membuat pilihan-pilihan yang nyata, dan pilihan-pilihan ini memiliki konsekuensi abadi. Namun, pada saat yang sama, Alkitab juga dengan tegas menyatakan bahwa Allah adalah Penguasa tertinggi atas segala sesuatu, dan tidak ada yang dapat menggagalkan tujuan-Nya. Ketegangan ini adalah bagian dari "misteri" Allah yang harus kita terima dengan iman, bukan mencoba menyelesaikannya dengan akal budi kita yang terbatas.
+            </p>
+
+            <hr>
+
+            <h2>VI. Implikasi Praktis bagi Kehidupan Orang Percaya</h2>
+            <p>
+                Pemahaman yang benar tentang Roma 9:20 dan kedaulatan Allah memiliki implikasi mendalam bagi kehidupan praktis orang percaya. Ini bukan sekadar doktrin abstrak untuk perdebatan teologis, melainkan kebenaran yang membentuk cara kita memandang Allah, diri sendiri, dan dunia.
+            </p>
+
+            <h3>A. Kerendahan Hati dan Kekaguman di Hadapan Allah</h3>
+            <p>
+                Pelajaran pertama dan terpenting dari Roma 9:20 adalah panggilan untuk kerendahan hati yang radikal. Jika kita adalah "tanah liat" dan Allah adalah "tukang periuk," maka kita tidak memiliki hak untuk mempertanyakan atau membantah keputusan-Nya. Pengakuan ini seharusnya menuntun kita pada sikap merendahkan diri dan kekaguman yang mendalam.
+                <ul>
+                    <li>
+                        <strong>Mengakui Keterbatasan:</strong> Kita harus mengakui keterbatasan akal dan pemahaman kita. Ada misteri dalam rencana dan kehendak Allah yang tidak dapat kita pahami sepenuhnya di sisi kekekalan ini. Daripada menuntut penjelasan lengkap, kita belajar untuk mempercayai hikmat-Nya yang tak terbatas.
+                    </li>
+                    <li>
+                        <strong>Penyembahan yang Lebih Dalam:</strong> Ketika kita merenungkan kedaulatan Allah yang sedemikian rupa—bahwa Ia mengendalikan segala sesuatu, dari pilihan individu hingga arah sejarah—hati kita seharusnya dipenuhi dengan penyembahan. Dia adalah Allah yang agung, berdaulat, dan bijaksana. Kita tunduk kepada-Nya bukan karena terpaksa, tetapi karena tahu bahwa Dialah yang layak menerima segala hormat dan kemuliaan.
+                    </li>
+                </ul>
+            </p>
+
+            <h3>B. Kepercayaan Penuh pada Hikmat dan Kebaikan Allah</h3>
+            <p>
+                Meskipun kita tidak selalu memahami "mengapa" Allah bertindak demikian, kita dipanggil untuk percaya pada hikmat dan kebaikan-Nya. Jika Ia adalah Pencipta yang berdaulat, maka semua tindakan-Nya sempurna dan bertujuan baik, bahkan jika itu melibatkan penderitaan atau hal-hal yang tidak kita pahami.
+                <ul>
+                    <li>
+                        <strong>Dalam Kesulitan:</strong> Ketika kita menghadapi penderitaan, ketidakadilan (dari sudut pandang manusia), atau situasi yang sulit, pemahaman tentang kedaulatan Allah memberikan penghiburan yang mendalam. Kita tahu bahwa tidak ada yang terjadi di luar kendali-Nya. Dia tidak terkejut oleh keadaan kita; sebaliknya, Ia memiliki rencana di dalamnya, meskipun kita tidak melihatnya. Ini menumbuhkan ketahanan dan kesabaran.
+                    </li>
+                    <li>
+                        <strong>Dalam Kegagalan dan Kekalahan:</strong> Kedaulatan Allah juga mengajarkan bahwa bahkan kegagalan atau kekalahan kita dapat digunakan-Nya untuk tujuan yang lebih besar. Kita tidak perlu putus asa karena Dia bekerja dalam segala sesuatu untuk kebaikan mereka yang mengasihi Dia (Roma 8:28).
+                    </li>
+                </ul>
+            </p>
+
+            <h3>C. Menerima Misteri dan Tidak Menjadi Arsitek Teologi Sendiri</h3>
+            <p>
+                Roma 9:20 menantang kita untuk menerima bahwa ada aspek-aspek Allah yang akan selalu menjadi misteri bagi kita. Kita tidak boleh menjadi "tukang periuk" bagi Allah, mencoba membentuk-Nya sesuai dengan logika atau preferensi kita sendiri.
+                <ul>
+                    <li>
+                        <strong>Bahaya Rasionalsime:</strong> Kita seringkali ingin Allah sesuai dengan cetakan kita—Allah yang "masuk akal" menurut standar manusia. Tetapi Roma 9:20 mengingatkan kita bahwa Allah melampaui akal budi kita. Berusaha untuk merasionalisasi setiap aspek kedaulatan-Nya dapat menyebabkan kita mengurangi Allah menjadi sesuatu yang kurang dari Dia sebenarnya.
+                    </li>
+                    <li>
+                        <strong>Kepatuhan kepada Firman:</strong> Daripada mencoba "memperbaiki" Alkitab agar sesuai dengan pemahaman kita, kita dipanggil untuk tunduk pada apa yang Alkitab katakan, bahkan jika itu sulit. Kita adalah pelajar Firman Allah, bukan peninjau atau editor-Nya.
+                    </li>
+                </ul>
+            </p>
+
+            <h3>D. Fokus pada Ketaatan dan Memberitakan Injil</h3>
+            <p>
+                Pemahaman kedaulatan Allah tidak boleh menyebabkan pasifitas atau fatalisme. Sebaliknya, hal itu seharusnya memotivasi kita untuk ketaatan yang lebih besar dan semangat yang lebih membara dalam memberitakan Injil.
+                <ul>
+                    <li>
+                        <strong>Motivasi untuk Ketaatan:</strong> Jika Allah adalah Penguasa mutlak, maka perintah-perintah-Nya tidak boleh diabaikan. Ketaatan menjadi respons alami terhadap kemuliaan dan kedaulatan-Nya. Kita tahu bahwa ketaatan kita bukanlah untuk "mendapatkan" kasih-Nya, tetapi sebagai respons dari kasih dan anugerah-Nya yang telah lebih dahulu diberikan secara berdaulat.
+                    </li>
+                    <li>
+                        <strong>Keyakinan dalam Penginjilan:</strong> Beberapa orang mungkin bertanya, "Jika Allah memilih siapa yang akan diselamatkan, mengapa kita harus memberitakan Injil?" Jawabannya terletak pada keyakinan bahwa Injil adalah sarana yang Allah gunakan untuk memanggil "perabot kemurahan hati" yang telah dipersiapkan-Nya. Kita tidak tahu siapa yang telah dipilih Allah, tetapi kita tahu bahwa Injil adalah kuasa Allah yang menyelamatkan. Oleh karena itu, kita memberitakan Injil dengan keyakinan, tahu bahwa Allah akan menggunakan firman-Nya untuk menggenapi rencana-Nya. Setiap orang yang percaya adalah bukti kedaulatan Allah yang bekerja melalui pemberitaan Injil.
+                        <blockquote>
+                            "Jadi, iman timbul dari pendengaran, dan pendengaran oleh firman Kristus." (Roma 10:17)
+                        </blockquote>
+                        Kedaulatan Allah tidak meniadakan evangelisasi; justru menjamin keberhasilannya.
+                    </li>
+                </ul>
+            </p>
+
+            <h3>E. Penghiburan dalam Kedaulatan-Nya</h3>
+            <p>
+                Terakhir, doktrin kedaulatan Allah membawa penghiburan yang luar biasa. Kita tidak sendirian di dunia yang kacau ini, dan kita tidak bertanggung jawab untuk mengendalikan takdir kita sendiri atau orang lain.
+                <ul>
+                    <li>
+                        <strong>Beban yang Terangkat:</strong> Pemahaman bahwa Allah memegang kendali atas segala sesuatu dapat mengangkat beban kecemasan dan kekhawatiran dari pundak kita. Kita dapat beristirahat dalam kepastian bahwa Dia memiliki tujuan yang baik, bahkan di tengah ketidakpastian.
+                    </li>
+                    <li>
+                        <strong>Harapan yang Pasti:</strong> Kedaulatan Allah menjamin bahwa janji-janji-Nya akan digenapi. Keselamatan kita terjamin bukan karena kekuatan iman kita, tetapi karena kesetiaan Allah yang berdaulat dalam memelihara mereka yang telah Dia pilih dan panggil.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Roma 9:20, dengan segala kekerasannya, adalah sebuah anugerah. Ini adalah panggilan untuk melihat Allah sebagai Dia adanya: Penguasa alam semesta yang maha kuasa, maha bijaksana, dan maha adil, yang kepadanya kita berhutang segala sesuatu. Respon yang tepat adalah bukan dengan membantah, melainkan dengan tunduk, percaya, dan menyembah.
+            </p>
+
+            <hr>
+
+            <h2>VII. Kesimpulan</h2>
+            <p>
+                Ayat Roma 9:20, "Hai manusia, siapakah engkau, maka engkau membantah Allah? Dapatkah yang dibentuk berkata kepada yang membentuknya: 'Mengapa engkau membuat aku demikian?'" adalah permata teologis yang menantang dan sekaligus mencerahkan. Dalam beberapa kata, Rasul Paulus mengkompresi kebenaran mendasar tentang perbedaan jurang pemisah antara Pencipta dan ciptaan, serta hak mutlak Allah sebagai Penguasa yang berdaulat atas segala sesuatu.
+            </p>
+            <p>
+                Kita telah melihat bagaimana ayat ini berakar kuat dalam konteks besar surat Roma, khususnya pasal 9, yang membahas tentang rencana Allah bagi Israel dan manifestasi kedaulatan-Nya dalam pemilihan. Paulus tidak takut untuk menegaskan bahwa Allah memiliki hak prerogatif untuk berbelas kasihan kepada siapa yang Dia kehendaki dan mengeraskan hati siapa yang Dia kehendaki, semuanya untuk kemuliaan nama-Nya yang kudus. Metafora tukang periuk dan tanah liat dengan jelas menggambarkan bahwa ciptaan tidak memiliki hak atau kapasitas untuk mempertanyakan maksud Sang Pencipta.
+            </p>
+            <p>
+                Lebih jauh, kita menemukan bahwa ajaran tentang kedaulatan Allah bukanlah sesuatu yang unik bagi Paulus atau Perjanjian Baru. Sebaliknya, seluruh narasi Alkitab, dari Kitab Ayub dan Yesaya di Perjanjian Lama hingga ajaran Yesus dan rasul-rasul di Perjanjian Baru, secara konsisten menyingkapkan Allah sebagai pribadi yang berdaulat mutlak atas penciptaan, sejarah, dan keselamatan.
+            </p>
+            <p>
+                Tentu saja, kebenaran ini mengangkat isu-isu teologis yang kompleks, seperti ketegangan antara kedaulatan ilahi dan kehendak bebas manusia, serta pertanyaan tentang keadilan Allah. Berbagai pendekatan telah diajukan untuk memahami paradoks ini, tetapi intinya adalah bahwa Alkitab mengajarkan kedua kebenaran tersebut dan mengajak kita untuk menerima misteri ini dengan iman. Allah adalah adil dalam segala jalan-Nya, dan keadilan serta belas kasihan-Nya sama-sama berfungsi untuk menyatakan kemuliaan-Nya.
+            </p>
+            <p>
+                Pada akhirnya, implikasi praktis dari Roma 9:20 bagi orang percaya adalah sebuah panggilan untuk kerendahan hati yang mendalam, kekaguman yang tulus, dan kepercayaan yang teguh pada hikmat dan kebaikan Allah. Ini membebaskan kita dari beban untuk memahami atau mengendalikan segala sesuatu, memungkinkan kita untuk bersandar pada kedaulatan-Nya bahkan di tengah ketidakpastian hidup. Ini juga memotivasi kita untuk ketaatan yang lebih besar dan semangat yang membara dalam memberitakan Injil, karena kita tahu bahwa Allah yang berdaulat akan menggunakan upaya kita untuk menggenapi tujuan-Nya.
+            </p>
+            <p>
+                Maka, biarlah Roma 9:20 menjadi sebuah pengingat abadi akan keagungan Allah yang tak terbatas dan posisi kita sebagai ciptaan yang rendah hati. Daripada membantah, mari kita bersukacita dalam realitas bahwa Allah adalah Penguasa yang baik, bijaksana, dan berdaulat penuh, yang di dalam Dia segala sesuatu bekerja sesuai dengan kehendak-Nya yang sempurna. Hormat, kemuliaan, dan puji-pujian hanya bagi Dia yang adalah Tukang Periuk agung kita.
+            </p>
+        </article>
+    </main>
+<div class='related-posts'><h3>Related Posts</h3><ul><li><a href="/ester-5-8">Ester 5 8</a></li>
+<li><a href="/kejadian-37-22">Kejadian 37 22</a></li>
+<li><a href="/kejadian-4-9">Kejadian 4 9</a></li>
+<li><a href="/2-petrus-2-1">2 Petrus 2 1</a></li>
+<li><a href="/1-korintus-11-20">1 Korintus 11 20</a></li>
+<li><a href="/markus-15-35">Markus 15 35</a></li>
+<li><a href="/1-tawarikh-16-35">1 Tawarikh 16 35</a></li>
+<li><a href="/lukas-23-18">Lukas 23 18</a></li>
+<li><a href="/kejadian-4-6">Kejadian 4 6</a></li>
+<li><a href="/2-samuel-14-28">2 Samuel 14 28</a></li></ul></div>
+<script src="/ik.js"></script>
+</body>
+</html>

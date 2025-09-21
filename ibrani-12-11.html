@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrani 12:11: Ganjaran, Buah Kebenaran, dan Damai Sejahtera</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style>
+        /* Variabel Warna Sejuk Cerah */
+        :root {
+            --bg-color: hsl(190, 80%, 96%); /* Sangat Biru Laut Pucat */
+            --text-color: #2E2E2E; /* Abu-abu Gelap */
+            --heading-color: #006064; /* Cyan Gelap */
+            --accent-color: #00838F; /* Cyan Medium */
+            --verse-bg: hsl(190, 60%, 93%); /* Sedikit lebih gelap dari bg-color untuk kutipan ayat */
+            --border-color: hsl(190, 30%, 85%); /* Warna border lembut */
+            --link-color: #00BCD4; /* Cyan Cerah untuk link */
+        }
+
+        /* Reset dan Box Sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body Utama */
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh; /* Agar footer tetap di bawah */
+            flex-direction: column;
+        }
+
+        /* Kontainer Artikel */
+        article {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            max-width: 850px; /* Lebar maksimum artikel */
+            width: 100%;
+            margin: 0 auto; /* Tengah di desktop */
+            transition: all 0.3s ease;
+        }
+
+        /* Judul Utama */
+        h1 {
+            color: var(--heading-color);
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        /* Ayat Alkitab */
+        .verse {
+            font-size: 1.3em;
+            font-style: italic;
+            text-align: center;
+            margin: 30px auto;
+            padding: 20px 30px;
+            background-color: var(--verse-bg);
+            border-left: 6px solid var(--accent-color);
+            color: var(--heading-color);
+            max-width: 650px; /* Lebar maksimum untuk ayat */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            line-height: 1.5;
+        }
+
+        /* Heading Konten */
+        h2 {
+            color: var(--heading-color);
+            font-size: 2.1em;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            font-size: 1.6em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Paragraf */
+        p {
+            margin-bottom: 1.2em;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+
+        /* Daftar */
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 1.5em;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        ul li, ol li {
+            margin-bottom: 0.8em;
+        }
+
+        /* Blockquote */
+        blockquote {
+            font-style: italic;
+            margin: 25px 0;
+            padding: 15px 25px;
+            border-left: 5px solid var(--link-color);
+            background-color: var(--verse-bg);
+            color: var(--text-color);
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        /* Link */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--heading-color);
+            text-decoration: underline;
+        }
+
+        /* Gambar SVG */
+        .svg-container {
+            width: 100%;
+            max-width: 400px; /* Lebar maksimum gambar */
+            margin: 40px auto;
+            display: block; /* Agar dapat di-center dengan margin auto */
+            background-color: #E0F7FA; /* Latar belakang untuk gambar SVG */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .svg-container svg {
+            display: block; /* Menghilangkan margin bawah default pada SVG */
+            width: 100%;
+            height: auto;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: var(--heading-color);
+        }
+
+        /* Responsif untuk Mobile */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            article {
+                padding: 20px;
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 2.2em;
+                margin-bottom: 20px;
+            }
+            .verse {
+                font-size: 1.1em;
+                margin: 25px auto;
+                padding: 15px 20px;
+            }
+            h2 {
+                font-size: 1.8em;
+                margin-top: 35px;
+                margin-bottom: 15px;
+            }
+            h3 {
+                font-size: 1.4em;
+                margin-top: 25px;
+                margin-bottom: 10px;
+            }
+            p, ul, ol, blockquote {
+                font-size: 1em;
+                margin-bottom: 1em;
+            }
+            ul, ol {
+                margin-left: 20px;
+            }
+            .svg-container {
+                margin: 30px auto;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            .verse {
+                font-size: 1em;
+            }
+            p, ul, ol, blockquote {
+                font-size: 0.95em;
+            }
+            body {
+                padding: 10px;
+            }
+            article {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Belajar dari Ibrani 12:11: Ganjaran Ilahi dan Buah Kedamaian</h1>
+
+        <p class="verse">
+            "Memang tiap-tiap ganjaran pada waktu ia diberikan tidak mendatangkan sukacita, melainkan dukacita. Tetapi kemudian ia menghasilkan buah kebenaran yang memberikan damai kepada mereka yang dilatih olehnya." <br>— Ibrani 12:11 (Terjemahan Baru)
+        </p>
+
+        <div class="svg-container">
+            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svgTitle svgDesc">
+                <title id="svgTitle">Ilustrasi Pertumbuhan Melalui Tantangan</title>
+                <desc id="svgDesc">Sebuah gambar yang menampilkan tunas hijau yang tumbuh kokoh dari tanah berbatu menuju cahaya matahari yang cerah di langit, melambangkan pertumbuhan, ketekunan, dan harapan yang muncul dari tantangan dan disiplin.</desc>
+                <!-- Latar belakang sejuk -->
+                <rect width="300" height="200" fill="#E0F2F7"/>
+                <!-- Tanah Berbatu / Tantangan -->
+                <path d="M0 160 C 70 140, 230 140, 300 160 L 300 200 L 0 200 Z" fill="#90B2A3"/>
+                <circle cx="80" cy="165" r="10" fill="#7A9C91"/>
+                <circle cx="220" cy="170" r="12" fill="#7A9C91"/>
+                <circle cx="150" cy="155" r="8" fill="#7A9C91"/>
+
+                <!-- Tunas / Pertumbuhan -->
+                <path d="M150 150 L 150 70" stroke="#4CAF50" stroke-width="6" stroke-linecap="round"/>
+                <path d="M150 120 C 170 110, 160 90, 175 80" stroke="#8BC34A" stroke-width="4" stroke-linecap="round"/>
+                <path d="M150 100 C 130 90, 140 70, 125 60" stroke="#8BC34A" stroke-width="4" stroke-linecap="round"/>
+
+                <!-- Cahaya Matahari / Harapan / Anugerah Ilahi -->
+                <circle cx="250" cy="50" r="30" fill="#FFEB3B"/>
+                <circle cx="250" cy="50" r="25" fill="#FFF176"/>
+                <circle cx="250" cy="50" r="20" fill="#FFEB3B"/>
+                <line x1="250" y1="50" x2="270" y2="30" stroke="#FFEB3B" stroke-width="1" stroke-opacity="0.6"/>
+                <line x1="250" y1="50" x2="270" y2="70" stroke="#FFEB3B" stroke-width="1" stroke-opacity="0.6"/>
+                <line x1="250" y1="50" x2="230" y2="30" stroke="#FFEB3B" stroke-width="1" stroke-opacity="0.6"/>
+                <line x1="250" y1="50" x2="230" y2="70" stroke="#FFEB3B" stroke-width="1" stroke-opacity="0.6"/>
+            </svg>
+        </div>
+
+        <p>
+            Surat Ibrani, sebuah permata teologis dalam kanon Perjanjian Baru, adalah seruan yang kuat untuk ketekunan iman dan loyalitas kepada Kristus di tengah-tengah pencobaan. Pasal 12 khususnya, mengalirkan inspirasi tentang bagaimana orang percaya harus menjalani perlombaan iman, dengan mata tertuju pada Yesus sebagai perintis dan penyempurna iman kita. Dalam konteks ini, Ibrani 12:11 muncul sebagai salah satu ayat yang paling mendalam dan kadang kala menantang, memberikan kita wawasan yang tak ternilai tentang sifat disiplin ilahi, tujuannya, dan buah-buahnya yang pada akhirnya membawa kedamaian. Ayat ini bukan sekadar sebuah observasi tentang penderitaan, melainkan sebuah deklarasi tentang proses transformatif yang dialami oleh setiap anak Tuhan.
+        </p>
+        <p>
+            Masyarakat modern cenderung menghindari rasa sakit dan ketidaknyamanan. Kita mencari jalur tercepat menuju kebahagiaan, kenyamanan, dan kepuasan instan. Namun, Ibrani 12:11 secara tegas mengingatkan kita bahwa ada nilai intrinsik dalam proses yang menyakitkan, yaitu disiplin. Ayat ini membuka tirai kebenaran yang esensial: bahwa jalan menuju kematangan spiritual dan kedamaian sejati seringkali diaspal dengan pengalaman yang pada awalnya tidak menyenangkan, bahkan mendatangkan dukacita. Ini adalah paradoks rohani yang kuat, sebuah kontradiksi yang hanya dapat dipahami melalui lensa iman dan pengertian akan kasih Allah yang tak terbatas.
+        </p>
+        <p>
+            Artikel ini akan menyelami lebih dalam setiap frasa dari Ibrani 12:11, mengupas makna teologis, implikasi praktis, dan janji transformatif yang terkandung di dalamnya. Kita akan menjelajahi mengapa ganjaran, atau disiplin, pada awalnya terasa menyakitkan, bagaimana dukacita tersebut pada akhirnya menghasilkan buah kebenaran, dan mengapa kedamaian adalah mahkota bagi mereka yang dengan rela hati menyerahkan diri pada pelatihan ilahi ini. Lebih jauh lagi, kita akan melihat bagaimana konsep ini terjalin dengan tema-tema lain dalam Alkitab dan bagaimana kita dapat mengaplikasikannya dalam kehidupan kita sehari-hari sebagai orang percaya yang sedang dalam perjalanan menuju kekekalan.
+        </p>
+
+        <h2>Konsep "Ganjaran" dalam Ibrani 12</h2>
+
+        <h3>Makna Asli "Paideia"</h3>
+        <p>
+            Kata Yunani yang diterjemahkan sebagai "ganjaran" di sini adalah <em>paideia</em>. Ini adalah kata yang jauh lebih kaya dan lebih luas maknanya daripada sekadar "hukuman" atau "ganjaran" seperti yang sering kita pahami dalam bahasa Indonesia modern. <em>Paideia</em> mengacu pada keseluruhan proses pendidikan, pembinaan, pelatihan, dan disiplin yang diberikan kepada seorang anak untuk membentuk karakternya. Ini mencakup instruksi lisan, koreksi, teladan, dan bahkan hukuman fisik jika diperlukan, semuanya dengan tujuan akhir untuk menghasilkan orang dewasa yang bijaksana dan bertanggung jawab. Dalam konteks biblika, khususnya dalam surat Ibrani, <em>paideia</em> mencerminkan kasih seorang ayah yang baik terhadap anaknya.
+        </p>
+        <p>
+            Penulis Ibrani secara eksplisit membandingkan disiplin Allah dengan disiplin dari ayah jasmani (Ibrani 12:7-10). Ia berargumen bahwa jika kita menghormati ayah jasmani yang mendisiplin kita demi kebaikan sementara waktu, betapa lebihnya kita harus tunduk kepada Bapa roh kita agar kita hidup. Perbedaan krusialnya adalah bahwa ayah jasmani mendisiplin kita sesuai dengan pandangan mereka sendiri yang terbatas dan kadang kala dengan motivasi yang kurang sempurna, sedangkan Allah Bapa mendisiplin kita untuk kebaikan kita yang sejati, agar kita dapat mengambil bagian dalam kekudusan-Nya. Disiplin Allah tidak pernah berasal dari kemarahan atau kebencian, melainkan dari kasih murni dan kerinduan-Nya untuk melihat anak-anak-Nya bertumbuh menjadi serupa dengan Kristus.
+        </p>
+        <p>
+            Oleh karena itu, ketika kita membaca "ganjaran" dalam Ibrani 12:11, kita harus memahaminya sebagai proses pembentukan karakter yang komprehensif, bukan sekadar respons terhadap kesalahan. Ini adalah campur tangan aktif Allah dalam hidup kita untuk mengajar, membimbing, dan memurnikan kita, seringkali melalui pengalaman-pengalaman yang menantang dan tidak nyaman. Ganjaran ilahi adalah bukti nyata bahwa kita adalah anak-anak-Nya yang sah, bukan anak-anak haram yang diabaikan (Ibrani 12:8).
+        </p>
+
+        <h3>Perbedaan Disiplin Ilahi dan Hukuman</h3>
+        <p>
+            Sangat penting untuk membedakan antara disiplin ilahi dan hukuman retributif. Dalam teologi Kristen, hukuman atas dosa telah ditanggung sepenuhnya oleh Yesus Kristus di kayu salib. Bagi orang percaya, tidak ada lagi penghukuman (Roma 8:1). Disiplin Allah, oleh karena itu, bukanlah hukuman untuk membayar dosa-dosa kita. Sebaliknya, itu adalah tindakan korektif dan formatif yang bertujuan untuk mengarahkan kita kembali ke jalan yang benar, memurnikan kita dari dosa-dosa yang melekat, dan melatih kita dalam kebenaran.
+        </p>
+        <p>
+            Hukuman biasanya berorientasi pada masa lalu, berfokus pada pembayaran atas kesalahan yang telah dilakukan. Disiplin, di sisi lain, berorientasi pada masa depan, berfokus pada pertumbuhan, pembelajaran, dan pencegahan kesalahan di kemudian hari. Ketika seorang anak membuat kesalahan, orang tua yang bijaksana tidak hanya menghukum, tetapi juga menjelaskan, mengajar, dan membimbing agar anak tersebut belajar dari kesalahannya dan tidak mengulanginya. Demikian pula, Allah Bapa mendisiplin kita bukan untuk "membalas dendam" atas kegagalan kita, melainkan untuk membentuk kita menjadi pribadi yang lebih kudus dan lebih berguna dalam Kerajaan-Nya. Ini adalah tindakan kasih, bukan kemarahan.
+        </p>
+
+        <h2>Mengapa Disiplin Awalnya Membawa Dukacita?</h2>
+
+        <h3>Sifat Alami Manusia Terhadap Penderitaan</h3>
+        <p>
+            Ayat Ibrani 12:11 dengan jujur mengakui realitas emosional yang dialami oleh manusia: "Memang tiap-tiap ganjaran pada waktu ia diberikan tidak mendatangkan sukacita, melainkan dukacita." Mengapa demikian? Karena secara alami, manusia menghindari rasa sakit, ketidaknyamanan, dan kesulitan. Tubuh kita dirancang untuk mencari kesenangan dan menjauhi bahaya. Jiwa kita mendambakan kedamaian, ketenangan, dan kepuasan. Oleh karena itu, ketika disiplin datang dalam bentuk cobaan, penderitaan, teguran, atau proses pemurnian yang sulit, reaksi insting pertama kita adalah penolakan dan dukacita.
+        </p>
+        <p>
+            Dukacita ini bisa bermanifestasi dalam berbagai cara: kekecewaan, keputusasaan, kemarahan, frustrasi, kebingungan, atau bahkan perasaan ditinggalkan oleh Allah. Ketika rencana kita terganggu, harapan kita pupus, atau dosa-dosa kita diungkap, kita merasakan sakit yang mendalam. Ini adalah proses yang menantang ego kita, kenyamanan kita, dan seringkali asumsi kita tentang bagaimana hidup seharusnya berjalan. Kita mungkin bertanya, "Mengapa saya? Mengapa sekarang? Mengapa harus sesulit ini?" Pertanyaan-pertanyaan ini, meskipun wajar, mencerminkan ketidaknyamanan dan dukacita yang tak terhindarkan dalam proses disiplin.
+        </p>
+        <p>
+            Penting untuk dicatat bahwa dukacita ini bukanlah tanda kegagalan iman, melainkan bagian alami dari pengalaman manusia. Bahkan Yesus sendiri, dalam taman Getsemani, berdoa agar cawan penderitaan itu berlalu dari-Nya, menunjukkan pergumulan batin yang mendalam sebelum Ia menyerahkan diri sepenuhnya kepada kehendak Bapa. Jika Sang Anak Allah pun mengalami dukacita dalam menghadapi penderitaan, apalagi kita sebagai manusia yang rapuh.
+        </p>
+
+        <h3>Contoh-contoh Dukacita dalam Proses Disiplin</h3>
+        <ul>
+            <li><strong>Disiplin Diri:</strong> Proses mengurangi nafsu duniawi, seperti puasa atau meninggalkan kebiasaan buruk, pada awalnya tidak menyenangkan. Tubuh dan pikiran kita akan memberontak, menyebabkan ketidaknyamanan fisik dan mental.</li>
+            <li><strong>Konfrontasi Dosa:</strong> Ketika Roh Kudus menegur dosa dalam hidup kita, atau ketika teguran datang melalui orang lain, itu seringkali menyakitkan dan memalukan. Mengakui kesalahan dan bertobat memerlukan kerendahan hati yang bisa sangat sulit.</li>
+            <li><strong>Penderitaan dalam Pengujian:</strong> Terkadang disiplin datang melalui penderitaan yang bukan akibat langsung dari dosa kita, tetapi sebagai ujian untuk memurnikan iman kita (1 Petrus 1:6-7). Kehilangan pekerjaan, masalah kesehatan, konflik hubungan—semua ini bisa mendatangkan dukacita yang mendalam.</li>
+            <li><strong>Proses Pembentukan Karakter:</strong> Membangun kesabaran, kerendahan hati, atau kasih yang tidak egois membutuhkan pengalaman-pengalaman di mana sifat-sifat ini diuji dan diregangkan melampaui batas kenyamanan kita.</li>
+        </ul>
+        <p>
+            Dukacita ini berfungsi sebagai alat. Ini menarik perhatian kita, memaksa kita untuk berhenti, merenung, dan mengevaluasi kembali arah hidup kita. Ini meruntuhkan kesombongan dan ketergantungan diri, membuka jalan bagi kita untuk lebih bersandar kepada Allah. Tanpa dukacita awal ini, seringkali kita tidak akan memiliki motivasi yang cukup untuk berubah dan bertumbuh. Rasa sakit adalah guru yang keras, tetapi efektif.
+        </p>
+
+        <h2>Buah Kebenaran yang Memberikan Damai</h2>
+
+        <h3>Definisi "Buah Kebenaran"</h3>
+        <p>
+            Meski ganjaran awalnya menyakitkan, ayat ini memberikan janji yang mulia: "Tetapi kemudian ia menghasilkan buah kebenaran yang memberikan damai." Kata "kemudian" sangat krusial di sini, menandakan adanya proses dan waktu yang dibutuhkan. Buah kebenaran bukanlah hasil instan dari disiplin, melainkan sesuatu yang tumbuh dan matang seiring berjalannya waktu, setelah pelatihan telah dilakukan dan diproses.
+        </p>
+        <p>
+            Apa itu "buah kebenaran"? Kebenaran (Yunani: <em>dikaiosyne</em>) di sini tidak hanya merujuk pada pembenaran yang kita terima melalui iman kepada Kristus, tetapi juga pada kebenaran praktis atau kesalehan. Ini adalah karakter yang selaras dengan karakter Allah, kehidupan yang mencerminkan standar moral dan etika Kerajaan Allah. Buah kebenaran dapat dilihat dalam:
+        </p>
+        <ol>
+            <li><strong>Kekudusan Pribadi:</strong> Hidup yang semakin bersih dari dosa, terpisah dari dunia, dan dikhususkan untuk Allah. Ini mencakup kemurnian pikiran, perkataan, dan perbuatan.</li>
+            <li><strong>Karakter Ilahi:</strong> Pengembangan sifat-sifat seperti kesabaran, kasih, sukacita, kedamaian, kemurahan hati, kebaikan, kesetiaan, kelemahlembutan, dan penguasaan diri (buah Roh, Galatia 5:22-23). Disiplin memangkas bagian-bagian yang tidak berbuah dan mendorong pertumbuhan sifat-sifat ini.</li>
+            <li><strong>Ketaatan:</strong> Keinginan dan kemampuan yang lebih besar untuk hidup sesuai dengan firman Allah, bukan karena paksaan, melainkan karena kasih dan pengertian.</li>
+            <li><strong>Hikmat dan Pengertian:</strong> Pemahaman yang lebih dalam tentang jalan-jalan Allah, tujuan-Nya, dan bagaimana hidup di dunia ini dengan cara yang menghormati-Nya.</li>
+            <li><strong>Integritas dan Keadilan:</strong> Hidup yang jujur, adil, dan bertanggung jawab dalam segala aspek, baik dalam hubungan dengan Allah maupun dengan sesama.</li>
+        </ol>
+        <p>
+            Buah ini adalah bukti nyata dari transformasi batin yang telah terjadi. Ini adalah manifestasi eksternal dari hati yang telah dibentuk dan dimurnikan oleh tangan Allah. Sama seperti pohon yang menghasilkan buah yang baik membutuhkan perawatan, pemangkasan, dan paparan terhadap unsur-unsur, demikian pula karakter Kristen yang sejati dibentuk melalui proses disiplin ilahi.
+        </p>
+
+        <h3>Hubungan Kebenaran dan Damai</h3>
+        <p>
+            Buah kebenaran ini kemudian "memberikan damai." Damai (Yunani: <em>eirene</em>, setara dengan <em>shalom</em> Ibrani) di sini bukan hanya ketiadaan konflik eksternal, melainkan kedamaian batin yang menyeluruh—kesejahteraan, keutuhan, dan keselarasan. Damai ini adalah hasil dari hidup yang selaras dengan kehendak Allah.
+        </p>
+        <p>
+            Bagaimana kebenaran menghasilkan damai?
+        </p>
+        <ul>
+            <li><strong>Damai dengan Allah:</strong> Ketika kita hidup dalam kebenaran dan ketaatan, hubungan kita dengan Allah menjadi lebih dekat dan tidak terhalang oleh dosa. Kita mengalami rasa perkenanan dan kehadiran-Nya, yang membawa kedamaian yang melampaui segala akal (Filipi 4:7).</li>
+            <li><strong>Damai Batin:</strong> Hati yang bersih dari rasa bersalah dan malu akibat dosa akan merasakan ketenangan. Ketika kita melakukan apa yang benar, kita tidak dihantui oleh penyesalan atau ketakutan akan konsekuensi buruk. Ada integritas batin yang membawa ketenteraman.</li>
+            <li><strong>Damai dengan Diri Sendiri:</strong> Proses disiplin seringkali membantu kita menerima diri kita apa adanya, memahami kelemahan kita, dan menerima kasih karunia Allah. Ini menghasilkan rasa aman dan penerimaan diri yang sejati.</li>
+            <li><strong>Damai dalam Hubungan:</strong> Karakter yang dibentuk oleh kebenaran—kasih, kesabaran, pengampunan—akan meningkatkan kualitas hubungan kita dengan orang lain, mengurangi konflik dan meningkatkan harmoni.</li>
+        </ul>
+        <p>
+            Kedamaian ini berbeda dengan kedamaian semu yang ditawarkan dunia, yang seringkali didasarkan pada ketiadaan masalah atau pemenuhan keinginan sesaat. Damai yang dihasilkan oleh disiplin ilahi adalah damai yang kokoh, yang bertahan bahkan di tengah-tengah badai kehidupan, karena akarnya tertanam dalam kebenaran Allah yang tak tergoyahkan.
+        </p>
+
+        <h2>"Kepada Mereka yang Dilatih Olehnya"</h2>
+
+        <h3>Sifat Aktif dari Pelatihan</h3>
+        <p>
+            Poin terakhir dalam ayat ini menekankan bahwa manfaat dari disiplin ilahi tidak datang secara otomatis kepada semua orang yang mengalaminya. Kedamaian dan buah kebenaran hanya dihasilkan "kepada mereka yang dilatih olehnya." Ini menunjukkan sifat aktif dari penerima disiplin. Kata Yunani untuk "dilatih" (<em>gymnazo</em>) adalah akar kata dari "senam" atau "latihan fisik," menyiratkan usaha, tekad, dan pengulangan.
+        </p>
+        <p>
+            Disiplin bukanlah pengalaman pasif. Ketika Allah mendisiplin kita, kita tidak diharapkan untuk hanya berdiam diri dan menunggu semuanya berlalu. Sebaliknya, kita dipanggil untuk berpartisipasi secara aktif dalam proses tersebut. Ini berarti:
+        </p>
+        <ul>
+            <li><strong>Menerima dengan Kerendahan Hati:</strong> Mengakui bahwa Allah tahu yang terbaik dan bahwa disiplin-Nya adalah untuk kebaikan kita, bahkan ketika itu terasa menyakitkan.</li>
+            <li><strong>Merespons dengan Pertobatan:</strong> Jika disiplin datang sebagai konsekuensi dosa, kita dipanggil untuk bertobat, mengakui kesalahan kita, dan berpaling dari jalan yang salah.</li>
+            <li><strong>Tekun dalam Proses:</strong> Tidak menyerah ketika keadaan sulit, melainkan terus berharap kepada Allah dan percaya pada tujuan-Nya.</li>
+            <li><strong>Belajar dan Menerapkan:</strong> Memahami pelajaran yang ingin Allah ajarkan melalui pengalaman tersebut dan secara sengaja menerapkan prinsip-prinsip tersebut dalam hidup kita.</li>
+            <li><strong>Menyerah pada Kehendak Allah:</strong> Melepaskan kendali dan mempercayai hikmat Allah yang tak terbatas, bahkan ketika kita tidak sepenuhnya memahami alasan di balik penderitaan kita.</li>
+        </ul>
+        <p>
+            Seperti seorang atlet yang menjalani latihan keras untuk mencapai keunggulan, demikian pula orang percaya harus menjalani "latihan" yang diberikan oleh Allah dengan tekad dan fokus. Proses ini memerlukan pengerahan diri, penolakan diri, dan komitmen yang berkelanjutan. Tanpa partisipasi aktif ini, disiplin bisa menjadi pengalaman yang pahit dan sia-sia, bukannya menjadi jembatan menuju pertumbuhan.
+        </p>
+
+        <h3>Tanda Orang yang Berhasil Dilatih</h3>
+        <p>
+            Orang yang berhasil dilatih oleh disiplin Allah akan menunjukkan tanda-tanda berikut dalam hidupnya:
+        </p>
+        <ul>
+            <li><strong>Peningkatan Ketaatan:</strong> Mereka akan semakin peka terhadap suara Roh Kudus dan lebih cepat merespons firman Allah.</li>
+            <li><strong>Pertumbuhan Karakter:</strong> Sifat-sifat Kristus akan semakin nyata dalam kepribadian mereka.</li>
+            <li><strong>Kerendahan Hati yang Lebih Dalam:</strong> Mereka akan semakin menyadari ketergantungan mereka pada Allah dan kurang bersandar pada kekuatan diri sendiri.</li>
+            <li><strong>Damai Sejahtera:</strong> Meskipun mungkin masih menghadapi tantangan, mereka akan memiliki kedamaian batin yang kokoh.</li>
+            <li><strong>Kasih yang Semakin Besar:</strong> Kasih mereka kepada Allah dan sesama akan tumbuh, karena mereka semakin memahami kasih Allah yang telah membentuk mereka.</li>
+            <li><strong>Ketekunan:</strong> Mereka akan mampu bertahan dalam pencobaan dengan harapan dan kesabaran yang lebih besar.</li>
+        </ul>
+        <p>
+            Singkatnya, disiplin ilahi adalah sebuah panggilan untuk pertumbuhan. Ini adalah undangan Allah untuk mengambil bagian dalam proses pemurnian-Nya, sebuah proses yang, meskipun awalnya sulit, pada akhirnya akan menghasilkan kehidupan yang penuh kebenaran dan kedamaian. Ini adalah janji yang kuat bagi setiap orang percaya yang berani menghadapi dan menerima "ganjaran" dari Bapa surgawi.
+        </p>
+
+        <h2>Disiplin Ilahi dalam Konteks Surat Ibrani</h2>
+
+        <h3>Perlombaan Iman dan Saksi-saksi Agung</h3>
+        <p>
+            Ibrani 12:11 tidak bisa dilepaskan dari konteks seluruh pasal 12 dan bahkan seluruh surat Ibrani. Sebelum ayat 11, penulis mengajak kita untuk mengingat "awan saksi yang begitu banyak" (Ibrani 12:1), yaitu para pahlawan iman yang disebutkan di pasal 11. Mereka adalah orang-orang yang melalui iman, menaklukkan kerajaan, melakukan kebenaran, memperoleh janji-janji, bahkan mengalami penderitaan dan siksaan, tetapi tetap setia. Mereka adalah contoh nyata dari orang-orang yang menerima ganjaran dalam hidup mereka, dan melalui itu, mereka menghasilkan buah kebenaran dan damai. Kisah-kisah mereka adalah bukti hidup bahwa disiplin ilahi adalah jalan yang telah ditempuh oleh orang-orang kudus sepanjang sejarah.
+        </p>
+        <p>
+            Penulis kemudian menyerukan agar kita membuang "segala beban dan dosa yang merintangi kita, dan berlomba dengan tekun dalam perlombaan yang diwajibkan bagi kita" (Ibrani 12:1). Beban dan dosa ini seringkali disingkapkan dan disingkirkan melalui proses disiplin. Disiplin membantu kita menanggalkan hal-hal yang menghambat kemajuan spiritual kita, seperti kebanggaan, keserakahan, rasa takut, atau keterikatan pada dunia. Tanpa pembersihan ini, kita tidak akan bisa berlari dengan efektif dalam perlombaan iman yang telah ditetapkan Allah bagi kita.
+        </p>
+
+        <h3>Mata Tertuju pada Yesus</h3>
+        <p>
+            Pusat dari seruan dalam Ibrani 12 adalah "Marilah kita melakukannya dengan mata yang tertuju kepada Yesus, yang memimpin kita dalam iman, dan yang menyempurnakan iman kita" (Ibrani 12:2). Yesus sendiri adalah teladan utama dari seseorang yang menerima "ganjaran" yang mendatangkan dukacita, tetapi kemudian menghasilkan buah kebenaran dan kedamaian yang tak terhingga.
+        </p>
+        <p>
+            Yesus, "yang demi sukacita yang disediakan bagi Dia, rela menanggung salib dengan menghina kehinaan itu, dan sekarang duduk di sebelah kanan takhta Allah" (Ibrani 12:2). Salib adalah puncak dari penderitaan dan disiplin yang Yesus alami. Itu adalah momen dukacita yang paling mendalam, namun dari sanalah muncul buah kebenaran terbesar—keselamatan bagi umat manusia—dan kedamaian yang kekal. Jika Sang Anak Allah pun harus menanggung penderitaan dan disiplin untuk menyelesaikan misi-Nya, maka kita, sebagai pengikut-Nya, tidaklah lebih besar dari Guru kita. Melihat kepada Yesus dalam penderitaan kita memberikan kita perspektif, kekuatan, dan harapan untuk bertahan.
+        </p>
+        <p>
+            Disiplin yang kita alami adalah bagian dari proses Allah untuk membuat kita semakin serupa dengan Kristus. Ini adalah bukti bahwa kita sedang dibentuk menjadi gambar-Nya, sebuah proses yang mulia dan penuh makna, meskipun seringkali menyakitkan.
+        </p>
+
+        <h2>Praktik Menerima Disiplin Ilahi dalam Kehidupan Sehari-hari</h2>
+
+        <h3>Mengidentifikasi Disiplin Allah</h3>
+        <p>
+            Langkah pertama untuk menerima manfaat dari Ibrani 12:11 adalah belajar mengidentifikasi kapan kita sedang didisiplin oleh Allah. Disiplin ilahi tidak selalu datang dalam bentuk hukuman yang jelas atau bencana besar. Kadang-kadang itu lebih halus:
+        </p>
+        <ul>
+            <li><strong>Teguran Roh Kudus:</strong> Rasa bersalah atau ketidaknyamanan yang kuat ketika kita melakukan atau memikirkan sesuatu yang tidak sesuai dengan kehendak Allah.</li>
+            <li><strong>Melalui Firman Tuhan:</strong> Sebuah ayat atau khotbah yang terasa "menusuk" hati dan menyingkapkan area-area dalam hidup kita yang perlu diubah.</li>
+            <li><strong>Melalui Orang Lain:</strong> Teguran yang penuh kasih dari seorang teman yang bijaksana, mentor rohani, atau pemimpin gereja.</li>
+            <li><strong>Melalui Keadaan Hidup:</strong> Kesulitan, kegagalan, kehilangan, atau tantangan yang memaksa kita untuk mengevaluasi kembali prioritas dan ketergantungan kita kepada Allah.</li>
+            <li><strong>Melalui Konsekuensi Alami:</strong> Kita menuai apa yang kita tabur. Konsekuensi negatif dari pilihan buruk kita dapat berfungsi sebagai alat disiplin Allah untuk mengajar kita.</li>
+        </ul>
+        <p>
+            Penting untuk membedakan antara disiplin ilahi dan penderitaan acak atau konsekuensi dari keputusan yang tidak bijaksana tanpa maksud disipliner dari Allah. Meskipun Allah bisa menggunakan segala sesuatu untuk kebaikan kita (Roma 8:28), fokus Ibrani 12:11 adalah pada intervensi Bapa yang sengaja dan penuh kasih untuk membentuk karakter kita. Kita perlu berdoa memohon hikmat untuk membedakan.
+        </p>
+
+        <h3>Respons yang Benar Terhadap Disiplin</h3>
+        <p>
+            Setelah kita mengidentifikasi disiplin Allah, bagaimana seharusnya respons kita? Penulis Ibrani memberikan petunjuk yang jelas di pasal 12:5-6: "Janganlah engkau menganggap remeh didikan Tuhan, dan janganlah putus asa apabila engkau dihajar-Nya. Karena Tuhan menghajar orang yang dikasihi-Nya, dan Ia menyesah setiap orang yang diakui-Nya sebagai anak."
+        </p>
+        <ol>
+            <li><strong>Jangan Menganggap Remeh:</strong> Jangan meremehkan atau mengabaikan teguran Allah. Anggaplah itu serius dan perhatikanlah pelajaran yang ingin Dia sampaikan. Mengabaikan disiplin hanya akan memperpanjang atau memperberat prosesnya.</li>
+            <li><strong>Jangan Putus Asa:</strong> Di tengah dukacita, godaan untuk putus asa sangat besar. Namun, kita diingatkan bahwa disiplin adalah bukti kasih, bukan penolakan. Allah tidak menghukum kita karena Dia membenci kita, melainkan karena Dia mengasihi kita dan ingin yang terbaik bagi kita.</li>
+            <li><strong>Merespons dengan Pertobatan dan Penyesuaian:</strong> Jika disiplin menunjukkan area dosa, bertobatlah. Jika itu menunjukkan kelemahan karakter, berdoalah dan berusahalah untuk berubah. Tunduklah pada proses pemurnian-Nya.</li>
+            <li><strong>Memelihara Perspektif Jangka Panjang:</strong> Ingatlah janji Ibrani 12:11—bahwa dukacita awal akan menghasilkan buah kebenaran dan damai. Fokus pada hasil akhir, bukan hanya pada rasa sakit saat ini.</li>
+            <li><strong>Mencari Dukungan Komunitas:</strong> Jangan menghadapi disiplin sendirian. Berbagilah dengan orang percaya yang dewasa secara rohani yang dapat berdoa untuk Anda, memberikan nasihat yang bijaksana, dan mengingatkan Anda akan kebenaran Allah.</li>
+            <li><strong>Memuji Allah di Tengah Penderitaan:</strong> Ini mungkin yang paling sulit, tetapi juga yang paling transformatif. Mengucapkan syukur dan memuji Allah bahkan dalam kesedihan adalah ekspresi tertinggi dari iman dan kepercayaan kepada kedaulatan dan kebaikan-Nya.</li>
+        </ol>
+        <p>
+            Sikap hati kita terhadap disiplin Allah adalah penentu utama apakah kita akan menghasilkan buah kebenaran atau tetap terjebak dalam kepahitan dan penolakan.
+        </p>
+
+        <h3>Manfaat Jangka Panjang Disiplin</h3>
+        <p>
+            Meskipun prosesnya sulit, manfaat jangka panjang dari disiplin ilahi sangatlah berharga. Ini bukan hanya tentang menghindari dosa, tetapi tentang menjadi pribadi yang lebih baik, lebih kuat, dan lebih serupa dengan Kristus. Disiplin membangun ketahanan spiritual, memperdalam akar iman kita, dan memurnikan motivasi kita. Ini adalah jalan menuju pertumbuhan yang otentik dan kematangan rohani.
+        </p>
+        <p>
+            Ketika kita telah "dilatih" oleh disiplin, kita tidak hanya menjadi lebih benar dan damai, tetapi juga lebih siap untuk melayani Allah dan sesama. Kita memiliki empati yang lebih besar terhadap penderitaan orang lain, hikmat untuk menasihati, dan kekuatan untuk bertahan dalam menghadapi tantangan di masa depan. Kita menjadi saksi hidup akan kuasa transformatif Allah.
+        </p>
+
+        <h2>Peran Kasih Allah dalam Disiplin</h2>
+
+        <h3>Disiplin sebagai Bukti Kasih Bapa</h3>
+        <p>
+            Salah satu kebenaran paling mendalam yang disajikan dalam Ibrani 12 adalah bahwa disiplin ilahi adalah manifestasi dari kasih Allah. "Karena Tuhan menghajar orang yang dikasihi-Nya, dan Ia menyesah setiap orang yang diakui-Nya sebagai anak" (Ibrani 12:6). Ini adalah kebenaran yang seringkali sulit diterima ketika kita berada di tengah-tengah penderitaan atau kesusahan. Namun, jika kita memikirkannya secara mendalam, kasih sejati tidak akan membiarkan anak-anaknya binasa dalam kebodohan atau dosa.
+        </p>
+        <p>
+            Seorang ayah yang sungguh-sungguh mengasihi anaknya akan mendisiplinnya demi kebaikannya. Ia tidak akan membiarkan anaknya melakukan hal-hal yang akan merugikan dirinya sendiri di kemudian hari. Justru, kurangnya disiplin adalah tanda pengabaian, bukan kasih. Penulis Ibrani mengingatkan kita bahwa anak haram tidak akan pernah didisiplin, tetapi anak yang sah, yang adalah ahli waris, akan didisiplin. Jadi, ketika kita mengalami disiplin, itu adalah konfirmasi ilahi bahwa kita adalah anak-anak Allah yang sejati, yang dikasihi dan dihargai oleh-Nya.
+        </p>
+        <p>
+            Kasih Allah adalah kasih yang suci, yang menginginkan kekudusan dan keutuhan bagi anak-anak-Nya. Disiplin-Nya adalah alat kasih itu untuk memurnikan kita, membentuk kita, dan membawa kita lebih dekat kepada-Nya. Ini adalah tindakan perlindungan, bukan penghukuman. Ini adalah undangan untuk bertumbuh, bukan penghakiman.
+        </p>
+
+        <h3>Perbandingan dengan Ayah Jasmani</h3>
+        <p>
+            Penulis Ibrani dengan cerdas menggunakan perbandingan antara ayah jasmani dan Bapa surgawi untuk menjelaskan poin ini (Ibrani 12:9-10). Ayah jasmani, meskipun dengan niat baik, seringkali mendisiplin "menurut kehendak mereka sendiri," dan "hanya untuk waktu yang pendek." Disiplin mereka mungkin didasarkan pada emosi sesaat, pemahaman yang terbatas, atau bahkan ego. Hasilnya, meskipun mungkin ada manfaat, tidak selalu sempurna atau kekal.
+        </p>
+        <p>
+            Namun, Bapa sorgawi mendisiplin kita "untuk kebaikan kita, supaya kita beroleh bagian dalam kekudusan-Nya." Disiplin Allah selalu sempurna dalam motivasinya (kasih murni), sempurna dalam metodenya (selalu tepat untuk setiap individu), dan sempurna dalam tujuannya (membawa kita kepada kekudusan dan kedamaian yang kekal). Dia tidak pernah membuat kesalahan dalam mendisiplin kita. Dia tahu persis apa yang kita butuhkan, kapan kita membutuhkannya, dan bagaimana cara menyampaikannya. Ini adalah jaminan yang luar biasa bagi kita di tengah-tengah pergumulan.
+        </p>
+        <p>
+            Memahami bahwa disiplin berasal dari kasih yang sempurna akan mengubah cara kita menghadapinya. Daripada memberontak atau merasa pahit, kita bisa mulai melihatnya sebagai hadiah, sebagai bukti perhatian dan investasi Allah dalam hidup kita. Ini adalah undangan untuk percaya lebih dalam pada kebaikan-Nya, bahkan ketika kita tidak memahami jalan-Nya.
+        </p>
+
+        <h2>Melampaui Dukacita: Menerima Damai yang Sejati</h2>
+
+        <h3>Kedamaian yang Melampaui Pemahaman</h3>
+        <p>
+            Kedamaian yang dihasilkan oleh disiplin ilahi bukanlah kedamaian yang diberikan dunia (Yohanes 14:27). Kedamaian dunia seringkali bersifat eksternal, tergantung pada keadaan yang menyenangkan, ketiadaan masalah, atau pemenuhan keinginan. Namun, kedamaian yang diberikan oleh Allah adalah kedamaian batiniah yang kokoh, yang dapat bertahan bahkan di tengah-tengah penderitaan dan kekacauan eksternal. Ini adalah "damai sejahtera Allah, yang melampaui segala akal" (Filipi 4:7).
+        </p>
+        <p>
+            Ketika kita telah didisiplin oleh Allah dan menghasilkan buah kebenaran, kita akan mengalami kedamaian ini karena kita telah belajar untuk bersandar sepenuhnya pada Allah. Kita telah melihat kebaikan-Nya di tengah kesulitan, merasakan anugerah-Nya yang menopang, dan mengalami kekuatan-Nya yang menyempurnakan kelemahan kita. Ini menghasilkan kepercayaan yang mendalam bahwa Allah memegang kendali atas segala sesuatu, dan bahwa Dia bekerja di balik layar untuk kebaikan kita.
+        </p>
+        <p>
+            Kedamaian ini bukan berarti kita tidak akan pernah lagi merasakan kesedihan atau dukacita. Itu adalah bagian dari pengalaman manusia di dunia yang jatuh ini. Namun, kedamaian yang dihasilkan oleh disiplin memungkinkan kita untuk merasakan kesedihan dengan harapan, menghadapi tantangan dengan ketenangan, dan menjalani hidup dengan keyakinan yang teguh pada janji-janji Allah. Ini adalah kedamaian yang tidak dapat dirampas oleh keadaan.
+        </p>
+
+        <h3>Hidup dalam Kekudusan dan Damai</h3>
+        <p>
+            Surat Ibrani mengakhiri bagian tentang disiplin dengan seruan: "Berusahalah hidup damai dengan semua orang dan kejarlah kekudusan, sebab tanpa kekudusan tidak seorang pun akan melihat Tuhan" (Ibrani 12:14). Ayat ini menunjukkan bahwa buah kebenaran dan damai yang dihasilkan oleh disiplin tidak hanya bersifat pribadi, tetapi juga memiliki implikasi sosial dan eskatologis.
+        </p>
+        <p>
+            Hidup dalam kebenaran dan damai dengan Allah akan memungkinkan kita untuk hidup damai dengan sesama, sejauh itu bergantung pada kita. Karakter yang telah dibentuk oleh Allah—dengan kesabaran, kasih, pengampunan—akan menjadi berkat bagi komunitas di sekitar kita. Selain itu, pengejaran kekudusan adalah tujuan utama dari disiplin ilahi, karena kekudusan adalah jalan menuju persekutuan yang lebih intim dengan Allah dan pada akhirnya, melihat-Nya.
+        </p>
+        <p>
+            Jadi, Ibrani 12:11 tidak hanya berbicara tentang transformasi pribadi, tetapi juga tentang bagaimana transformasi itu berkontribusi pada kehidupan yang lebih luas—kehidupan yang memuliakan Allah, memberkati sesama, dan mempersiapkan kita untuk kekekalan bersama-Nya. Ini adalah janji yang luar biasa: bahwa proses yang menyakitkan saat ini akan berujung pada kekudusan dan kedamaian abadi.
+        </p>
+
+        <h2>Kesimpulan</h2>
+
+        <p>
+            Ibrani 12:11 adalah sebuah mercusuar kebenaran yang menerangi jalan kita melalui lembah-lembah penderitaan dan tantangan. Ayat ini dengan jujur mengakui bahwa disiplin ilahi, atau "ganjaran" yang Allah berikan kepada anak-anak-Nya yang dikasihi, tidak akan pernah mendatangkan sukacita pada awalnya. Sebaliknya, ia membawa serta dukacita, ketidaknyamanan, dan rasa sakit. Ini adalah bagian yang tidak terhindarkan dari proses pembentukan karakter yang mendalam. Namun, keindahan dan janji yang terkandung dalam ayat ini adalah bahwa dukacita itu bukanlah akhir dari cerita.
+        </p>
+        <p>
+            "Tetapi kemudian ia menghasilkan buah kebenaran yang memberikan damai kepada mereka yang dilatih olehnya." Frasa ini adalah inti dari pesan pengharapan. Melalui proses yang menyakitkan itu, Allah sedang bekerja di dalam kita untuk menyingkirkan apa yang tidak berguna, untuk memurnikan motivasi kita, dan untuk membentuk kita menjadi pribadi yang semakin serupa dengan gambaran Kristus. Buah kebenaran ini termanifestasi dalam kekudusan pribadi, ketaatan yang lebih besar, karakter ilahi, dan hikmat yang mendalam.
+        </p>
+        <p>
+            Dan sebagai mahkota dari semua itu, proses ini menghasilkan damai—bukan damai yang dangkal atau sementara, tetapi kedamaian batin yang kokoh, kesejahteraan yang menyeluruh, dan keselarasan hubungan dengan Allah dan sesama. Damai ini adalah hadiah dari hidup yang selaras dengan kehendak Allah, damai yang melampaui segala pemahaman manusia, dan damai yang tidak dapat digoyahkan oleh badai kehidupan.
+        </p>
+        <p>
+            Yang terpenting, manfaat transformatif ini hanya diberikan "kepada mereka yang dilatih olehnya." Ini adalah panggilan untuk respons aktif dari pihak kita. Kita tidak boleh menganggap remeh disiplin Allah, tidak boleh putus asa di dalamnya, melainkan harus menerimanya dengan kerendahan hati, bertobat dari dosa-dosa kita, dan bertekun dalam prosesnya, percaya bahwa Bapa surgawi kita bekerja untuk kebaikan kita yang tertinggi. Dengan mata yang tertuju kepada Yesus, teladan sempurna kita dalam penderitaan dan ketaatan, kita dapat menjalani setiap ganjaran dengan harapan dan keyakinan.
+        </p>
+        <p>
+            Mari kita merangkul kebenaran Ibrani 12:11 dalam hidup kita sehari-hari. Ketika kita menemukan diri kita dalam lembah disiplin, ingatlah bahwa itu adalah bukti kasih Allah yang tak terbatas. Biarkan dukacita awal itu menjadi pupuk bagi pertumbuhan rohani Anda, memercayai bahwa pada akhirnya, Anda akan memetik buah kebenaran yang manis dan menikmati kedamaian yang kekal. Disiplin Allah bukanlah akhir dari kebahagiaan, melainkan awal dari kebahagiaan sejati yang berakar pada kekudusan dan persekutuan yang mendalam dengan Dia.
+        </p>
+    </article>
+
+    <footer>
+        <p>&copy; Artikel ini dibuat untuk tujuan pembelajaran dan inspirasi rohani.</p>
+    </footer>
+<div class='related-posts'><h3>Related Posts</h3><ul><li><a href="/1-samuel-10-5">1 Samuel 10 5</a></li>
+<li><a href="/daniel-10-2">Daniel 10 2</a></li>
+<li><a href="/2-samuel-8-6">2 Samuel 8 6</a></li>
+<li><a href="/markus-9-4">Markus 9 4</a></li>
+<li><a href="/1-samuel-5-5">1 Samuel 5 5</a></li>
+<li><a href="/1-yohanes-3-13">1 Yohanes 3 13</a></li>
+<li><a href="/1-samuel-4-19">1 Samuel 4 19</a></li>
+<li><a href="/nahum-2-4">Nahum 2 4</a></li>
+<li><a href="/yeremia-14-7">Yeremia 14 7</a></li>
+<li><a href="/matius-6-1">Matius 6 1</a></li></ul></div>
+<script src="/ik.js"></script>
+</body>
+</html>

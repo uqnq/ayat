@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazmur 137:1: Di Tepi Sungai Babel, Mengenang Sion</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style>
+        /* Desain dasar: Mobile-first */
+        :root {
+            --color-primary-blue: #2A6B8A; /* Lebih gelap, sejuk */
+            --color-secondary-blue: #3D8AB0; /* Menengah, sejuk */
+            --color-tertiary-blue: #5AA0C2; /* Lebih terang, sejuk */
+            --color-light-background: #F8FCFF; /* Sangat terang, hampir putih */
+            --color-white: #FFFFFF;
+            --color-text-dark: #333333;
+            --color-text-medium: #555555;
+            --color-accent-light: #ADD8E6; /* Light Blue, untuk aksen */
+            --color-link: #007BFF; /* Biru standar untuk tautan */
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-light-background);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            font-size: 1.1em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--color-white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--color-primary-blue);
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .verse-text {
+            font-style: italic;
+            color: var(--color-secondary-blue);
+            font-size: 1.3em;
+            margin: 20px 0 40px 0;
+            padding: 15px;
+            background-color: #E0F7FA; /* Sangat ringan, hampir tak terlihat */
+            border-left: 5px solid var(--color-accent-light);
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--color-secondary-blue);
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--color-accent-light);
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--color-tertiary-blue);
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1.5em;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 0.8em;
+            text-align: justify;
+        }
+
+        blockquote {
+            background-color: #F0F8FA;
+            border-left: 5px solid var(--color-accent-light);
+            margin: 20px 0;
+            padding: 15px 20px;
+            font-style: italic;
+            color: var(--color-text-medium);
+            border-radius: 4px;
+        }
+
+        a {
+            color: var(--color-link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            font-weight: bold;
+            color: var(--color-primary-blue); /* Penekanan */
+        }
+
+        /* Responsif untuk layar lebih kecil */
+        @media (max-width: 768px) {
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .verse-text {
+                font-size: 1.1em;
+                margin: 15px 0 30px 0;
+            }
+            h2 {
+                font-size: 1.5em;
+                margin-top: 30px;
+            }
+            h3 {
+                font-size: 1.3em;
+                margin-top: 25px;
+            }
+            body {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                margin: 5px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .verse-text {
+                font-size: 1em;
+                margin: 10px 0 20px 0;
+                padding: 10px;
+            }
+            h2 {
+                font-size: 1.3em;
+                margin-top: 25px;
+            }
+            h3 {
+                font-size: 1.1em;
+                margin-top: 20px;
+            }
+            p {
+                margin-bottom: 1em;
+            }
+        }
+
+        /* SVG untuk gambar cocok dengan tema */
+        .svg-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            display: block;
+            text-align: center;
+        }
+        .svg-container svg {
+            width: 100%;
+            height: auto;
+        }
+        .river-path {
+            fill: none;
+            stroke: var(--color-tertiary-blue);
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .tree-trunk {
+            fill: #8B4513; /* SaddleBrown */
+        }
+        .tree-leaves {
+            fill: #66BB6A; /* Hijau segar */
+        }
+        .person-fill {
+            fill: var(--color-secondary-blue);
+        }
+        .tear-path {
+            fill: var(--color-accent-light);
+            stroke: var(--color-secondary-blue);
+            stroke-width: 1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Mazmur 137:1: Di Tepi Sungai Babel, Mengenang Sion</h1>
+            <p class="verse-text">"Di tepi sungai-sungai Babel, di sanalah kita duduk dan menangis, apabila kita mengingat Sion."</p>
+        </header>
+
+        <div class="svg-container">
+            <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svgTitle svgDesc">
+                <title id="svgTitle">Orang-orang Israel menangis di tepi Sungai Babel</title>
+                <desc id="svgDesc">Ilustrasi seorang tokoh duduk di tepi sungai, di bawah pohon, dengan air mata menetes, melambangkan kesedihan dan kerinduan akan Sion.</desc>
+
+                <!-- Sungai Babel -->
+                <path class="river-path" d="M0 350 C150 300, 450 300, 600 350" />
+                <path class="river-path" d="M0 360 C140 310, 460 310, 600 360" opacity="0.7"/>
+                <path class="river-path" d="M0 370 C130 320, 470 320, 600 370" opacity="0.5"/>
+                <path class="river-path" d="M0 380 C120 330, 480 330, 600 380" opacity="0.3"/>
+
+                <!-- Tanah tempat duduk -->
+                <path d="M0 350 L600 350 L600 400 L0 400 Z" fill="#D2B48C" />
+
+                <!-- Pohon di tepi sungai (Weeping Willow style) -->
+                <rect class="tree-trunk" x="400" y="180" width="20" height="170" rx="5" ry="5"/>
+                <path class="tree-leaves" d="M410 180 C360 100, 300 120, 350 200 C370 250, 450 280, 480 200 C500 120, 440 100, 410 180 Z"/>
+                <path class="tree-leaves" d="M420 190 C380 140, 340 150, 370 210 C390 260, 460 270, 480 210 C490 150, 440 130, 420 190 Z" opacity="0.8"/>
+                <circle class="tree-leaves" cx="410" cy="180" r="40" opacity="0.6"/>
+
+                <!-- Tokoh duduk -->
+                <g class="person-figure">
+                    <rect class="person-fill" x="350" y="300" width="50" height="50" rx="10" ry="10"/> <!-- Tubuh -->
+                    <circle class="person-fill" cx="375" cy="285" r="15"/> <!-- Kepala -->
+                    <line class="person-fill" x1="360" y1="310" x2="330" y2="330" stroke="var(--color-secondary-blue)" stroke-width="5" stroke-linecap="round"/> <!-- Lengan kiri -->
+                    <line class="person-fill" x1="390" y1="310" x2="420" y2="330" stroke="var(--color-secondary-blue)" stroke-width="5" stroke-linecap="round"/> <!-- Lengan kanan -->
+                </g>
+
+                <!-- Air mata (tear drop) -->
+                <path class="tear-path" d="M375 295 Q370 305, 375 315 T380 325 Z" transform="translate(-10, 0)"/>
+                <path class="tear-path" d="M375 295 Q370 305, 375 315 T380 325 Z" transform="translate(10, 5) scale(0.8)"/>
+            </svg>
+        </div>
+
+
+        <h2>Pendahuluan: Ratapan di Tepi Sungai yang Asing</h2>
+        <p>Mazmur 137:1 adalah salah satu ayat paling ikonik dan menyentuh dalam seluruh kitab Mazmur, sebuah narasi singkat namun padat yang mengabadikan kesedihan mendalam, kerinduan, dan kehampaan yang dirasakan oleh bangsa Israel saat mereka dibuang di Babel. Ayat ini bukan sekadar catatan sejarah, melainkan sebuah jendela ke dalam jiwa kolektif sebuah bangsa yang telah kehilangan segalanya: tanah air, Bait Allah, kebebasan, dan bahkan identitas mereka sebagai umat pilihan di tanah mereka sendiri. "Di tepi sungai-sungai Babel, di sanalah kita duduk dan menangis, apabila kita mengingat Sion." Hanya dengan beberapa kata, Mazmur ini berhasil menyampaikan trauma, kepedihan, dan kerinduan yang tak terhingga.</p>
+        <p>Kisah Mazmur 137:1 adalah kisah tentang kehilangan, pengasingan, dan perlawanan spiritual. Ia berbicara tentang bagaimana ingatan—baik yang manis maupun yang pahit—membentuk identitas dan ketahanan sebuah komunitas di tengah penderitaan yang tak terbayangkan. Artikel ini akan menyelami kedalaman ayat tunggal ini, menggali konteks sejarahnya, menelusuri nuansa emosional dan teologisnya, serta merefleksikan relevansinya yang abadi bagi kita di masa kini. Kita akan menjelajahi mengapa sungai-sungai Babel menjadi latar yang begitu kuat, mengapa duduk dan menangis adalah respons yang universal, dan mengapa mengingat Sion adalah tindakan yang jauh lebih dari sekadar nostalgia.</p>
+
+        <h2>1. Latar Belakang Sejarah: Penaklukan dan Pembuangan Babel</h2>
+        <h3>1.1. Kejatuhan Yerusalem dan Bait Allah</h3>
+        <p>Untuk memahami Mazmur 137:1, kita harus terlebih dahulu menempatkannya dalam konteks sejarahnya yang tragis. Pada abad ke-6 SM, kerajaan Yehuda, yang merupakan sisa dari kerajaan Israel yang terpecah, menghadapi ancaman besar dari Kekaisaran Babel yang sedang bangkit. Di bawah kepemimpinan raja Nebukadnezar II, Babel menjadi kekuatan dominan di Timur Tengah, menelan kerajaan-kerajaan kecil di sekitarnya. Yerusalem, ibu kota Yehuda dan rumah bagi Bait Allah yang megah—pusat kehidupan keagamaan dan identitas bangsa Israel—tidak luput dari cengkeraman Babel.</p>
+        <p>Penaklukan Yerusalem tidak terjadi dalam satu waktu. Ada beberapa gelombang penyerbuan dan deportasi. Gelombang pertama terjadi sekitar tahun 605 SM, di mana kaum elit dan bangsawan, termasuk nabi Daniel, dibawa ke Babel. Gelombang kedua yang lebih besar terjadi pada tahun 597 SM, ketika Raja Yoyakhin, para pejabat, prajurit, dan ribuan pengrajin serta pandai besi dideportasi. Nabi Yehezkiel termasuk dalam rombongan ini. Puncak tragedi datang pada tahun 586 SM, ketika Nebukadnezar, setelah pengepungan yang panjang dan brutal, akhirnya merebut Yerusalem. Kali ini, kota itu diratakan dengan tanah. Tembok-temboknya dihancurkan, istana-istana dibakar, dan yang paling menyakitkan, Bait Allah yang dibangun oleh Salomo, kebanggaan dan pusat spiritual Israel, dihancurkan hingga fondasinya.</p>
+        <p>Penghancuran Bait Allah bukan hanya kehancuran sebuah bangunan. Itu adalah kehancuran simbol kehadiran Allah di tengah umat-Nya, tempat kurban dipersembahkan, doa dinaikkan, dan perayaan dirayakan. Bagi orang Israel, Bait Allah adalah jangkar keberadaan mereka, bukti perjanjian mereka dengan Yahweh. Kehilangannya meninggalkan kekosongan spiritual dan eksistensial yang luar biasa.</p>
+
+        <h3>1.2. Hidup dalam Pengasingan di Babel</h3>
+        <p>Setelah kehancuran Yerusalem, sebagian besar penduduk yang tersisa, kecuali yang paling miskin dan tidak penting, dibawa ke Babel. Ini adalah sebuah kebijakan kekaisaran untuk mencegah pemberontakan dan untuk memanfaatkan tenaga kerja serta keahlian bangsa-bangsa taklukan. Mereka dipaksa melakukan perjalanan jauh dan melelahkan melintasi gurun dan sungai, meninggalkan semua yang mereka kenal dan cintai. Setibanya di Babel, mereka tidak dipenjarakan dalam arti sempit, tetapi ditempatkan di komunitas-komunitas tertentu, seringkali di sepanjang sungai dan kanal-kanal yang digunakan untuk irigasi dan transportasi. Ini adalah sebuah kehidupan dalam pembuangan, di mana mereka diberi lahan untuk bertani dan membangun rumah, namun mereka tetaplah orang asing di tanah orang lain.</p>
+        <p>Babel adalah peradaban yang sangat maju dan makmur, dengan kota-kota besar yang megah, kuil-kuil dewa-dewa mereka yang menjulang tinggi, dan sistem irigasi yang canggih. Namun, bagi orang Israel, kemegahan Babel justru mempertegas penderitaan mereka. Mereka hidup di tengah-tengah politeisme yang asing, budaya yang berbeda, dan bahasa yang tidak mereka pahami sepenuhnya. Mereka adalah orang buangan, dipisahkan dari tradisi, perayaan, dan praktik keagamaan mereka yang terpusat di Yerusalem. Di sana, di negeri asing ini, mereka menghadapi tantangan untuk menjaga iman dan identitas mereka di tengah tekanan asimilasi dan keputusasaan.</p>
+        <p>Dalam konteks inilah, Mazmur 137:1 lahir—sebagai sebuah ekspresi yang jujur dari rasa sakit dan kerinduan yang mendalam, sebuah ratapan yang abadi dari hati yang hancur.</p>
+
+        <h2>2. Sungai-Sungai Babel: Simbol Kesedihan dan Pengasingan</h2>
+        <h3>2.1. Latar Fisik dan Metaforis Sungai</h3>
+        <p>Ayat ini secara spesifik menyebut "sungai-sungai Babel." Ini bukan sekadar detail geografis. Kekaisaran Babel, yang terletak di Mesopotamia, memang sangat bergantung pada sistem sungai dan kanal yang rumit, terutama di sekitar sungai Efrat dan Tigris. Orang-orang Yahudi yang diasingkan seringkali ditempatkan di dekat jalur air ini, baik untuk tujuan pertanian maupun agar mereka dapat diawasi lebih mudah. Sungai-sungai ini adalah sumber kehidupan bagi Babel, menyediakan air untuk pertanian, jalur transportasi, dan sumber daya bagi kota-kota megah mereka.</p>
+        <p>Namun, bagi para pembuangan Israel, sungai-sungai ini mengambil makna yang jauh lebih dalam dan metaforis. Mereka bukan lagi sungai kehidupan yang mengalirkan berkat, melainkan sungai kesedihan yang mengalirkan air mata. Sungai-sungai ini adalah batas yang memisahkan mereka dari tanah air mereka, sebuah tanda permanen dari pengasingan mereka. Di tepi sungai-sungai yang asing ini, di mana air mengalir menuju tujuan yang tidak mereka kenal, mereka duduk, terdampar, dan meratapi nasib mereka. Kontras dengan "sungai-sungai Sion" (misalnya, aliran yang menggembirakan Yerusalem dalam Mazmur 46:4), sungai-sungai Babel adalah simbol kegersangan spiritual dan emosional.</p>
+
+        <h3>2.2. Kontras dengan Sungai Yordan dan Sumber Air Israel</h3>
+        <p>Orang Israel memiliki hubungan yang sangat mendalam dengan sungai-sungai dan sumber air di tanah perjanjian mereka. Sungai Yordan, misalnya, memiliki makna teologis yang besar sebagai batas yang harus mereka seyeberangi untuk memasuki Tanah Perjanjian. Sumber-sumber air di Israel seringkali dikaitkan dengan berkat Allah dan kehidupan. Di Babel, sungai-sungai itu adalah asing, sunyi, dan tidak memiliki makna suci bagi mereka. Air yang mengalir di sana adalah air yang tidak membawa mereka pulang, melainkan menjauhkan mereka dari kenangan dan harapan. Ini adalah air yang tidak membersihkan dosa mereka atau menyegarkan jiwa mereka, melainkan mencerminkan air mata yang mengalir dari mata mereka.</p>
+        <p>Sungai-sungai Babel menjadi saksi bisu atas penderitaan mereka. Aliran airnya yang tanpa henti mungkin mencerminkan aliran air mata mereka yang tak kunjung kering. Gemericik air mungkin terasa seperti bisikan keputusasaan. Mereka duduk di sana, mungkin karena itulah satu-satunya tempat di mana mereka bisa menemukan ketenangan untuk merenung, untuk berduka secara terbuka tanpa gangguan dari para penjajah yang merayakan kemenangan mereka. Di tepi sungai-sungai itulah, di mana cakrawala tampak tanpa batas namun masa depan terasa terkurung, mereka mencari dan menemukan tempat untuk meratapi kehilangan mereka yang tak tergantikan.</p>
+        <p>Sungai-sungai itu adalah batas antara dunia mereka yang hancur dan dunia baru yang dingin dan tidak ramah. Mereka adalah cermin yang memantulkan keputusasaan dan kebingungan yang memenuhi hati mereka.</p>
+
+        <h2>3. Duduk dan Menangis: Manifestasi Dukacita Mendalam</h2>
+        <h3>3.1. Simbolisme Tindakan "Duduk"</h3>
+        <p>Kata "duduk" dalam konteks Mazmur 137:1 memiliki makna yang jauh lebih dalam daripada sekadar posisi fisik. Dalam budaya kuno Timur Tengah, dan juga dalam Alkitab, duduk seringkali melambangkan kedukaan, kehancuran, atau penyesalan. Ketika seseorang duduk di tanah atau di abu, itu adalah tanda kesedihan yang mendalam, kerendahan hati, dan kadang-kadang juga kehinaan.</p>
+        <p>Di tepi sungai-sungai Babel, tindakan duduk ini adalah sebuah pernyataan bisu tentang keterpurukan. Mereka tidak berdiri tegak dengan kebanggaan, tidak berjalan dengan langkah pasti menuju masa depan, melainkan duduk—seolah-olah mereka tidak memiliki tempat lain untuk pergi, tidak ada kekuatan untuk bergerak, dan tidak ada harapan untuk berdiri. Mereka duduk dalam keadaan pasif, tak berdaya di hadapan kekuatan kekaisaran yang telah menghancurkan mereka. Ini adalah duduk dalam keputusasaan, dalam penantian yang tanpa akhir, di tengah kehancuran segala yang mereka kenal dan cintai. Duduk di sana, di tepi sungai-sungai yang asing, juga mungkin menandakan bahwa mereka telah mencapai batas kemampuan mereka untuk bertahan, bahwa mereka telah menyerah pada gelombang kesedihan yang tak tertahankan.</p>
+
+        <h3>3.2. Air Mata sebagai Bahasa Universal Dukacita</h3>
+        <p>Dan kemudian, ada tindakan "menangis." Menangis adalah salah satu ekspresi emosi manusia yang paling primordial dan universal. Ia melampaui batas bahasa, budaya, dan waktu. Air mata dalam konteks ini bukanlah sekadar tetesan kesedihan sesaat; itu adalah luapan dari luka batin yang menganga, manifestasi dari kehancuran identitas dan harapan yang terenggut secara brutal. Mereka menangis karena kehilangan tanah air mereka, karena kehancuran Bait Allah, karena kematian orang-orang yang mereka cintai, karena kemerdekaan yang dirampas, dan karena masa depan yang menjadi abu.</p>
+        <p>Air mata mereka mungkin adalah campuran dari berbagai emosi: dukacita, amarah, kebingungan, ketidakadilan, dan juga kerinduan yang mendalam. Mereka menangis tidak hanya untuk apa yang telah hilang, tetapi juga untuk apa yang mungkin tidak akan pernah kembali. Air mata itu adalah penolakan terhadap kenyataan pahit di Babel, sebuah penegasan akan rasa sakit yang tak terlukiskan. Bagi orang-orang buangan, menangis mungkin adalah satu-satunya cara mereka untuk mengungkapkan penderitaan mereka secara otentik, di tempat di mana kata-kata mungkin tidak cukup atau bahkan dilarang.</p>
+        <p>Menangis di tepi sungai-sungai Babel juga dapat dilihat sebagai tindakan ketaatan spiritual. Dalam tradisi Yahudi, ratapan dan tangisan adalah bagian integral dari proses duka dan pertobatan. Mazmur-mazmur ratapan adalah bukti bahwa Allah mendengarkan tangisan umat-Nya. Dengan menangis, mereka secara tidak langsung memanggil Allah, menyampaikan keluhan mereka, dan mencari penghiburan dari-Nya, bahkan di tengah keputusasaan yang paling dalam. Air mata ini, meskipun pahit, adalah benang yang menghubungkan mereka dengan Tuhan yang mereka percaya masih peduli, bahkan di tengah pembuangan yang gelap.</p>
+
+        <h2>4. Mengingat Sion: Jantung Kerinduan dan Identitas</h2>
+        <h3>4.1. Sion sebagai Pusat Kehidupan Israel</h3>
+        <p>Klimaks emosional dari ayat ini terletak pada frasa "apabila kita mengingat Sion." Sion bukanlah sekadar nama geografis untuk bukit di Yerusalem atau nama lain untuk kota itu sendiri. Sion adalah lambang yang sangat kaya dan sarat makna bagi bangsa Israel. Sion adalah tempat Bait Allah berdiri, tempat kehadiran Allah bersemayam di tengah umat-Nya. Sion adalah pusat ibadah, perayaan, dan kehidupan komunal Israel. Sion adalah lambang perjanjian Allah dengan Daud, janji tentang pemerintahan yang kekal dan kediaman Allah yang abadi. Mengingat Sion berarti mengingat identitas mereka sebagai umat pilihan Allah, mengingat janji-janji-Nya, dan mengingat kemuliaan masa lalu mereka.</p>
+        <p>Mengingat Sion berarti mengingat perayaan Paskah, hari raya Pondok Daun, dan ibadah-ibadah suci di Bait Allah. Itu berarti mengingat suara para imam dan nyanyian para Lewi. Itu berarti mengingat rumah, keluarga, tradisi, dan segala sesuatu yang membuat mereka menjadi Israel. Mengingat Sion adalah sebuah tindakan yang membangkitkan kebanggaan yang telah direnggut dan kerinduan akan tempat di mana mereka benar-benar menjadi diri mereka sendiri, di hadapan Allah mereka.</p>
+
+        <h3>4.2. Ingatan sebagai Bentuk Perlawanan dan Harapan</h3>
+        <p>Di tanah asing Babel, di mana segala sesuatu menekan mereka untuk berasimilasi dan melupakan warisan mereka, tindakan mengingat Sion adalah sebuah tindakan perlawanan yang radikal. Itu adalah penolakan untuk menyerah pada budaya Babel, sebuah penegasan bahwa identitas mereka tidak dapat dihapus oleh penindasan. Mengingat Sion menjaga api harapan tetap menyala, harapan akan pemulihan, akan kembalinya ke tanah air mereka, dan akan pembangunan kembali Bait Allah. Ingatan ini adalah tali yang mengikat mereka pada janji-janji Allah, bahwa pembuangan ini tidak akan berlangsung selamanya.</p>
+        <p>Ironisnya, ingatan akan Sion juga menjadi sumber utama kesedihan mereka. Semakin jelas mereka mengingat kemuliaan dan keindahan Sion, semakin tajam pula rasa sakit karena kehilangannya. Kerinduan yang mendalam ini adalah pedang bermata dua: ia menghancurkan hati mereka dengan rasa duka, tetapi juga memberi mereka alasan untuk terus bertahan, untuk tidak melupakan, untuk tidak menyerah. Ingatan ini bukan hanya nostalgia pasif; itu adalah kekuatan aktif yang membentuk ketahanan mereka, mendorong mereka untuk menjaga tradisi lisan, menceritakan kisah-kisah leluhur, dan menunggu hari di mana mereka dapat kembali.</p>
+        <p>Tanpa ingatan akan Sion, orang Israel mungkin akan berasimilasi sepenuhnya, kehilangan identitas mereka dan lenyap ke dalam lautan budaya Babel. Namun, melalui ingatan yang menyakitkan ini, mereka mempertahankan esensi siapa mereka, sebuah umat yang terikat oleh perjanjian dengan Allah, dengan sebuah tanah, dan dengan sebuah harapan yang berakar pada janji-janji ilahi. Dengan demikian, mengingat Sion adalah tindakan yang fundamental untuk kelangsungan hidup spiritual dan budaya mereka di tengah pengasingan.</p>
+
+        <h2>5. Makna Teologis dan Spiritual: Allah dalam Pembuangan</h2>
+        <h3>5.1. Pertanyaan tentang Kehadiran Allah</h3>
+        <p>Salah satu krisis terbesar yang dihadapi orang Israel di Babel adalah krisis teologis. Jika Allah adalah Allah yang Mahakuasa, mengapa Dia membiarkan Bait-Nya dihancurkan dan umat-Nya diasingkan? Apakah Allah telah meninggalkan mereka? Apakah dewa-dewa Babel lebih kuat dari Yahweh? Pertanyaan-pertanyaan ini pasti menghantui setiap hati yang berduka di tepi sungai-sungai Babel. Para nabi seperti Yeremia dan Yehezkiel bergulat dengan pertanyaan-pertanyaan ini, memberikan penjelasan bahwa pembuangan adalah hukuman ilahi atas dosa-dosa Israel, tetapi juga merupakan bagian dari rencana ilahi untuk pemurnian dan pemulihan.</p>
+        <p>Dalam Mazmur 137:1, tangisan mereka di tepi sungai juga dapat diinterpretasikan sebagai sebuah doa, sebuah seruan kepada Allah yang terasa jauh. Meskipun mereka tidak dapat beribadah di Bait Allah atau mempersembahkan kurban, tangisan dan ingatan mereka adalah bentuk ibadah yang jujur dan tulus. Mereka mungkin merasa ditinggalkan, tetapi ingatan akan Sion—yang adalah lambang kehadiran Allah—menjaga hubungan mereka tetap hidup, betapapun rapuhnya. Ini adalah pengakuan bahwa meskipun mereka berada di tanah asing, Allah mereka tetaplah Yahweh, dan perjanjian-Nya tetap berlaku.</p>
+
+        <h3>5.2. Penemuan Iman yang Lebih Dalam</h3>
+        <p>Meskipun penuh penderitaan, masa pembuangan di Babel juga menjadi periode transformatif bagi iman Israel. Tanpa Bait Allah sebagai pusat ibadah, mereka dipaksa untuk mencari cara-cara baru untuk menjaga iman mereka. Sinagoga mulai berkembang sebagai tempat pertemuan dan studi Taurat. Penekanan pada hukum dan ritual yang dapat dipraktikkan di mana saja, seperti hari Sabat dan sunat, menjadi lebih penting. Identitas Yahudi menjadi lebih terfokus pada Taurat dan komunitas, bukan hanya pada lokasi geografis atau Bait Allah.</p>
+        <p>Di tepi sungai-sungai Babel, orang-orang Israel mulai memahami bahwa Allah tidak terbatas pada satu tempat saja. Meskipun Sion adalah tempat kehadiran-Nya yang istimewa, Dia adalah Allah semesta alam, yang dapat dijangkau bahkan di tanah asing. Tangisan dan kerinduan mereka bukanlah tanda kelemahan iman, melainkan bukti iman yang kuat—iman yang bertahan bahkan ketika segala sesuatu tampak runtuh. Mereka berduka, ya, tetapi mereka tidak sepenuhnya kehilangan harapan. Air mata mereka adalah bibit yang akan menumbuhkan pengertian yang lebih dalam tentang Allah dan janji-janji-Nya, yang akhirnya mengarah pada pemulihan dan reformasi spiritual setelah kepulangan mereka.</p>
+        <p>Pembuangan Babel, dengan segala kepedihannya, mengajarkan Israel sebuah pelajaran penting: hubungan mereka dengan Allah lebih penting daripada lokasi fisik atau institusi keagamaan. Iman mereka haruslah iman yang portabel, yang dapat bertahan di mana saja, bahkan di tepi sungai-sungai Babel.</p>
+
+        <h2>6. Pelajaran untuk Masa Kini: Pengasingan Modern</h2>
+        <h3>6.1. Pengasingan dari Diri Sendiri dan Nilai-Nilai</h3>
+        <p>Meskipun kita mungkin tidak mengalami pengasingan geografis seperti yang dialami orang Israel di Babel, Mazmur 137:1 tetap relevan bagi pengalaman manusia modern. Kita seringkali merasa "dibuang" atau "terasing" dalam berbagai cara. Pengasingan modern bisa berarti terasing dari diri kita sendiri, dari nilai-nilai inti kita, atau dari komunitas yang bermakna. Dalam masyarakat yang serba cepat dan materialistis, banyak orang merasa kehilangan arah, terputus dari akar spiritual atau budaya mereka.</p>
+        <p>Kita duduk di "tepi sungai-sungai Babel" modern kita—di tengah hiruk-pikuk kehidupan kota, di balik layar digital, atau dalam kesibukan yang tak berkesudahan—dan merasa terasing dari keheningan, dari makna, dari tujuan yang lebih besar. Kita mungkin menangis karena hilangnya otentisitas, karena kekosongan yang dirasakan di tengah kelimpahan materi, atau karena hubungan yang dangkal. Kerinduan kita adalah untuk "Sion" versi modern kita: sebuah tempat di mana kita merasa utuh, terhubung, dan bermakna.</p>
+
+        <h3>6.2. Pentingnya Mengingat "Sion" Kita</h3>
+        <p>Pelajaran terpenting dari Mazmur ini adalah tentang kekuatan dan kebutuhan untuk "mengingat Sion." Setiap orang memiliki "Sion" mereka sendiri—yaitu, tempat, nilai, atau visi yang menjadi pusat identitas, harapan, dan tujuan hidup mereka. Ini bisa berupa keluarga, iman, impian, keadilan sosial, atau tujuan spiritual. Ketika kita merasa terasing atau kehilangan arah, tindakan mengingat "Sion" kita menjadi sangat penting.</p>
+        <p>Mengingat "Sion" berarti secara sadar kembali ke akar kita, ke prinsip-prinsip yang membentuk kita, ke tujuan yang lebih tinggi yang memberi makna pada hidup. Ini adalah tindakan refleksi, meditasi, dan kadang-kadang, ratapan yang jujur atas apa yang telah hilang atau yang belum tercapai. Seperti orang Israel yang berpegang teguh pada ingatan akan Yerusalem dan janji Allah, kita juga perlu berpegang teguh pada "Sion" kita untuk menjaga harapan tetap menyala di tengah pengasingan atau keputusasaan. Ingatan ini bukan hanya tentang masa lalu; itu adalah peta jalan menuju masa depan yang lebih otentik dan bermakna, sebuah jangkar di tengah badai kehidupan modern.</p>
+        <p>Mazmur 137:1 mengajarkan kita bahwa bahkan dalam keputusasaan yang paling gelap, ingatan akan apa yang kita hargai, apa yang kita cintai, dan apa yang kita perjuangkan dapat menjadi kekuatan yang membakar kembali semangat, memungkinkan kita untuk duduk, menangis, dan pada akhirnya, menemukan kekuatan untuk bangkit lagi.</p>
+
+        <h2>7. Air Mata yang Membangun Harapan: Paradoks Penderitaan</h2>
+        <h3>7.1. Transformasi melalui Kesedihan</h3>
+        <p>Di permukaan, Mazmur 137:1 adalah tentang kesedihan yang tak tersembuhkan. Namun, di balik air mata dan ratapan itu, tersimpan paradoks mendalam: penderitaan seringkali menjadi katalisator bagi pertumbuhan dan harapan. Air mata yang tumpah di tepi sungai-sungai Babel bukanlah air mata keputusasaan yang total, melainkan juga air mata yang membasahi benih-benih harapan. Mereka menangis karena mereka masih peduli, karena mereka masih memiliki sesuatu yang untuk dirindukan, dan karena mereka masih memiliki iman yang, meskipun goyah, belum padam sepenuhnya.</p>
+        <p>Filosofi kuno dan psikologi modern sama-sama mengakui bahwa kesedihan dan duka adalah bagian integral dari proses penyembuhan. Dengan mengakui rasa sakit, dengan membiarkan air mata mengalir, seseorang mulai memproses trauma dan bergerak menuju penerimaan. Bagi orang Israel, ratapan mereka di Babel adalah sebuah ritual kolektif yang memungkinkan mereka untuk mengolah penderitaan mereka bersama-sama, saling menguatkan dalam kepedihan. Ini adalah sebuah proses katarsis yang, meskipun menyakitkan, esensial untuk menjaga kewarasan dan identitas mereka.</p>
+        <p>Tanpa kesedihan yang mendalam ini, tanpa "duduk dan menangis," mereka mungkin tidak akan pernah menghargai sepenuhnya nilai Sion atau makna perjanjian mereka dengan Allah. Penderitaan memurnikan iman mereka, menghilangkan asumsi-asumsi dangkal, dan memperdalam pemahaman mereka tentang hubungan sejati dengan Ilahi.</p>
+
+        <h3>7.2. Kesetiaan dalam Keputusasaan</h3>
+        <p>Meskipun Mazmur 137 secara keseluruhan memiliki nada yang kuat tentang pembalasan terhadap Edom dan Babel (ayat 7-9), ayat pembukanya berfokus pada kesetiaan yang luar biasa. Bahkan di tengah penderitaan yang luar biasa dan di tanah musuh, mereka menolak untuk "menyanyikan nyanyian Tuhan di tanah asing" (Mazmur 137:4). Ini adalah tindakan kesetiaan yang mendalam. Mereka tidak ingin menodai kekudusan nyanyian Sion dengan menyanyikannya untuk hiburan para penawan mereka, atau untuk diri mereka sendiri di tempat yang tidak kudus.</p>
+        <p>Kesetiaan ini adalah bentuk harapan yang diam-diam. Mereka berharap suatu hari nanti mereka akan dapat menyanyikan nyanyian itu lagi di Sion yang telah dipulihkan. Air mata mereka, oleh karena itu, adalah air mata kesetiaan dan penantian. Mereka percaya bahwa meskipun mereka saat ini berada di dalam lembah bayangan maut, Allah tidak akan melupakan perjanjian-Nya. Dengan tetap berpegang pada ingatan Sion dan menolak untuk menyerah pada tuntutan musuh, mereka secara aktif membangun jembatan harapan, menjaga tradisi, dan mempersiapkan diri untuk hari pemulihan yang dijanjikan.</p>
+        <p>Penderitaan di Babel bukan akhir, melainkan sebuah persimpangan jalan yang membentuk kembali identitas dan iman Israel, mempersiapkan mereka untuk masa depan yang lebih kuat dan berpusat pada Tuhan. Air mata mereka bukanlah tanda kekalahan akhir, melainkan pupuk bagi harapan yang akan datang.</p>
+
+        <h2>8. Resiliensi dan Penantian Pemulihan</h2>
+        <h3>8.1. Ketahanan di Tengah Ujian</h3>
+        <p>Mazmur 137:1 adalah kesaksian tentang resiliensi manusia dan spiritual yang luar biasa. Meskipun mereka duduk dan menangis, mereka tetap ada. Mereka tidak bubar, tidak kehilangan identitas mereka sepenuhnya. Mereka bertahan sebagai sebuah komunitas, berpegang pada ingatan dan tradisi mereka. Ketahanan ini tidak berarti tidak adanya rasa sakit, melainkan kemampuan untuk bertahan dan bahkan tumbuh melalui rasa sakit tersebut. Para pembuangan di Babel menghadapi tekanan yang sangat besar untuk mengasimilasi, untuk melupakan bahasa mereka, budaya mereka, dan yang terpenting, iman mereka kepada Yahweh. Namun, mereka menolak. Mereka menjaga api identitas mereka tetap menyala di tengah kegelapan.</p>
+        <p>Nabi Yehezkiel, yang juga berada dalam pembuangan, memberikan penghiburan dan nasihat, mendorong mereka untuk membangun rumah, menanam kebun, menikah, dan berkembang biak di Babel, sembari menantikan pemulihan Yerusalem. Ini adalah strategi yang luar biasa: beradaptasi untuk bertahan hidup di negeri asing, tetapi tanpa melupakan tujuan akhir untuk kembali ke tanah air. Resiliensi mereka adalah perpaduan antara pragmatisme dan spiritualitas, antara penerimaan akan kenyataan pahit saat ini dan harapan yang teguh akan masa depan yang lebih baik.</p>
+        <p>Ketahanan mereka juga terlihat dari upaya menjaga catatan sejarah dan hukum mereka. Di masa pembuangan inilah banyak bagian dari Kitab Suci Ibrani dikumpulkan, diedit, dan dilestarikan, memastikan bahwa generasi mendatang tidak akan melupakan warisan mereka. Dengan demikian, Mazmur 137:1 bukan hanya tentang kesedihan, tetapi juga tentang kekuatan luar biasa dari semangat manusia dan iman yang diuji.</p>
+
+        <h3>8.2. Janji dan Penggenapan Pemulihan</h3>
+        <p>Meskipun Mazmur 137 tidak secara eksplisit menyebutkan janji pemulihan, keseluruhan narasi kenabian yang mendampingi masa pembuangan Babel dipenuhi dengan janji-janji kembalinya Israel ke tanah mereka. Nabi Yeremia menubuatkan bahwa pembuangan akan berlangsung selama 70 tahun (Yeremia 29:10). Nabi Yesaya (Yesaya 40-55) berbicara tentang penghiburan bagi Israel dan kedatangan seorang hamba Tuhan yang akan membawa pembebasan. Janji-janji ini menjadi suar harapan bagi mereka yang duduk dan menangis di tepi sungai-sungai Babel.</p>
+        <p>Dan memang, setelah sekitar 70 tahun, janji itu digenapi. Dengan bangkitnya Kekaisaran Persia di bawah Koresy Agung, Babel ditaklukkan. Koresy mengeluarkan dekret pada tahun 538 SM yang mengizinkan orang-orang Yahudi untuk kembali ke Yehuda dan membangun kembali Bait Allah mereka. Ini adalah peristiwa yang luar biasa, sebuah pemulihan yang menandai campur tangan ilahi dalam sejarah. Mereka yang telah "duduk dan menangis" di tepi sungai-sungai Babel akhirnya dapat kembali ke Sion, meskipun dengan susah payah dan tantangan baru.</p>
+        <p>Kisah Mazmur 137:1, oleh karena itu, adalah bagian dari sebuah narasi yang lebih besar tentang siklus penderitaan, kesetiaan, dan pemulihan dalam sejarah keselamatan. Ini mengajarkan bahwa bahkan dalam kegelapan yang paling pekat, ada janji terang yang akan datang. Tangisan di Babel bukanlah akhir cerita, melainkan sebuah babak penting yang membentuk karakter dan iman sebuah bangsa yang telah dipilih untuk menjadi saksi bagi Allah di dunia.</p>
+
+        <h2>9. Refleksi Mendalam tentang Memori dan Warisan</h2>
+        <h3>9.1. Kekuatan Ingatan Kolektif</h3>
+        <p>Mazmur 137:1 secara kuat menyoroti peran ingatan kolektif dalam pembentukan dan pelestarian identitas sebuah bangsa. Ingatan akan Sion, dengan segala keindahan dan kekudusannya, adalah kekuatan perekat yang menjaga orang Israel tetap bersatu sebagai satu umat di tanah asing. Ingatan ini diturunkan dari generasi ke generasi melalui cerita, lagu, dan ritual. Bahkan anak-anak yang lahir di Babel, yang belum pernah melihat Yerusalem yang asli, diajari untuk mengingat Sion dan merindukannya.</p>
+        <p>Ingatan kolektif ini adalah warisan yang tak ternilai. Ia memberi mereka akar di tengah tanah yang gersang, sebuah narasi yang memberi makna pada penderitaan mereka. Tanpa ingatan ini, mereka akan menjadi sekadar kelompok imigran yang berasimilasi. Dengan ingatan ini, mereka tetap menjadi "Israel," sebuah bangsa dengan sejarah, perjanjian, dan tujuan ilahi yang unik. Mazmur itu sendiri, yang ditulis dan dilestarikan, menjadi bagian dari ingatan kolektif itu, sebuah monumen sastra bagi trauma dan ketahanan mereka.</p>
+        <p>Dalam dunia modern, di mana sejarah seringkali terlupakan atau direvisi, Mazmur 137:1 mengingatkan kita akan pentingnya menjaga ingatan kolektif—bukan untuk hidup dalam masa lalu, melainkan untuk belajar darinya, untuk memahami siapa kita, dan untuk membentuk masa depan yang lebih baik. Ini adalah panggilan untuk menghargai warisan, baik yang pahit maupun yang manis.</p>
+
+        <h3>9.2. Air Mata sebagai Saksi Sejarah</h3>
+        <p>Air mata yang tumpah di tepi sungai-sungai Babel adalah saksi bisu atas sebuah periode paling kelam dalam sejarah Israel. Mereka adalah bukti penderitaan yang nyata, namun juga bukti kesetiaan yang tak tergoyahkan. Setiap tetes air mata membawa kisah kehilangan, namun juga harapan. Mazmur 137:1, dengan begitu ringkas, mengabadikan kesaksian ini untuk semua generasi yang akan datang.</p>
+        <p>Ratapan ini mengajarkan kita tentang empati, tentang kemampuan untuk merasakan penderitaan orang lain, bahkan lintas waktu dan budaya. Ketika kita membaca Mazmur ini, kita diajak untuk membayangkan diri kita duduk di tepi sungai-sungai Babel, merasakan kepedihan yang sama, dan memahami kerinduan yang sama akan "Sion" kita sendiri. Ini adalah sebuah Mazmur yang melampaui konteks historisnya untuk berbicara tentang pengalaman universal manusia akan kehilangan, pengasingan, dan kerinduan akan rumah—baik rumah fisik maupun spiritual.</p>
+        <p>Pada akhirnya, Mazmur 137:1 adalah tentang bagaimana ingatan, kesedihan, dan harapan dapat bersatu untuk membentuk sebuah warisan abadi, sebuah kisah tentang ketahanan iman yang terus bergema hingga hari ini.</p>
+
+        <h2>10. Kebenaran Universal dari Penderitaan dan Harapan</h2>
+        <h3>10.1. Pengalaman Universal Akan Kehilangan</h3>
+        <p>Meskipun Mazmur 137:1 berakar kuat dalam sejarah spesifik Israel, pesannya melampaui batas-batas budaya dan waktu, menyentuh inti pengalaman manusia yang universal. Setiap individu dan setiap komunitas pada suatu titik akan menghadapi kehilangan—kehilangan orang terkasih, rumah, pekerjaan, impian, kesehatan, atau bahkan identitas diri. Perasaan terasing, duka, dan kerinduan adalah respons alami terhadap kehilangan tersebut. Ayat ini memberikan pengesahan atas perasaan-perasaan ini, menunjukkan bahwa berduka adalah bagian yang sah dan bahkan perlu dari perjalanan manusia.</p>
+        <p>Sama seperti orang Israel yang terpisah dari Sion, kita mungkin merasa terpisah dari 'rumah' kita—bukan hanya secara fisik, tetapi secara emosional atau spiritual. Rumah bisa berarti keadaan pikiran, komunitas yang mendukung, atau rasa aman dan kepemilikan. Ketika 'rumah' ini hilang, entah karena pilihan, keadaan, atau tragedi, kita pun mungkin menemukan diri kita 'duduk dan menangis' di tepi 'sungai-sungai Babel' kita sendiri. Pengakuan Mazmur ini terhadap pengalaman universal ini menjadikan Mazmur ini abadi dan relevan bagi setiap generasi yang bergulat dengan penderitaan.</p>
+
+        <h3>10.2. Kekuatan Kerinduan yang Berujung pada Pembaruan</h3>
+        <p>Kerinduan, sebuah elemen sentral dalam Mazmur 137:1, seringkali dilihat sebagai emosi yang menyakitkan. Namun, Mazmur ini mengungkapkan kerinduan sebagai sebuah kekuatan. Kerinduan akan Sion bukan hanya nostalgia akan masa lalu; itu adalah dorongan yang kuat untuk masa depan yang lebih baik. Ini adalah mesin pendorong di balik penantian, di balik doa, dan di balik upaya untuk mempertahankan identitas. Kerinduan yang mendalam inilah yang membedakan mereka yang menyerah dari mereka yang bertahan.</p>
+        <p>Dalam konteks teologis yang lebih luas, kerinduan Israel akan Sion adalah cerminan dari kerinduan spiritual umat manusia akan kehadiran Allah, akan sebuah dunia yang dipulihkan, akan 'Yerusalem Baru'. Kita semua, dalam suatu pengertian, adalah peziarah di tanah asing, merindukan pulang ke rumah abadi kita. Oleh karena itu, Mazmur 137:1 menjadi sebuah himne bagi semua yang merasa terasing di dunia ini, yang merindukan pemenuhan janji-janji ilahi dan pemulihan penuh dari semua yang telah rusak. Air mata yang tumpah, oleh karena itu, adalah benih dari pembaruan dan harapan yang akan datang, sebuah janji bahwa kerinduan yang tulus tidak akan pernah sia-sia.</p>
+        <p>Melalui Mazmur ini, kita diajarkan bahwa bahkan di saat-saat tergelap, di tepi sungai penderitaan, ingatan akan apa yang kudus dan kerinduan akan pemulihan dapat menjadi mercusuar yang menuntun kita melewati badai, menjanjikan bahwa meskipun tangisan mungkin bertahan semalaman, sukacita akan datang di pagi hari.</p>
+
+        <h2>Penutup: Gema Ratapan yang Abadi</h2>
+        <p>Mazmur 137:1, dengan kesederhanaan dan kekuatannya, tetap menjadi salah satu ayat yang paling resonan dalam Alkitab. Ini adalah cerminan abadi dari pengalaman manusia akan kehilangan yang mendalam, pengasingan yang menyakitkan, dan kerinduan yang tak terpadamkan. Dari tepi sungai-sungai Babel, orang-orang Israel yang diasingkan tidak hanya meratapi kehancuran Yerusalem, tetapi juga menegaskan kembali identitas mereka, berpegang teguh pada janji-janji ilahi, dan menyemai benih-benih harapan di tengah keputusasaan.</p>
+        <p>Dalam dunia kita yang terus berubah, di mana banyak dari kita merasakan bentuk-bentuk pengasingan yang berbeda—dari komunitas, dari makna, dari diri sendiri—pesan Mazmur ini tetap relevan. Ia mengundang kita untuk berani mengakui dukacita kita, untuk duduk dan menangis ketika dibutuhkan, dan yang terpenting, untuk mengingat "Sion" kita sendiri: nilai-nilai, tujuan, dan keyakinan inti yang memberi makna pada hidup kita. Ingatan ini adalah jangkar yang mengikat kita pada masa lalu yang berharga dan suar yang membimbing kita menuju masa depan yang dipulihkan.</p>
+        <p>Air mata yang tumpah di tepi sungai-sungai Babel tidaklah sia-sia. Mereka adalah saksi bisu atas ketahanan iman, kekuatan ingatan, dan janji abadi akan pemulihan. Mazmur 137:1 bukan hanya kisah masa lalu; ini adalah cermin yang memantulkan pengalaman universal manusia, sebuah lagu ratapan yang juga merupakan himne harapan, bergema melalui setiap hati yang pernah merindukan pulang.</p>
+    </main>
+<div class='related-posts'><h3>Related Posts</h3><ul><li><a href="/lukas-1-5">Lukas 1 5</a></li>
+<li><a href="/bilangan-2-3">Bilangan 2 3</a></li>
+<li><a href="/galatia-6-17">Galatia 6 17</a></li>
+<li><a href="/daniel-7-20">Daniel 7 20</a></li>
+<li><a href="/galatia-1-1">Galatia 1 1</a></li>
+<li><a href="/ezra-8-26">Ezra 8 26</a></li>
+<li><a href="/1-samuel-13-12">1 Samuel 13 12</a></li>
+<li><a href="/kejadian-15-2">Kejadian 15 2</a></li>
+<li><a href="/amsal-14-8">Amsal 14 8</a></li>
+<li><a href="/yesaya-60-4">Yesaya 60 4</a></li></ul></div>
+<script src="/ik.js"></script>
+</body>
+</html>

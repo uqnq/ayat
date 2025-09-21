@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yesaya 43:6: Janji Pemulihan dan Kedaulatan Allah</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variabel Warna Sejuk Cerah */
+        :root {
+            --primary-blue: #ADD8E6; /* Light Blue */
+            --secondary-green: #90EE90; /* Light Green */
+            --accent-yellow: #FFFACD; /* Lemon Chiffon */
+            --text-dark: #333;
+            --text-light: #555;
+            --bg-light: #F8F8F8; /* Off-white for body */
+            --bg-header-footer: #E0FFFF; /* Light Cyan */
+            --border-color: #B0E0E6; /* Powder Blue */
+            --highlight-color: #AFEEEE; /* Pale Turquoise */
+            --shadow-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Reset dan Box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+            flex-grow: 1; /* Agar konten mengisi ruang yang tersedia */
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-header-footer);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+
+        header h1 {
+            font-family: 'Lora', serif;
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+            line-height: 1.2;
+        }
+
+        .verse-text {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            border: 1px dashed var(--border-color);
+            padding: 1rem;
+            display: inline-block;
+            margin-top: 1rem;
+            background-color: var(--accent-yellow);
+            border-radius: 8px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Main Content */
+        main {
+            padding: 1rem 0;
+        }
+
+        section {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--secondary-green);
+            padding-left: 10px;
+            background-color: var(--highlight-color);
+            padding: 0.5rem 10px;
+            border-radius: 4px;
+        }
+
+        h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dotted var(--border-color);
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Styling untuk bagian artikel kecil dalam Analisis Ayat */
+        .verse-analysis article {
+            background-color: var(--accent-yellow);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+        .verse-analysis article h3 {
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--secondary-green);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        /* SVG Image */
+        .article-illustration {
+            display: block;
+            margin: 2rem auto;
+            max-width: 100%;
+            height: auto;
+            background-color: var(--bg-header-footer);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-header-footer);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-top: 2px solid var(--border-color);
+            margin-top: 2rem;
+            box-shadow: 0 -2px 4px var(--shadow-color);
+        }
+
+        /* Responsiveness for smaller screens */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .verse-text {
+                font-size: 1.1rem;
+                padding: 0.8rem;
+                max-width: 100%;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+            .container {
+                padding: 0.8rem;
+            }
+            section {
+                padding: 1rem 0;
+            }
+            .verse-analysis article {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yesaya 43:6 - Panggilan Ilahi dari Ujung-Ujung Bumi</h1>
+        <p class="verse-text">
+            "Aku akan berkata kepada utara: Berikanlah! Dan kepada selatan: Janganlah tahan! Bawalah anak-anak-Ku laki-laki dari jauh, dan anak-anak-Ku perempuan dari ujung-ujung bumi,"
+        </p>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Pengantar: Janji yang Abadi di Tengah Kesusahan</h2>
+            <p>Dalam gulungan kitab Nabi Yesaya, kita menemukan sebuah harta karun berupa nubuat, pengharapan, dan janji-janji ilahi yang abadi. Khususnya dalam pasal 43, di tengah-tengah narasi penderitaan dan pembuangan bangsa Israel, Tuhan mengangkat suara-Nya dengan penuh kuasa dan kasih. Ayat Yesaya 43:6 adalah salah satu permata dalam pasal ini, sebuah pernyataan kedaulatan Allah yang tak tergoyahkan atas segala bangsa dan segala situasi, serta janji-Nya untuk mengumpulkan dan memulihkan umat-Nya dari setiap penjuru bumi. Ayat ini bukan sekadar kata-kata penghiburan sesaat bagi orang-orang buangan di Babel, melainkan sebuah proklamasi tentang identitas Allah, karakter-Nya yang setia, dan rencana-Nya yang tak dapat dibatalkan bagi mereka yang disebut milik-Nya.</p>
+            <p>Pada pandangan pertama, ayat ini mungkin terdengar sederhana. Namun, di baliknya tersembunyi kedalaman teologis dan spiritual yang luar biasa. Ia berbicara tentang kuasa Allah yang mengendalikan arah mata angin, kemampuan-Nya untuk memanggil kembali yang hilang, dan kasih-Nya yang mengidentifikasi setiap individu sebagai "anak-anak-Ku." Ayat ini menantang kita untuk melihat melampaui keadaan fisik atau geografis kita, dan memahami bahwa ada kekuatan yang lebih tinggi yang bekerja dalam sejarah dan dalam kehidupan pribadi kita. Mari kita telusuri lebih jauh makna dari setiap frasa dalam ayat yang berharga ini, memahami konteks sejarahnya, dan merenungkan relevansinya yang tak lekang oleh waktu bagi kita di era modern.</p>
+            <p>Janji ini datang pada saat Israel berada di titik terendah mereka sebagai sebuah bangsa. Mereka telah diasingkan dari tanah perjanjian, Bait Suci mereka dihancurkan, dan identitas mereka sebagai umat pilihan Allah seolah dipertanyakan. Dalam keputusasaan yang mendalam, Yesaya 43:6 muncul sebagai mercusuar harapan, menegaskan kembali bahwa bahkan dalam kehancuran dan keterpisahan terburuk sekalipun, Allah masih memegang kendali dan rencana-Nya untuk pemulihan tetap berlaku. Ini adalah pesan bahwa tidak ada jarak yang terlalu jauh, tidak ada rintangan yang terlalu besar, dan tidak ada penderitaan yang terlalu dalam sehingga dapat memisahkan umat Allah dari kasih dan rencana-Nya yang berdaulat.</p>
+            <p>Artikel ini akan membawa kita menyelami lapisan-lapisan makna Yesaya 43:6, mulai dari latar belakang historis kitab Yesaya, analisis mendalam setiap frasa, tema-tema kunci yang terkandung di dalamnya, hingga aplikasi praktis bagi kehidupan kita saat ini. Kita akan melihat bagaimana ayat ini tidak hanya berbicara tentang pemulihan fisik bagi Israel kuno, tetapi juga tentang pemulihan rohani dan panggilan global bagi umat Allah di sepanjang zaman, hingga ke ujung-ujung bumi.</p>
+        </section>
+
+        <section class="context">
+            <h2>Latar Belakang Kitab Yesaya dan Pasal 43</h2>
+            <p>Untuk memahami Yesaya 43:6 secara utuh, penting bagi kita untuk menempatkannya dalam konteks yang lebih luas dari kitab Nabi Yesaya. Yesaya adalah salah satu nabi besar dalam tradisi Ibrani, yang pelayanannya membentang selama empat dekade di abad ke-8 SM, melayani di bawah empat raja Yehuda: Uzia, Yotam, Ahas, dan Hizkia. Kitab Yesaya sendiri dibagi menjadi beberapa bagian utama oleh para sarjana, seringkali disebut sebagai Proto-Yesaya (pasal 1-39), Deutero-Yesaya (pasal 40-55), dan Trito-Yesaya (pasal 56-66).</p>
+            <p>Yesaya pasal 43, tempat ayat kita berada, terletak dalam bagian Deutero-Yesaya. Bagian ini secara khusus ditujukan kepada bangsa Israel yang sedang atau akan mengalami pembuangan di Babel. Nubuat-nubuat dalam bagian ini, termasuk pasal 43, berfungsi ganda: sebagai penghiburan bagi umat yang sedang menderita akibat dosa-dosa mereka, dan sebagai janji pemulihan dan pembebasan dari penawanan. Mereka telah kehilangan kemerdekaan, tanah air, dan Bait Suci mereka – simbol kehadiran Allah di tengah-tengah mereka. Dalam keadaan putus asa inilah, Tuhan melalui Yesaya menyampaikan pesan-pesan harapan yang luar biasa.</p>
+            <p>Latar belakang politik dan spiritual pada masa itu sangat kelam. Bangsa Israel, yang seharusnya menjadi terang bagi bangsa-bangsa lain, telah berkali-kali melanggar perjanjian dengan Allah, menyembah berhala, dan melakukan ketidakadilan sosial. Akibatnya, Allah mengizinkan mereka untuk dihukum melalui kekuatan asing, yaitu Kekaisaran Babel yang perkasa. Jutaan orang Israel dideportasi dan dipaksa hidup sebagai orang asing di tanah asing, sebuah pengalaman yang sangat traumatis dan merendahkan.</p>
+            <p>Namun, di tengah-tengah kehancuran dan rasa malu ini, Allah tidak meninggalkan umat-Nya. Pasal 43 dimulai dengan kata-kata yang penuh kasih: "Janganlah takut, sebab Aku telah menebus engkau, Aku telah memanggil engkau dengan namamu, engkau ini kepunyaan-Ku" (Yesaya 43:1). Ini adalah deklarasi yang kuat tentang identitas dan nilai umat Israel di mata Allah, sebuah penegasan bahwa meskipun mereka telah jatuh dan dihukum, hubungan perjanjian antara Allah dan umat-Nya tidak pernah putus. Ayat 6 adalah kelanjutan dari deklarasi ilahi ini, sebuah bukti konkret dari kesetiaan Allah untuk mewujudkan janji-Nya, bahkan ketika segala sesuatu tampak mustahil.</p>
+            <p>Allah tidak hanya menyatakan kasih-Nya, tetapi juga kuasa-Nya yang mutlak. Dia adalah Pencipta dan Pembentuk Israel (Yesaya 43:1), satu-satunya Allah yang sejati, yang tidak ada yang lain sebelum atau sesudah-Nya (Yesaya 43:10-11). Penegasan tentang kedaulatan Allah ini sangat penting untuk memberikan pengharapan bagi bangsa Israel yang sedang menghadapi kerajaan Babel yang sangat kuat. Mereka perlu diingatkan bahwa di atas semua kerajaan dan kekuatan manusia, ada Allah yang lebih besar, yang memiliki rencana yang tak tergoyahkan. Allah mampu meruntuhkan setiap rintangan dan mengumpulkan kembali umat-Nya, tidak peduli seberapa tersebar dan terasingnya mereka.</p>
+            <p>Dengan latar belakang ini, Yesaya 43:6 bukan hanya sekadar instruksi ilahi, melainkan sebuah pernyataan profetis tentang kebangkitan dan pemulihan Israel yang akan datang. Ini adalah gambaran tentang Allah yang secara aktif dan berdaulat bekerja untuk menggenapi janji-Nya, membalikkan keadaan yang tampaknya tidak dapat diubah oleh manusia. Ini menunjukkan bahwa bahkan kesalahan terbesar manusia pun tidak dapat menggagalkan tujuan ilahi Allah yang lebih besar.</p>
+        </section>
+
+        <section class="verse-analysis">
+            <h2>Analisis Mendalam Ayat Yesaya 43:6</h2>
+            <p>Setiap frasa dalam Yesaya 43:6 membawa bobot makna yang mendalam, mengungkapkan karakter Allah dan janji-Nya yang berdaulat.</p>
+
+            <article>
+                <h3>"Aku akan berkata kepada utara: Berikanlah!"</h3>
+                <p>Frasa ini adalah pernyataan otoritas ilahi yang mutlak. "Utara" dalam konteks geografis dan historis Israel seringkali diasosiasikan dengan kekuatan musuh yang datang menyerang. Kekaisaran Babel, yang membuang Israel, berada di arah timur laut dari Yehuda, dan serbuan-serbuan besar seringkali datang dari arah utara melalui Jalur Gaza. Jadi, secara harfiah, Allah sedang berbicara kepada kekuatan-kekuatan yang menawan umat-Nya. Kata "Berikanlah!" adalah perintah yang tidak dapat dibantah. Ini bukan permohonan, melainkan sebuah dekret dari Sang Pencipta. Ini menunjukkan bahwa tidak ada kekuatan manusia, tidak ada kekaisaran, dan tidak ada otoritas duniawi yang dapat melawan kehendak Allah. Ketika Allah berbicara, seluruh alam semesta tunduk. Ini adalah janji bahwa tidak peduli seberapa kuat atau tak terkalahkan musuh yang menahan umat-Nya, pada waktunya Allah akan mengeluarkan perintah dan mereka harus patuh. Bagi Israel di pembuangan, ini adalah jaminan bahwa penawanan mereka di Babel bukanlah akhir cerita, melainkan hanya bagian sementara dari rencana Allah yang lebih besar. Allah yang mengizinkan mereka ditawan, kini memerintahkan pembebasan mereka. Ini memberikan penghiburan yang besar bahwa kuasa Allah lebih besar dari kuasa Babel atau negara mana pun yang menindas.</p>
+                <p>Secara spiritual, "utara" juga bisa melambangkan segala kekuatan atau keadaan yang menahan kita, yang membelenggu kita dari kebebasan yang telah Tuhan berikan. Itu bisa berupa dosa, ketakutan, kecanduan, keputusasaan, atau bahkan sistem duniawi yang menindas. Ketika Allah berkata "Berikanlah!", itu adalah janji bahwa Dia memiliki otoritas untuk melepaskan kita dari setiap belenggu yang menahan kita. Ini adalah panggilan untuk percaya pada kuasa pembebasan-Nya yang aktif.</p>
+            </article>
+
+            <article>
+                <h3>"Dan kepada selatan: Janganlah tahan!"</h3>
+                <p>Pernyataan ini menggemakan dan memperkuat perintah sebelumnya, meliputi arah mata angin yang berlawanan. Jika "utara" mungkin merujuk kepada Babel dan kekuatan penindas, "selatan" bisa merujuk kepada Mesir atau wilayah lain yang mungkin menjadi tempat perlindungan atau pelarian bagi beberapa orang Israel. Perintah "Janganlah tahan!" menunjukkan bahwa tidak ada tempat persembunyian di mana umat Allah dapat disembunyikan dari kehendak-Nya untuk memulihkan mereka. Ini adalah penegasan kedaulatan Allah yang menyeluruh. Baik di utara maupun di selatan, di mana pun umat-Nya berada, Allah memiliki kuasa untuk memanggil mereka pulang. Ini menghilangkan kemungkinan bagi siapa pun, baik bangsa asing maupun bahkan umat Israel sendiri, untuk menghalangi proses pengumpulan ini.</p>
+                <p>Perintah ganda kepada utara dan selatan ini secara simbolis mencakup seluruh dunia yang dikenal pada saat itu, menunjukkan bahwa tidak ada sudut bumi yang luput dari jangkauan dan otoritas Allah. Ini adalah pernyataan tentang sifat universal dari kuasa dan tujuan Allah. Pesan ini sangat meyakinkan: tidak ada tempat di bumi yang terlalu terpencil atau terlalu tersembunyi sehingga Allah tidak dapat menjangkau umat-Nya. Ini menggarisbawahi bahwa Allah tidak terbatas oleh batas-batas geografis atau politik, melainkan Dia adalah Tuhan atas seluruh bumi. Bagi umat yang tercerai-berai, janji ini adalah jaminan bahwa Allah akan secara aktif mencari dan membawa pulang setiap orang dari mereka.</p>
+            </article>
+
+            <article>
+                <h3>"Bawalah anak-anak-Ku laki-laki dari jauh,"</h3>
+                <p>Bagian ini berpusat pada identitas dan tujuan dari pengumpulan itu. Frasa "anak-anak-Ku" adalah inti dari seluruh pernyataan. Ini adalah ekspresi kasih dan hubungan yang mendalam. Meskipun Israel telah memberontak dan dihukum, Allah tidak mencabut identitas mereka sebagai anak-anak-Nya. Ini adalah pengingat bahwa hubungan Allah dengan umat-Nya tidak didasarkan pada kesempurnaan mereka, melainkan pada janji dan kesetiaan-Nya sendiri. Identitas "anak" menyiratkan kepemilikan, perlindungan, dan kasih kebapaan. Bahkan dalam pembuangan, mereka tetap "anak-anak-Ku" di mata Allah.</p>
+                <p>Penyebutan "laki-laki" mungkin mencakup makna representatif sebagai kepala keluarga atau pemimpin, tetapi lebih luas lagi, ini menegaskan bahwa tidak ada kelompok atau jenis kelamin yang dikecualikan dari panggilan ini. "Dari jauh" menekankan betapa tersebarnya umat Israel. Mereka bukan hanya tersebar di Babel, tetapi juga di berbagai wilayah lain akibat penyerbuan dan emigrasi sebelumnya. Ini menandakan jangkauan ilahi yang tak terbatas. Tidak peduli seberapa jauh mereka telah menyimpang atau tersebar, Allah akan membawa mereka kembali. Ini adalah gambaran tentang Allah sebagai Gembala yang mencari setiap domba yang hilang, tidak peduli seberapa jauh mereka telah tersesat dari kawanan. Ini adalah janji restorasi yang komprehensif, bahwa setiap individu yang merupakan bagian dari umat-Nya akan dijangkau dan dibawa pulang.</p>
+                <p>Kata "bawalah" (bahasa Ibrani: יָבִיא, yavi') adalah kata kerja aktif yang menunjukkan tindakan yang disengaja dan berdaulat dari pihak Allah. Ini bukan Israel yang secara aktif mencari jalan pulang, melainkan Allah yang mengambil inisiatif dan kuasa untuk membawa mereka. Ini menyoroti bahwa pemulihan bukanlah hasil dari upaya manusia, tetapi anugerah dan pekerjaan Allah semata. Ini juga memberikan ketenangan hati bagi mereka yang merasa tak berdaya dan tidak mampu untuk membebaskan diri mereka sendiri.</p>
+            </article>
+
+            <article>
+                <h3>"Dan anak-anak-Ku perempuan dari ujung-ujung bumi,"</h3>
+                <p>Frasa ini melengkapi dan memperluas cakupan janji pengumpulan. Penambahan "anak-anak-Ku perempuan" menunjukkan inklusivitas total dari panggilan Allah. Ini menegaskan bahwa tidak ada perbedaan gender di hadapan Allah dalam hal kasih dan janji-Nya untuk pemulihan. Baik laki-laki maupun perempuan, tua maupun muda, semuanya adalah "anak-anak-Ku" yang berharga di mata-Nya. Ini adalah gambaran lengkap dari komunitas Israel yang akan dipulihkan, tanpa ada yang tertinggal atau dikecualikan.</p>
+                <p>"Dari ujung-ujung bumi" adalah frasa yang sangat kuat, melampaui "dari jauh" sebelumnya. Ini bukan hanya tentang tempat-tempat yang dapat dicapai dengan perjalanan beberapa minggu, tetapi merujuk pada batas-batas terjauh dari dunia yang dikenal, bahkan ke tempat-tempat yang mungkin belum terjamah oleh kaki manusia. Ini menunjukkan skala global dari rencana Allah. Meskipun secara harfiah mungkin merujuk pada diaspora Israel yang sangat luas, secara profetis frasa ini juga menunjuk pada jangkauan misi Allah yang lebih besar di kemudian hari, untuk mengumpulkan umat-Nya dari setiap suku, bahasa, kaum, dan bangsa di seluruh dunia. Ini adalah visi universal tentang keselamatan dan pemulihan, yang melampaui batas-batas etnis atau geografis Israel kuno.</p>
+                <p>Penyebutan "ujung-ujung bumi" juga menekankan bahwa tidak ada batasan geografis atau politik yang dapat menghalangi tujuan Allah. Sekuat apa pun penghalang, sejauh apa pun penyebaran, Allah yang berdaulat akan menggenapi janji-Nya. Ini adalah harapan yang tak tergoyahkan bagi mereka yang merasa terasing, terlupakan, atau terlalu jauh dari rumah dan kehadiran Allah. Ayat ini memastikan bahwa setiap "anak" Allah, di mana pun mereka berada, adalah bagian dari rencana pengumpulan dan pemulihan-Nya yang sempurna.</p>
+            </article>
+            <div style="clear: both;"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" class="article-illustration" role="img" aria-labelledby="svgTitle svgDesc">
+                <title id="svgTitle">Ilustrasi Pemulihan dan Pengumpulan Ilahi</title>
+                <desc id="svgDesc">Beberapa siluet manusia sederhana dikumpulkan di bawah lengkungan cahaya yang lembut dan damai, melambangkan janji Allah untuk mengumpulkan umat-Nya dari seluruh penjuru bumi kembali ke dalam hadirat-Nya.</desc>
+                <defs>
+                    <linearGradient id="lightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ADD8E6;stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:#E0FFFF;stop-opacity:0.2" />
+                    </linearGradient>
+                    <linearGradient id="figureGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#90EE90;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FFFACD;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Arcs of divine light/guidance -->
+                <path d="M 50 100 Q 300 10 550 100" stroke="url(#lightGradient)" stroke-width="10" fill="none" stroke-linecap="round" />
+                <path d="M 60 110 Q 300 20 540 110" stroke="url(#lightGradient)" stroke-width="8" fill="none" stroke-linecap="round" />
+                <path d="M 70 120 Q 300 30 530 120" stroke="url(#lightGradient)" stroke-width="6" fill="none" stroke-linecap="round" />
+
+                <!-- Simple figures being gathered -->
+                <circle cx="150" cy="150" r="30" fill="#ADD8E6" opacity="0.9"/>
+                <rect x="135" y="175" width="30" height="25" fill="#ADD8E6" opacity="0.9" rx="5"/>
+
+                <circle cx="250" cy="160" r="35" fill="#90EE90" opacity="0.9"/>
+                <rect x="230" y="190" width="40" height="20" fill="#90EE90" opacity="0.9" rx="5"/>
+
+                <circle cx="350" cy="140" r="28" fill="#FFFACD" opacity="0.9"/>
+                <rect x="338" y="165" width="24" height="35" fill="#FFFACD" opacity="0.9" rx="5"/>
+
+                <circle cx="450" cy="170" r="32" fill="#ADD8E6" opacity="0.9"/>
+                <rect x="435" y="195" width="30" height="15" fill="#ADD8E6" opacity="0.9" rx="5"/>
+            </svg>
+        </section>
+
+        <section class="themes">
+            <h2>Tema-tema Kunci dalam Yesaya 43:6</h2>
+            <p>Ayat Yesaya 43:6 adalah sebuah wadah yang kaya akan tema-tema teologis yang mendalam dan relevan. Memahami tema-tema ini membantu kita menangkap pesan inti yang ingin disampaikan Allah kepada umat-Nya, baik di masa lalu maupun sekarang.</p>
+
+            <h3>1. Kedaulatan Allah yang Mutlak</h3>
+            <p>Salah satu tema yang paling menonjol dalam ayat ini adalah kedaulatan Allah yang tak terbatas. Perintah-Nya kepada utara dan selatan menunjukkan bahwa Allah adalah penguasa atas segala ciptaan, termasuk kekuatan-kekuatan politik, geografis, dan bahkan kekuatan spiritual yang berusaha menahan umat-Nya. Tidak ada yang dapat melawan kehendak-Nya. Ketika Dia berbicara, alam semesta mematuhinya. Ini adalah kedaulatan yang mencakup waktu, ruang, dan takdir. Bagi Israel yang merasa tak berdaya di tangan Babel, penegasan ini sangat penting. Itu mengingatkan mereka bahwa penawanan mereka bukanlah tanda kekalahan Allah, melainkan bagian dari rencana-Nya yang lebih besar, dan pada waktunya, Allah yang sama yang mengizinkan penawanan itu akan memerintahkan pembebasan.</p>
+            <p>Kedaulatan ini juga berarti bahwa Allah tidak terbatas oleh keterbatasan manusia. Dia dapat mencapai "ujung-ujung bumi" dan membawa pulang setiap "anak-Nya." Ini adalah jaminan bahwa tidak ada situasi yang terlalu sulit atau terlalu rumit bagi Allah untuk mengintervensi dan mengubahnya sesuai kehendak-Nya. Kedaulatan-Nya memberikan fondasi yang kuat bagi harapan dan keyakinan, bahwa rencana-Nya akan terlaksana, tidak peduli apa pun rintangan yang muncul di jalan.</p>
+
+            <h3>2. Identitas sebagai "Anak-Anak-Ku"</h3>
+            <p>Frasa "anak-anak-Ku" adalah pusat dari janji ini. Ini menunjukkan sifat hubungan Allah dengan umat-Nya—sebuah hubungan yang bersifat pribadi, penuh kasih, dan berdasarkan perjanjian. Meskipun Israel telah berdosa dan mengalami hukuman, Allah tidak membatalkan identitas mereka sebagai anak-anak-Nya. Identitas ini melampaui prestasi atau kegagalan mereka; ia berakar pada anugerah dan janji Allah. Menjadi "anak Allah" berarti memiliki tempat yang istimewa dalam hati-Nya, di bawah perlindungan-Nya, dan mewarisi janji-janji-Nya.</p>
+            <p>Identitas ini memberikan jaminan keamanan dan nilai diri. Dalam pembuangan, identitas Israel sebagai umat pilihan dipertanyakan. Yesaya 43:6 mengingatkan mereka bahwa di mata Allah, mereka tetap berharga, tetap dikasihi, dan tetap memiliki tujuan. Untuk setiap orang percaya hari ini, ini adalah pengingat bahwa di dalam Kristus, kita dipanggil "anak-anak Allah" (Yohanes 1:12; Roma 8:14-17). Identitas ini adalah sumber keberanian, pengharapan, dan harga diri sejati, terlepas dari apa pun keadaan hidup yang kita alami.</p>
+
+            <h3>3. Panggilan dan Pengumpulan yang Aktif</h3>
+            <p>Ayat ini menggambarkan Allah sebagai Pribadi yang aktif dan berinisiatif dalam mengumpulkan umat-Nya. Dia tidak hanya menunggu mereka pulang; Dia memerintahkan kekuatan-kekuatan duniawi untuk "memberikan" dan "jangan menahan" mereka, dan Dia secara aktif "membawa" mereka pulang. Ini adalah tindakan gembala yang mencari domba-domba-Nya yang hilang. Ini menunjukkan bahwa pemulihan umat Allah bukanlah hasil dari upaya atau strategi manusia semata, tetapi merupakan pekerjaan ilahi yang diprakarsai dan diwujudkan oleh Allah sendiri.</p>
+            <p>Panggilan ini bersifat universal dan inklusif, mencakup "anak-anak laki-laki" dan "anak-anak perempuan," dari "jauh" dan dari "ujung-ujung bumi." Ini menyoroti bahwa dalam rencana Allah, tidak ada yang dikecualikan dan tidak ada tempat yang terlalu terpencil. Ini adalah visi tentang umat Allah yang dipulihkan secara menyeluruh, bersatu kembali dalam hadirat-Nya, sebuah gambaran yang kemudian diperluas dalam Perjanjian Baru untuk mencakup gereja global dari segala bangsa.</p>
+
+            <h3>4. Pemulihan dan Pengharapan</h3>
+            <p>Pada intinya, Yesaya 43:6 adalah pesan tentang pemulihan dan pengharapan. Bagi bangsa Israel yang berada dalam pembuangan, masa depan tampak suram dan tanpa harapan. Mereka mungkin merasa ditinggalkan oleh Allah. Namun, ayat ini dengan tegas menyatakan bahwa Allah memiliki rencana untuk memulihkan mereka, tidak hanya secara fisik kembali ke tanah mereka, tetapi juga untuk memulihkan hubungan mereka dengan Dia. Ini adalah janji bahwa kesusahan tidak akan bertahan selamanya dan bahwa di balik setiap penderitaan ada janji kebangkitan dan pembaruan.</p>
+            <p>Pesan ini memberikan kekuatan bagi setiap orang yang menghadapi situasi putus asa, kehilangan, atau perpisahan. Itu mengingatkan kita bahwa Allah adalah Allah pemulihan, yang mampu mengubah air mata menjadi sukacita, kehancuran menjadi pembangunan kembali, dan perpisahan menjadi perjumpaan kembali. Harapan ini tidak didasarkan pada optimisme manusia, melainkan pada karakter Allah yang setia dan kuasa-Nya yang tak terbatas untuk menggenapi setiap janji-Nya.</p>
+
+            <h3>5. Kasih dan Pemeliharaan Ilahi</h3>
+            <p>Di balik perintah-perintah yang berdaulat dan tindakan pengumpulan yang aktif, terungkap kasih Allah yang mendalam kepada umat-Nya. Dia memanggil mereka "anak-anak-Ku," sebuah istilah yang penuh kehangatan, keintiman, dan pemeliharaan. Kasih ini mendorong-Nya untuk tidak melepaskan mereka, bahkan ketika mereka tersesat. Pemeliharaan-Nya melampaui batas-batas geografis; Dia peduli pada setiap individu, di mana pun mereka berada.</p>
+            <p>Ini adalah kasih yang tidak hanya menghukum dosa tetapi juga menawarkan penebusan dan rekonsiliasi. Pemeliharaan ini adalah jaminan bahwa Allah tidak akan membiarkan umat-Nya binasa dalam pembuangan, melainkan akan secara aktif melindungi dan menuntun mereka kembali ke keamanan dan kedamaian. Ini adalah janji bahwa kasih Allah adalah abadi dan setia, menjangkau melampaui segala kesalahan dan kegagalan manusia, untuk membawa mereka kembali kepada-Nya.</p>
+        </section>
+
+        <section class="application">
+            <h2>Aplikasi Praktis untuk Kehidupan Modern</h2>
+            <p>Meskipun Yesaya 43:6 disampaikan kepada bangsa Israel kuno dalam konteks pembuangan, prinsip-prinsip dan janji-janji yang terkandung di dalamnya memiliki aplikasi yang mendalam dan relevan bagi kita di zaman modern. Ayat ini melampaui batas waktu dan budaya, menawarkan pengharapan dan arah bagi setiap orang percaya.</p>
+
+            <h3>1. Pengingat Identitas Kita dalam Kristus</h3>
+            <p>Bagi orang percaya, Yesaya 43:6 adalah penegasan kembali identitas kita sebagai "anak-anak Allah" melalui Yesus Kristus. Di dunia yang seringkali mendefinisikan kita berdasarkan pekerjaan, status sosial, penampilan, atau keberhasilan, ayat ini mengingatkan kita bahwa identitas sejati kita berakar pada kasih dan kepemilikan Allah. Kita adalah "anak-anak-Nya" – ini adalah gelar yang paling tinggi dan paling aman. Ini harus menjadi dasar dari harga diri dan tujuan hidup kita. Ketika kita memahami bahwa kita adalah milik-Nya, kita dapat menghadapi ketakutan, penolakan, atau kegagalan dengan keyakinan bahwa kita dikasihi tanpa syarat dan memiliki tempat yang kekal di hati Allah. Ini juga berarti bahwa kita tidak perlu takut akan masa depan, karena Bapa kita yang berdaulat memegang kendali.</p>
+
+            <h3>2. Pengharapan di Tengah Kesusahan dan Keterasingan</h3>
+            <p>Banyak dari kita mungkin tidak mengalami pembuangan fisik seperti Israel, tetapi kita seringkali menghadapi "pembuangan" pribadi: keterasingan, kesepian, kehilangan, penyakit, depresi, atau perasaan terpisah dari Allah. Dalam momen-momen ini, Yesaya 43:6 menawarkan pengharapan yang kuat. Allah yang memerintahkan utara untuk "memberikan" dan selatan untuk "jangan menahan" adalah Allah yang sama yang berkuasa atas setiap keadaan sulit dalam hidup kita. Dia dapat memerintahkan belenggu-belenggu kita untuk dilepaskan dan membawa kita keluar dari kegelapan. Jika Anda merasa "jauh" atau "di ujung-ujung bumi" secara emosional atau spiritual, ingatlah bahwa Allah Anda mencari Anda, memanggil Anda, dan secara aktif bekerja untuk membawa Anda kembali kepada-Nya. Dia tidak akan membiarkan Anda tertahan.</p>
+
+            <h3>3. Panggilan untuk Misi Global</h3>
+            <p>Frasa "dari ujung-ujung bumi" secara profetis menunjuk pada sifat global dari rencana penyelamatan Allah. Dalam Perjanjian Baru, ini digenapi dalam Amanat Agung Kristus untuk pergi dan menjadikan semua bangsa murid-Nya (Matius 28:19-20). Gereja, sebagai umat Allah yang baru, dipanggil untuk menjadi alat dalam pengumpulan ini. Yesaya 43:6 menginspirasi kita untuk memiliki visi misi yang luas, melihat setiap suku, kaum, bahasa, dan bangsa sebagai bagian dari "anak-anak Allah" yang akan dikumpulkan. Ini mendorong kita untuk mendukung misi, berdoa bagi bangsa-bangsa, dan jika dipanggil, untuk pergi memberitakan Injil ke "ujung-ujung bumi." Ini adalah pengingat bahwa tujuan Allah adalah menyelamatkan umat dari setiap penjuru dunia, dan kita memiliki peran dalam tujuan itu.</p>
+
+            <h3>4. Ketenangan dalam Kedaulatan Allah</h3>
+            <p>Di dunia yang penuh ketidakpastian dan perubahan cepat, Yesaya 43:6 memberikan ketenangan karena mengingatkan kita akan kedaulatan Allah yang tak tergoyahkan. Tidak ada pandemi, krisis ekonomi, konflik politik, atau masalah pribadi yang di luar kendali-Nya. Dia adalah Allah yang berkuasa atas utara dan selatan, atas segala sesuatu. Kedaulatan-Nya berarti kita dapat mempercayakan hidup kita kepada-Nya sepenuhnya, mengetahui bahwa Dia akan bekerja segala sesuatu sesuai dengan tujuan-Nya yang baik bagi kita yang mengasihi Dia (Roma 8:28). Ini membebaskan kita dari kecemasan yang berlebihan dan memungkinkan kita untuk hidup dengan damai sejahtera, bahkan di tengah badai.</p>
+
+            <h3>5. Mempraktikkan Inklusivitas dan Kasih</h3>
+            <p>Penyebutan "anak-anak laki-laki" dan "anak-anak perempuan" menunjukkan bahwa Allah tidak membeda-bedakan berdasarkan gender, status sosial, atau latar belakang. Semua yang menjadi "anak-Nya" memiliki nilai yang sama di mata-Nya. Hal ini menantang kita sebagai orang percaya untuk mempraktikkan inklusivitas yang sama dalam komunitas kita. Kita dipanggil untuk mengasihi dan menerima semua orang tanpa prasangka, melihat setiap individu sebagai ciptaan Allah yang berharga, dan berpotensi menjadi "anak" Allah yang akan Dia kumpulkan. Ini mendorong kita untuk meruntuhkan tembok-tembok pemisah dan membangun jembatan kasih, persatuan, dan penerimaan dalam gereja dan masyarakat kita.</p>
+
+            <h3>6. Doa Keyakinan</h3>
+            <p>Ayat ini dapat menjadi dasar untuk doa-doa kita. Ketika kita berdoa untuk pemulihan, pembebasan, atau pengumpulan orang-orang yang kita kasihi yang mungkin "jauh" dari iman, kita dapat memohon kepada Allah yang telah berkata kepada utara dan selatan. Kita berdoa dengan keyakinan bahwa Dia memiliki kuasa dan kehendak untuk menggenapi janji-Nya, bahkan dalam situasi yang paling sulit sekalipun. Doa berdasarkan janji-janji Allah adalah doa yang penuh kuasa, karena kita bersandar pada kesetiaan-Nya.</p>
+        </section>
+
+        <section class="broader-theology">
+            <h2>Koneksi Teologis yang Lebih Luas: Yesaya 43:6 dalam Lensa Perjanjian Baru</h2>
+            <p>Ayat Yesaya 43:6, meskipun berakar kuat dalam sejarah Israel kuno, memiliki resonansi teologis yang mendalam dan luas yang mencapai puncaknya dalam Perjanjian Baru dan misi gereja. Janji tentang pengumpulan umat Allah dari "ujung-ujung bumi" tidak hanya merujuk pada pemulihan fisik Israel ke tanah mereka, tetapi juga secara profetis menunjuk pada penggenapan yang lebih besar dalam Yesus Kristus.</p>
+
+            <h3>1. Yesus Kristus sebagai Penggenap Janji Pengumpulan</h3>
+            <p>Yesus sendiri sering digambarkan sebagai Gembala yang baik yang datang untuk mencari dan menyelamatkan domba-domba yang hilang (Matius 18:12-14; Yohanes 10:11). Tujuan kedatangan-Nya adalah untuk mengumpulkan "anak-anak Allah yang tercerai-berai menjadi satu" (Yohanes 11:52). Dia adalah realitas ilahi di balik perintah "Berikanlah!" dan "Janganlah tahan!". Melalui kematian dan kebangkitan-Nya, Yesus telah membayar harga untuk pembebasan umat manusia dari belenggu dosa dan maut, belenggu yang lebih besar dari pembuangan fisik mana pun. Dia mengumpulkan orang-orang dari setiap suku, bahasa, kaum, dan bangsa, bukan lagi hanya dari Israel secara etnis, tetapi dari siapa pun yang percaya kepada-Nya.</p>
+            <p>Ketika Yesus memberikan Amanat Agung kepada murid-murid-Nya untuk pergi ke seluruh dunia dan menjadikan segala bangsa murid-Nya (Matius 28:19-20), Dia pada dasarnya sedang mengaktifkan penggenapan Yesaya 43:6 dalam skala yang belum pernah terjadi sebelumnya. Dia memanggil murid-murid-Nya untuk menjadi agen-agen dalam pengumpulan "anak-anak-Nya" dari "ujung-ujung bumi." Ini adalah misi yang universal, melampaui batas-batas geografis atau etnis, mencerminkan visi Allah yang besar untuk mengasihi dan menyelamatkan seluruh umat manusia.</p>
+
+            <h3>2. Peran Roh Kudus dalam Pengumpulan</h3>
+            <p>Roh Kudus memainkan peran krusial dalam menggenapi janji pengumpulan ini. Roh Kuduslah yang meyakinkan dunia akan dosa, kebenaran, dan penghakiman (Yohanes 16:8), menarik hati manusia kepada Kristus. Dia memberdayakan para rasul dan semua orang percaya untuk bersaksi tentang Yesus "sampai ke ujung bumi" (Kisah Para Rasul 1:8). Roh Kudus yang sama ini yang bekerja di dalam hati setiap individu, memanggil mereka keluar dari kegelapan ke dalam terang, mengumpulkan mereka ke dalam Tubuh Kristus, yaitu gereja. Jadi, perintah Allah dalam Yesaya 43:6 dilaksanakan melalui karya penebusan Kristus dan kuasa penggerak Roh Kudus.</p>
+
+            <h3>3. Gereja sebagai Israel Baru dan Umat Allah yang Terkumpul</h3>
+            <p>Dalam teologi Kristen, gereja sering disebut sebagai "Israel baru" atau "umat Allah" yang meluas. Janji-janji yang diberikan kepada Israel kuno, termasuk janji pengumpulan, kini menemukan penggenapan yang lebih luas dalam gereja universal. Paulus menjelaskan bahwa di dalam Kristus, tidak ada lagi Yahudi atau Yunani, hamba atau orang merdeka, laki-laki atau perempuan, karena kita semua adalah satu dalam Kristus Yesus (Galatia 3:28). Ini adalah inklusivitas yang sama yang diisyaratkan dalam Yesaya 43:6 dengan penyebutan "anak-anak laki-laki dan perempuan."</p>
+            <p>Gereja, yang terdiri dari orang-orang percaya dari setiap bangsa, menjadi manifestasi hidup dari janji Allah untuk mengumpulkan umat-Nya dari "ujung-ujung bumi." Setiap jemaat lokal, setiap persekutuan orang percaya, adalah sebagian kecil dari pengumpulan besar yang sedang Allah kerjakan di seluruh dunia. Ketika gereja menjangkau orang-orang yang "jauh" dari Allah, baik secara geografis maupun spiritual, ia sedang berpartisipasi dalam misi ilahi yang diuraikan dalam Yesaya 43:6.</p>
+
+            <h3>4. Harapan Eskatologis</h3>
+            <p>Selain penggenapan historis dan missiologis, Yesaya 43:6 juga memiliki dimensi eskatologis, menunjuk pada pengumpulan terakhir umat Allah di akhir zaman. Kitab Wahyu menggambarkan visi tentang "banyak orang dari segala bangsa dan suku dan kaum dan bahasa, berdiri di hadapan takhta dan di hadapan Anak Domba" (Wahyu 7:9). Ini adalah penggenapan paripurna dari janji untuk mengumpulkan umat Allah dari "ujung-ujung bumi," sebuah gambaran tentang kesatuan ilahi di hadapan takhta Allah, di mana tidak ada lagi perpisahan atau keterasingan. Ini adalah tujuan akhir dari rencana penyelamatan Allah—untuk mengumpulkan semua anak-anak-Nya ke dalam kemuliaan hadirat-Nya yang kekal.</p>
+            <p>Dengan demikian, Yesaya 43:6 adalah sebuah ayat yang beresonansi sepanjang sejarah keselamatan. Dari nubuat penghiburan bagi Israel di pembuangan, hingga Amanat Agung Yesus, karya Roh Kudus dalam gereja, dan harapan akan kekekalan, ayat ini secara konsisten menegaskan kedaulatan Allah, kasih-Nya yang tak terbatas, dan tujuan-Nya yang tak tergoyahkan untuk mengumpulkan semua yang menjadi milik-Nya.</p>
+        </section>
+
+        <section class="conclusion">
+            <h2>Kesimpulan: Janji yang Tak Tergoyahkan dari Allah yang Setia</h2>
+            <p>Ayat Yesaya 43:6 adalah sebuah proklamasi ilahi yang penuh kuasa dan pengharapan, yang terus bergema sepanjang zaman. Di tengah-tengah keputusasaan dan kehancuran bangsa Israel yang diasingkan, Allah mengangkat suara-Nya dengan otoritas dan kasih, menyatakan bahwa Dia tetap berdaulat atas segala sesuatu dan bahwa janji-Nya untuk mengumpulkan umat-Nya dari setiap penjuru bumi akan digenapi. Ini bukanlah sekadar kata-kata penghiburan yang kosong, melainkan sebuah deklarasi dari karakter Allah yang setia dan kuasa-Nya yang tak terbatas.</p>
+            <p>Kita telah menyelami kedalaman setiap frasa dalam ayat ini: "Aku akan berkata kepada utara: Berikanlah! Dan kepada selatan: Janganlah tahan! Bawalah anak-anak-Ku laki-laki dari jauh, dan anak-anak-Ku perempuan dari ujung-ujung bumi." Dari setiap kata, terungkap kedaulatan Allah yang mutlak atas kekuatan-kekuatan duniawi, kasih-Nya yang mendalam yang mengidentifikasi kita sebagai "anak-anak-Ku," dan misi-Nya yang inklusif untuk menjangkau setiap individu, tidak peduli seberapa jauh mereka tersebar. Ini adalah gambaran Allah sebagai Gembala Agung yang tidak akan pernah melepaskan domba-domba-Nya, melainkan akan secara aktif mencari dan membawa pulang mereka.</p>
+            <p>Untuk kita di zaman modern, Yesaya 43:6 adalah mercusuar pengharapan. Ia mengingatkan kita akan identitas sejati kita dalam Kristus sebagai anak-anak Allah yang dikasihi, memberikan kekuatan di tengah kesusahan dan keterasingan, dan menginspirasi kita untuk berpartisipasi dalam misi global-Nya. Ayat ini menegaskan bahwa tidak ada situasi yang terlalu sulit, tidak ada jarak yang terlalu jauh, dan tidak ada belenggu yang terlalu kuat bagi Allah yang berdaulat. Dia memiliki kuasa untuk melepaskan, memulihkan, dan mengumpulkan semua yang menjadi milik-Nya.</p>
+            <p>Oleh karena itu, marilah kita memegang teguh janji ini. Dalam setiap tantangan, setiap ketakutan, dan setiap momen merasa "jauh" dari Allah, ingatlah Yesaya 43:6. Ingatlah bahwa Bapa surgawi Anda berbicara kepada kekuatan-kekuatan yang menahan Anda, memerintahkan mereka untuk "memberikan" Anda. Dia sedang mengulurkan tangan-Nya kepada Anda, di mana pun Anda berada, untuk membawa Anda pulang ke dalam kasih dan kehadiran-Nya yang aman. Janji-Nya adalah tak tergoyahkan, karena Dia yang berjanji adalah Allah yang setia, dulu, sekarang, dan selamanya.</p>
+            <p>Biarlah janji ini memenuhi hati kita dengan damai sejahtera, keberanian, dan keyakinan akan Allah yang memegang kendali atas segala sesuatu, dan yang tidak akan pernah meninggalkan anak-anak-Nya, melainkan akan mengumpulkan mereka dari ujung-ujung bumi ke dalam pelukan kasih-Nya yang abadi.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Hak Cipta Dilindungi</p>
+    </footer>
+<div class='related-posts'><h3>Related Posts</h3><ul><li><a href="/lukas-4-25">Lukas 4 25</a></li>
+<li><a href="/markus-5-35">Markus 5 35</a></li>
+<li><a href="/daniel-6-17">Daniel 6 17</a></li>
+<li><a href="/1-korintus-15-40">1 Korintus 15 40</a></li>
+<li><a href="/yesaya-41-7">Yesaya 41 7</a></li>
+<li><a href="/ezra-2-61">Ezra 2 61</a></li>
+<li><a href="/1-samuel-8-7">1 Samuel 8 7</a></li>
+<li><a href="/2-samuel-1-11">2 Samuel 1 11</a></li>
+<li><a href="/roma-7-18">Roma 7 18</a></li>
+<li><a href="/lukas-23-34">Lukas 23 34</a></li></ul></div>
+<script src="/ik.js"></script>
+</body>
+</html>
